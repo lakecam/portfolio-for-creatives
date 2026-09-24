@@ -16,131 +16,16 @@
  * =============================================
  */
 
-/* 
-███████  ██████  ███    ██ ████████ ███████ 
-██      ██    ██ ████   ██    ██    ██      
-█████   ██    ██ ██ ██  ██    ██    ███████ 
-██      ██    ██ ██  ██ ██    ██         ██ 
-██       ██████  ██   ████    ██    ███████ 
-*/
+  /*Typefaces*/
+  --font-family-body: var(--)
+  --font-family-heading: var(--font-main), serif;
+  --font-family-project-title: var(--font-main), serif;
 
-/* ------------------------------- */
-/* 🌐 Google Fonts - Customize Your Site's Typography */
-/* You can add your own fonts here, but be mindful of performance */
-/* ------------------------------- */
-
-/* TODO: Replace these Google Fonts with the ones you want to use on your site. */
-/* Remember, the more fonts you load, the longer it can take for your page to load. */
-
-/* Eczar Font (for headers or special text) */
-@import url("https://fonts.googleapis.com/css2?family=Eczar:wght@400;500;600;700;800&display=swap");
-
-/* Rubik Font (clean and modern for body text) */
-@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;900&display=swap");
-
-/* Inter Font (great for readability and minimal design) */
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
-
-/*
-
-/* 
-██ ███    ███ ██████   ██████  ██████  ████████      ██████ ███████ ███████ 
-██ ████  ████ ██   ██ ██    ██ ██   ██    ██        ██      ██      ██      
-██ ██ ████ ██ ██████  ██    ██ ██████     ██        ██      ███████ ███████ 
-██ ██  ██  ██ ██      ██    ██ ██   ██    ██        ██           ██      ██ 
-██ ██      ██ ██       ██████  ██   ██    ██         ██████ ███████ ███████ 
-*/
-
-/* ------------------------------- */
-/* 🔗 Imported Stylesheets */
-/* These are external CSS files that add extra effects to your site. */
-/* ------------------------------- */
-
-/* TODO: Delete any stylesheets you don't plan to use on your site. */
-
-/* File for animation effects that make elements move (e.g., flying) */
-@import url("make-something-fly.css");
-
-/* File for animation effects that make elements blink */
-@import url("make-something-blink.css");
-
-/* File for adding a smooth animated gradient background */
-@import url("animated-gradient.css");
-
-/* File for adding a glitch animation to your 404 error page */
-@import url("error.css");
-
-/* File for adding text stroke (outline) effect */
-@import url("text-stroke.css");
-
-/* File for adding stroke shadow effect around text */
-@import url("stroke-shadow.css");
-
-/* File with extra experimental styles (e.g., fun animations or effects) */
-@import url("experiments.css");
-
-/* File for adding a scroll-to-top button or effect */
-@import url("scroll-to-top.css");
-
-/* File for adding accordion functionality to expand/collapse content sections */
-@import url("accordian.css");
-
-/* 
-██    ██  █████  ██████  ██  █████  ██████  ██      ███████ ███████ 
-██    ██ ██   ██ ██   ██ ██ ██   ██ ██   ██ ██      ██      ██      
-██    ██ ███████ ██████  ██ ███████ ██████  ██      █████   ███████ 
- ██  ██  ██   ██ ██   ██ ██ ██   ██ ██   ██ ██      ██           ██ 
-  ████   ██   ██ ██   ██ ██ ██   ██ ██████  ███████ ███████ ███████ 
-*/
-
-/* ------------------------------- */
-/* 🎨 Theme Design Variables */
-/* Use CSS variables to quickly change your site's color scheme and typography */
-/* ------------------------------- */
-
-/* These design variables store important elements like colours and fonts.
-   You can easily change the look and feel of your site by adjusting these values. */
-
-/* TODO: Customize these variables to fit your design. You can add new ones or delete ones you don’t need. */
-
-:root {
-  /* RAW VALUES */
-
-  /* Neutral */
-  --neutral-50: #fafafa;
-  --neutral-100: #f4f4f5;
-  --neutral-200: #e4e4e7;
-  --neutral-300: #d4d4d8;
-  --neutral-400: #9f9fa9;
-  --neutral-500: #71717b;
-  --neutral-600: #52525c;
-  --neutral-700: #3f3f47;
-  --neutral-800: #27272a;
-  --neutral-900: #18181b;
-  --neutral-950: #09090b;
-
-  /* Brand */
-  --neutral-50: #fafafa;
-  --neutral-100: #f4f4f5;
-  --neutral-200: #e4e4e7;
-  --neutral-300: #d4d4d8;
-  --neutral-400: #9f9fa9;
-  --neutral-500: #71717b;
-  --neutral-600: #52525c;
-  --neutral-700: #3f3f47;
-  --neutral-800: #27272a;
-  --neutral-900: #18181b;
-  --neutral-950: #09090b;
-
-  /* Typography */
-  --font-family-body: "Inter", sans-serif;
-  --font-family-heading: "Eczar", serif;
-  --font-family-project-title: "Eczar", serif;
   /* Core Colours */
-  --color-text-primary: #222;
-  --color-text-secondary: #333;
-  --color-accent-primary: #ffffff;
-  --color-accent-secondary: #ff057c;
+  --color-text-primary: var(--neutral-50);
+  --color-text-secondary: var(--neutral-100);
+  --color-accent-primary: var(--accent1-400);
+  --color-accent-secondary: var(--accent1-400);
   --color-overlay-primary: rgba(82, 0, 255, 0.5);
   --color-highlight: lemonchiffon;
   --color-fallback: #ff057c; /* Fallback color for glitch effect on 404 page */
@@ -149,13 +34,15 @@
   --color-bg-about: #f5f5f5;
   --color-bg-footer: #f5f5f5;
   --color-bg-holding-page: rgba(82, 0, 255, 0.6);
+
   /* Headings */
-  --h1-color: #ffffff;
+  --h1-color: var(neutral-50);
   --h2-color: #5200ff;
   --h3-color: #5200ff;
   --h4-color: #5200ff;
   --h5-color: #5200ff;
   --h6-color: #5200ff;
+
   /* Special Text Colours */
   --color-text-holding-title: #ebedf0;
   --color-text-project-category: #ffffff;
@@ -460,7 +347,7 @@ svg {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  background: lightblue;
+  background: lightaccent2;
   padding: var(--padding-small);
 }
 
@@ -555,7 +442,7 @@ sup {
 
 /* Main hero headline — usually sits in the intro section */
 .hero-headline {
-  color: var(--color-accent-primary); /* Uses your brand's dominant color */
+  color: var(--neutral-50);
   max-width: 40ch; /* Optimal line length for readability (~40 characters) */
   text-wrap: balance; /* Prevents awkward line breaks (like elegant typography) */
   margin-inline: auto; /* Horizontally centers the text in its container */

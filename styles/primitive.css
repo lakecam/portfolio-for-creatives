@@ -1,0 +1,66 @@
+/* PRIMITIVE TOKENS */
+
+/* Main Font */
+@import url("https://fonts.googleapis.com/css2?family=Catamaran:wght@100..900&display=swap");
+
+/* Accent Font */
+@import url("https://fonts.googleapis.com/css2?family=Geist+Mono:ital,wght@0,100..900;1,100..900&display=swap");
+
+:root {
+  /* Neutral */
+  --neutral-50: #fafafa;
+  --neutral-100: #f4f4f5;
+  --neutral-200: #e4e4e7;
+  --neutral-300: #d4d4d8;
+  --neutral-400: #9f9fa9;
+  --neutral-500: #71717b;
+  --neutral-600: #52525c;
+  --neutral-700: #3f3f47;
+  --neutral-800: #27272a;
+  --neutral-900: #18181b;
+  --neutral-950: #09090b;
+  /* Brand */
+  --brand-50: #f7fee7;
+  --brand-100: #ecfcca;
+  --brand-200: #d8f999;
+  --brand-300: #bbf451;
+  --brand-400: #9ae600;
+  --brand-500: #7ccf00;
+  --brand-600: #5ea500;
+  --brand-700: #497d00;
+  --brand-800: #3c6300;
+  --brand-900: #35530e;
+  --brand-950: #192e03;
+  /* Accent 1 */
+  --accent1-50: #fdf2f8;
+  --accent1-100: #fce7f3;
+  --accent1-200: #fccee8;
+  --accent1-300: #fda5d5;
+  --accent1-400: #fb64b6;
+  --accent1-500: #f6339a;
+  --accent1-600: #e60076;
+  --accent1-700: #c6005c;
+  --accent1-800: #a3004c;
+  --accent1-900: #861043;
+  --accent1-950: #510424;
+  /* Accent 2 */
+  --accent2-50: #eff6ff;
+  --accent2-100: #dbeafe;
+  --accent2-200: #bedbff;
+  --accent2-300: #8ec5ff;
+  --accent2-400: #50a2ff;
+  --accent2-500: #2b7fff;
+  --accent2-600: #155dfc;
+  --accent2-700: #1447e6;
+  --accent2-800: #193cb8;
+  --accent2-900: #1c398e;
+  --accent2-950: #162556;
+  /* Overlays */
+  --overlay-10: rgba(39, 39, 42, 0.1);
+  --overlay-25: rgba(39, 39, 42, 0.25);
+  --overlay-50: rgba(39, 39, 42, 0.5);
+  --overlay-75: rgba(39, 39, 42, 0.75);
+  /* Typefaces */
+  --font-main: "Catamaran", sans-serif;
+  --font-accent: "Geist Mono", monospace;
+}
