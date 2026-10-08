@@ -1082,9 +1082,9 @@ a.nav-link-primary:hover {
   align-items: center;
   gap: var(--space-2);
   border-radius: 100vmax;
-  font-family: var(--font-mono);
+  font-family: "Jelink", var(--font-geist); /* same hand as the "my work" heading */
   font-size: var(--font-size-base);
-  font-weight: var(--font-weight-medium);
+  font-weight: 400; /* Jelink only ships a regular weight */
   line-height: 1.6;
   color: var(--work-ink);
   text-decoration: none;
