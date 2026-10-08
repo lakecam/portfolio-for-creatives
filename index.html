@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Lake Cam | Portfolio</title>
+    <meta
+      name="Lake Cam | Portfolio"
+      content="Lake Cam is a product designer and designer engineer who is super into indie development and making cool tools."
+    />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="assets/branding-images/favicon.svg"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      href="assets/branding-images/favicon.png"
+    />
+    <meta property="og:image" content="screenshot.jpg" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./styles/style.css" />
+  </head>
+
+  <body class="work-page" id="top">
+    <!-- clips the shapes that hang off the bottom -->
+    <div class="page-clip">
+    <section class="hero gradient-animation">
+      <canvas class="hero-shader" aria-hidden="true"></canvas>
+      <header class="hero-header">
+        <ul class="nav-branding">
+          <!-- Logo (standalone LI) -->
+          <li class="nav-branding-logo">
+            <a href="index.html">
+              <img src="assets/branding-images/lake.svg" alt="Lake Cam" />
+            </a>
+          </li>
+          <li class="nav-branding-item">
+            <ul class="nav-branding-group">
+              <li class="nav-branding-item">
+                <a href="index.html" class="nav-link-primary" aria-current="page">Home</a>
+              </li>
+              <li class="nav-branding-item">
+                <a href="#work" class="nav-link-primary">Work</a>
+              </li>
+              <li class="nav-branding-item">
+                <a href="about.html" class="nav-link-primary">About</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </header>
+      <div class="hero-headline-wrapper">
+        <h1 class="hero-headline">
+          Lake Cam is a product designer who lives between pixels and code
+        </h1>
+      </div>
+    </section>
+
+    <!-- Work (placeholder content for now) -->
+    <section class="work-section" id="work" aria-labelledby="work-heading">
+      <canvas class="section-a-shader" aria-hidden="true"></canvas>
+      <h2 class="work-section__heading" id="work-heading">my work</h2>
+      <canvas class="work-shape work-shape--x" aria-hidden="true"></canvas>
+      <canvas class="work-shape work-shape--k" aria-hidden="true"></canvas>
+      <article class="work-project work-project--pink">
+        <div class="work-project__media">
+          <img class="work-project__image" src="assets/placeholders/project-1-a.webp" alt="" width="1200" height="1200" loading="lazy" decoding="async" />
+          <img class="work-project__image" src="assets/placeholders/project-1-b.webp" alt="" width="1200" height="1200" loading="lazy" decoding="async" />
+          <img class="work-project__image" src="assets/placeholders/project-1-c.webp" alt="" width="1200" height="1200" loading="lazy" decoding="async" />
+        </div>
+        <div class="work-project__meta">
+          <h3 class="work-project__title">Placeholder</h3>
+          <p class="work-project__date">Month 2026</p>
+        </div>
+        <div class="work-project__body">
+          <p class="work-project__summary">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          <a data-draw-line="" class="work-project__link text-draw" href="project-1.html">
+            <span class="text-draw__label">
+              <span class="text-draw__span">See work</span>
+              <span data-draw-line-box="" class="text-draw__box"></span>
+            </span>
+            <svg class="work-project__arrow" viewBox="0 0 30.2242 30.2223" aria-hidden="true" focusable="false"><path fill="currentColor" transform="matrix(-1 0 0 1 30.2242 0)" d="M12.2779 14.282V19.3612C12.2779 20.1432 11.6432 20.7779 10.8612 20.7779C10.0792 20.7779 9.44452 20.1432 9.44452 19.3612V10.8612C9.44452 10.0792 10.0792 9.44452 10.8612 9.44452H19.3612C20.1432 9.44452 20.7779 10.0792 20.7779 10.8612C20.7779 11.6432 20.1432 12.2779 19.3612 12.2779H14.282L26.7467 24.7407C28.9171 22.1246 30.2242 18.7681 30.2242 15.1112C30.2242 6.7793 23.445 0 15.1131 0C6.78119 0 0 6.7793 0 15.1112C0 23.4431 6.7793 30.2223 15.1112 30.2223C18.7681 30.2223 22.1246 28.9152 24.7426 26.7449L12.2779 14.282Z"/></svg>
+          </a>
+        </div>
+      </article>
+      <hr class="work-section__divider" />
+      <article class="work-project work-project--yellow">
+        <div class="work-project__media">
+          <img class="work-project__image" src="assets/placeholders/project-2-a.webp" alt="" width="1306" height="1030" loading="lazy" decoding="async" />
+          <img class="work-project__image" src="assets/placeholders/project-2-b.webp" alt="" width="1600" height="1034" loading="lazy" decoding="async" />
+          <img class="work-project__image" src="assets/placeholders/project-2-c.webp" alt="" width="1600" height="1015" loading="lazy" decoding="async" />
+        </div>
+        <div class="work-project__meta">
+          <h3 class="work-project__title">Placeholder</h3>
+          <p class="work-project__date">Month 2026</p>
+        </div>
+        <div class="work-project__body">
+          <p class="work-project__summary">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          <a data-draw-line="" class="work-project__link text-draw" href="project-2.html">
+            <span class="text-draw__label">
+              <span class="text-draw__span">See work</span>
+              <span data-draw-line-box="" class="text-draw__box"></span>
+            </span>
+            <svg class="work-project__arrow" viewBox="0 0 30.2242 30.2223" aria-hidden="true" focusable="false"><path fill="currentColor" transform="matrix(-1 0 0 1 30.2242 0)" d="M12.2779 14.282V19.3612C12.2779 20.1432 11.6432 20.7779 10.8612 20.7779C10.0792 20.7779 9.44452 20.1432 9.44452 19.3612V10.8612C9.44452 10.0792 10.0792 9.44452 10.8612 9.44452H19.3612C20.1432 9.44452 20.7779 10.0792 20.7779 10.8612C20.7779 11.6432 20.1432 12.2779 19.3612 12.2779H14.282L26.7467 24.7407C28.9171 22.1246 30.2242 18.7681 30.2242 15.1112C30.2242 6.7793 23.445 0 15.1131 0C6.78119 0 0 6.7793 0 15.1112C0 23.4431 6.7793 30.2223 15.1112 30.2223C18.7681 30.2223 22.1246 28.9152 24.7426 26.7449L12.2779 14.282Z"/></svg>
+          </a>
+        </div>
+      </article>
+      <hr class="work-section__divider" />
+      <article class="work-project work-project--blue">
+        <div class="work-project__media">
+          <video class="work-project__image" src="assets/placeholders/project-3-a.mp4" poster="assets/placeholders/project-3-a-poster.webp" width="1440" height="1060" autoplay muted loop playsinline preload="metadata" aria-hidden="true"></video>
+          <img class="work-project__image" src="assets/placeholders/project-3-b.webp" alt="" width="1600" height="900" loading="lazy" decoding="async" />
+          <img class="work-project__image" src="assets/placeholders/project-3-c.webp" alt="" width="1600" height="1016" loading="lazy" decoding="async" />
+        </div>
+        <div class="work-project__meta">
+          <h3 class="work-project__title">Placeholder</h3>
+          <p class="work-project__date">Month 2026</p>
+        </div>
+        <div class="work-project__body">
+          <p class="work-project__summary">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          <a data-draw-line="" class="work-project__link text-draw" href="project-3.html">
+            <span class="text-draw__label">
+              <span class="text-draw__span">See work</span>
+              <span data-draw-line-box="" class="text-draw__box"></span>
+            </span>
+            <svg class="work-project__arrow" viewBox="0 0 30.2242 30.2223" aria-hidden="true" focusable="false"><path fill="currentColor" transform="matrix(-1 0 0 1 30.2242 0)" d="M12.2779 14.282V19.3612C12.2779 20.1432 11.6432 20.7779 10.8612 20.7779C10.0792 20.7779 9.44452 20.1432 9.44452 19.3612V10.8612C9.44452 10.0792 10.0792 9.44452 10.8612 9.44452H19.3612C20.1432 9.44452 20.7779 10.0792 20.7779 10.8612C20.7779 11.6432 20.1432 12.2779 19.3612 12.2779H14.282L26.7467 24.7407C28.9171 22.1246 30.2242 18.7681 30.2242 15.1112C30.2242 6.7793 23.445 0 15.1131 0C6.78119 0 0 6.7793 0 15.1112C0 23.4431 6.7793 30.2223 15.1112 30.2223C18.7681 30.2223 22.1246 28.9152 24.7426 26.7449L12.2779 14.282Z"/></svg>
+          </a>
+        </div>
+      </article>
+    </section>
+
+    <main class="main-work-section" hidden>
+      <div class="stacking-cards__collection">
+        <div class="stacking-cards__list">
+          <div data-stacking-cards-item="" class="stacking-cards__item is--one">
+            <h2 class="stacking-cards__item-h">
+              <span class="stacking-card__heading-faded">UX/UI</span
+              ><br />Project Number One
+            </h2>
+            <!-- Swap this box for your work, e.g.
+                 <img src="assets/your-image.jpg" data-stacking-cards-img="" alt="Describe your project" class="stacking-cards__item-img" /> -->
+            <div
+              data-stacking-cards-img=""
+              class="stacking-cards__item-img"
+            ></div>
+            <div class="stacking-cards__item-top">
+              <span class="stacking-card__top-span">Product Design</span>
+              <span class="stacking-card__top-span">01 / 06</span>
+            </div>
+            <a
+              href="project-1.html"
+              class="stacking-cards__item-link"
+              aria-label="Project Number One"
+            ></a>
+          </div>
+          <div data-stacking-cards-item="" class="stacking-cards__item is--two">
+            <h2 class="stacking-cards__item-h">
+              <span class="stacking-card__heading-faded">Category</span
+              ><br />Project Number Two
+            </h2>
+            <!-- Swap this box for your work, e.g.
+                 <img src="assets/your-image.jpg" data-stacking-cards-img="" alt="Describe your project" class="stacking-cards__item-img" /> -->
+            <div
+              data-stacking-cards-img=""
+              class="stacking-cards__item-img"
+            ></div>
+            <div class="stacking-cards__item-top">
+              <span class="stacking-card__top-span">Category</span>
+              <span class="stacking-card__top-span">02 / 06</span>
+            </div>
+            <a
+              href="project-2.html"
+              class="stacking-cards__item-link"
+              aria-label="Project Number Two"
+            ></a>
+          </div>
+          <div
+            data-stacking-cards-item=""
+            class="stacking-cards__item is--three"
+          >
+            <h2 class="stacking-cards__item-h">
+              <span class="stacking-card__heading-faded">Category</span
+              ><br />Project Number Three
+            </h2>
+            <!-- Swap this box for your work, e.g.
+                 <img src="assets/your-image.jpg" data-stacking-cards-img="" alt="Describe your project" class="stacking-cards__item-img" /> -->
+            <div
+              data-stacking-cards-img=""
+              class="stacking-cards__item-img"
+            ></div>
+            <div class="stacking-cards__item-top">
+              <span class="stacking-card__top-span">Category</span>
+              <span class="stacking-card__top-span">03 / 06</span>
+            </div>
+            <a
+              href="project-3.html"
+              class="stacking-cards__item-link"
+              aria-label="Project Number Three"
+            ></a>
+          </div>
+          <div
+            data-stacking-cards-item=""
+            class="stacking-cards__item is--four"
+          >
+            <h2 class="stacking-cards__item-h">
+              <span class="stacking-card__heading-faded">Category</span
+              ><br />Project Number Four
+            </h2>
+            <!-- Swap this box for your work, e.g.
+                 <img src="assets/your-image.jpg" data-stacking-cards-img="" alt="Describe your project" class="stacking-cards__item-img" /> -->
+            <div
+              data-stacking-cards-img=""
+              class="stacking-cards__item-img"
+            ></div>
+            <div class="stacking-cards__item-top">
+              <span class="stacking-card__top-span">Category</span>
+              <span class="stacking-card__top-span">04 / 06</span>
+            </div>
+            <a
+              href="project-1.html"
+              class="stacking-cards__item-link"
+              aria-label="Project Number Four"
+            ></a>
+          </div>
+          <div
+            data-stacking-cards-item=""
+            class="stacking-cards__item is--five"
+          >
+            <h2 class="stacking-cards__item-h">
+              <span class="stacking-card__heading-faded">Category</span
+              ><br />Project Number Five
+            </h2>
+            <!-- Swap this box for your work, e.g.
+                 <img src="assets/your-image.jpg" data-stacking-cards-img="" alt="Describe your project" class="stacking-cards__item-img" /> -->
+            <div
+              data-stacking-cards-img=""
+              class="stacking-cards__item-img"
+            ></div>
+            <div class="stacking-cards__item-top">
+              <span class="stacking-card__top-span">Category</span>
+              <span class="stacking-card__top-span">05 / 06</span>
+            </div>
+            <a
+              href="project-1.html"
+              class="stacking-cards__item-link"
+              aria-label="Project Number Five"
+            ></a>
+          </div>
+          <div data-stacking-cards-item="" class="stacking-cards__item is--six">
+            <h2 class="stacking-cards__item-h">
+              <span class="stacking-card__heading-faded">Category</span
+              ><br />Project Number Six
+            </h2>
+            <!-- Swap this box for your work, e.g.
+                 <img src="assets/your-image.jpg" data-stacking-cards-img="" alt="Describe your project" class="stacking-cards__item-img" /> -->
+            <div
+              data-stacking-cards-img=""
+              class="stacking-cards__item-img"
+            ></div>
+            <div class="stacking-cards__item-top">
+              <span class="stacking-card__top-span">Category</span>
+              <span class="stacking-card__top-span">06 / 06</span>
+            </div>
+            <a
+              href="project-1.html"
+              class="stacking-cards__item-link"
+              aria-label="Project Number Six"
+            ></a>
+          </div>
+        </div>
+      </div>
+    </main>
+
+
+    <footer class="site-footer">
+      <canvas class="footer-clouds" aria-hidden="true"></canvas>
+      <div class="site-footer__inner">
+        <p class="footer-legal">&copy; 2026 Lake Cam. All rights reserved.</p>
+        <div class="site-footer__social">
+          <a class="social-orb" href="mailto:thelakecam@gmail.com" aria-label="Email Lake Cam">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" focusable="false"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+          </a>
+          <a class="social-orb" href="https://www.linkedin.com/in/lakecam" aria-label="Lake Cam on LinkedIn" target="_blank" rel="noopener noreferrer">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+          </a>
+          <a class="social-orb" href="https://x.com/lakespace" aria-label="Lake Cam on X" target="_blank" rel="noopener noreferrer">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.179z"/></svg>
+          </a>
+          <a class="social-orb" href="https://sublime.app/lakecam" aria-label="Lake Cam on Sublime" target="_blank" rel="noopener noreferrer">
+            <svg viewBox="3 3 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M25.982 26.986c0 .006-.165.01-.165.017-.055 0 .055 0 0 0l-21.435-.001a1.32 1.32 0 0 1-.898-.332 1.347 1.347 0 0 1-.48-1.04C3 24.406 3.006 23.183 3 21.961a1.364 1.364 0 0 1 .148-.638c.254-.505.68-.757 1.228-.76 2.173-.013 4.348-.008 6.522-.013.223 0 .453.003.668-.048.345-.08.687-.177 1.01-.336.659-.326 1.188-.784 1.569-1.41.378-.623.615-1.292.58-2.033a6.004 6.004 0 0 0-.079-.797c-.093-.515-.31-.982-.598-1.417-.196-.296-.459-.528-.71-.774-.962-.94-1.92-1.882-2.878-2.824-.345-.338-.684-.685-1.04-1.012-.22-.204-.44-.404-.629-.637-.633-.776-.896-1.663-.795-2.662.038-.371.143-.724.309-1.052a4.165 4.165 0 0 1 1.03-1.326c.534-.452 1.122-.797 1.797-.98.37-.101.743-.186 1.13-.217.326-.027.649-.03.974-.008a5.3 5.3 0 0 1 1.437.309 4.84 4.84 0 0 1 1.814 1.16c.42.43.725.93.915 1.502.013.041.038.08.056.118.019.04.043.077.052.119.086.433.172.867.256 1.3.197 1.006.395 2.011.59 3.017.185.954.366 1.91.547 2.865.072.383.142.765.247 1.141.105.373.314.659.658.832.555.282 1.11.28 1.663-.022.318-.172.525-.424.607-.777.093-.4.19-.8.275-1.202.137-.655.262-1.31.397-1.965.12-.578.252-1.155.372-1.733.1-.476.185-.954.282-1.43.085-.416.177-.83.27-1.246.037-.166.061-.34.13-.493.292-.643 1.034-.932 1.703-.88.332.025.629.144.905.334.392.269.581.634.584 1.1C27 8.206 27 9.344 27 10.484V25.64c-.015.475-.201.864-.599 1.134-.132.09-.286.146-.42.213.352 0-.366 0 0 0Z"/></svg>
+          </a>
+          <a class="social-orb" href="https://github.com/lakecam" aria-label="Lake Cam on GitHub" target="_blank" rel="noopener noreferrer">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.769-1.584 8.2-6.085 8.2-11.386 0-6.627-5.373-12-12-12z"/></svg>
+          </a>
+        </div>
+      </div>
+    </footer>
+
+
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/DrawSVGPlugin.min.js"></script>
+    <script src="./js/draw-underline.js"></script>
+    <script>
+      // Hold project videos on their poster frame for reduced motion
+      if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+        document.querySelectorAll(".work-project video").forEach((video) => {
+          video.removeAttribute("autoplay");
+          video.pause();
+        });
+      }
+    </script>
+    <script type="module" src="./js/hero-shader.js"></script>
+    <script type="module" src="./js/cloud-atlas.js"></script>
+
+    <script>
+      gsap.registerPlugin(ScrollTrigger);
+
+      function initStackingCardsParallax() {
+        const cards = document.querySelectorAll("[data-stacking-cards-item]");
+
+        if (cards.length < 2) return;
+
+        cards.forEach((card, i) => {
+          // Skip over the first section
+          if (i === 0) return;
+
+          // When current section is in view, target the PREVIOUS one
+          const previousCard = cards[i - 1];
+          if (!previousCard) return;
+
+          // Find any element inside the previous card
+          const previousCardImage = previousCard.querySelector(
+            "[data-stacking-cards-img]"
+          );
+
+          let tl = gsap.timeline({
+            defaults: {
+              ease: "none",
+              duration: 1,
+            },
+            scrollTrigger: {
+              trigger: card,
+              start: "top bottom",
+              end: "top top",
+              scrub: true,
+              invalidateOnRefresh: true,
+            },
+          });
+
+          tl.fromTo(previousCard, { yPercent: 0 }, { yPercent: 50 }).fromTo(
+            previousCardImage,
+            { rotate: 0, yPercent: 0 },
+            { rotate: -5, yPercent: -25 },
+            "<"
+          );
+        });
+      }
+
+      // Initialize Stacking Cards Parallax (skipped for reduced motion)
+      document.addEventListener("DOMContentLoaded", () => {
+        if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+          initStackingCardsParallax();
+        }
+      });
+    </script>
+
+    <script>
+      myID = document.getElementById("myID");
+
+      var myScrollFunc = function () {
+        if (!myID) return;
+        var y = window.scrollY;
+        if (y >= 800) {
+          myID.className = "bottomMenu show";
+        } else {
+          myID.className = "bottomMenu hide";
+        }
+      };
+
+      window.addEventListener("scroll", myScrollFunc);
+    </script>
+  </body>
+</html>

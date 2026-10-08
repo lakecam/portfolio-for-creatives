@@ -1,9 +1,15 @@
 /* PRIMITIVE TOKENS */
 
-/* Main Font */
+/* Body Font */
+@import url("https://fonts.googleapis.com/css2?family=Figtree:wght@300..900&display=swap");
+
+/* Display Font */
 @import url("https://fonts.googleapis.com/css2?family=Catamaran:wght@100..900&display=swap");
 
-/* Accent Font */
+/* Hero Headline Font */
+@import url("https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap");
+
+/* Mono Font */
 @import url("https://fonts.googleapis.com/css2?family=Geist+Mono:ital,wght@0,100..900;1,100..900&display=swap");
 
 :root {
@@ -16,12 +22,14 @@
   --neutral-500: #71717b;
   --neutral-600: #52525c;
   --neutral-700: #3f3f47;
+  --neutral-750: #333338;
   --neutral-800: #27272a;
   --neutral-900: #18181b;
   --neutral-950: #09090b;
   /* Brand */
   --brand-50: #f7fee7;
   --brand-100: #ecfcca;
+  --brand-150: #e2fab1;
   --brand-200: #d8f999;
   --brand-300: #bbf451;
   --brand-400: #9ae600;
@@ -55,12 +63,108 @@
   --accent2-800: #193cb8;
   --accent2-900: #1c398e;
   --accent2-950: #162556;
+  /* Utility colours */
+  --white: #ffffff;
+  --black: #000000;
+  --ink-950: #111111;
+  --ink-800: #222222;
+  --paper-200: #f5f5f5;
+  --paper-100: #f8f8ff;
+  --midnight-950: #070c12;
+  --lemonchiffon: lemonchiffon;
+  --orangered: orangered;
+  --darkred: darkred;
+  /* Violet */
+  --violet-500: #5200ff;
+  --violet-900: #321575;
+  /* Gradient stops */
+  --magenta-700: #8d0b93;
+  --hotpink-500: #ff057c;
+  --fuchsia-500: #ff00ff;
+  --cyan-500: #00ffff;
   /* Overlays */
   --overlay-10: rgba(39, 39, 42, 0.1);
   --overlay-25: rgba(39, 39, 42, 0.25);
   --overlay-50: rgba(39, 39, 42, 0.5);
   --overlay-75: rgba(39, 39, 42, 0.75);
+  --overlay-violet-50: rgba(82, 0, 255, 0.5);
+  --overlay-violet-60: rgba(82, 0, 255, 0.6);
+  --overlay-black-40: rgba(0, 0, 0, 0.4);
+  --overlay-white-10: rgba(255, 255, 255, 0.1);
+  --overlay-black-45: rgba(0, 0, 0, 0.45);
+  --overlay-black-55: rgba(0, 0, 0, 0.55);
+  /* Space — 4px base unit (1 step = 0.25rem). Step n = n × 4px, in rem. */
+  --space-0: 0;
+  --space-px: 1px;
+  --space-0-5: 0.125rem; /* 2px */
+  --space-1: 0.25rem; /* 4px */
+  --space-2: 0.5rem; /* 8px */
+  --space-3: 0.75rem; /* 12px */
+  --space-4: 1rem; /* 16px */
+  --space-5: 1.25rem; /* 20px */
+  --space-6: 1.5rem; /* 24px */
+  --space-8: 2rem; /* 32px */
+  --space-10: 2.5rem; /* 40px */
+  --space-12: 3rem; /* 48px */
+  --space-16: 4rem; /* 64px */
+  --space-20: 5rem; /* 80px */
+  --space-24: 6rem; /* 96px */
+  --space-32: 8rem; /* 128px */
+  /* Corners */
+  --corner-8: 0.5rem;
+  --corner-12: 0.75rem;
+  --corner-16: 1rem;
+  --corner-24: 1.5rem;
+  --corner-32: 2rem;
+  --corner-round: 50%;
+  /* Motion */
+  --motion-150: 0.15s;
+  --motion-300: 0.3s;
+  --motion-750: 0.75s;
+  /* Ratios */
+  --ratio-16-9: 16 / 9;
+  /* Type scale — 1rem = 16px base (xs → 8xl) */
+  --font-size-xs: 0.75rem; /* 12px */
+  --font-size-sm: 0.875rem; /* 14px */
+  --font-size-base: 1rem; /* 16px */
+  --font-size-lg: 1.125rem; /* 18px */
+  --font-size-xl: 1.25rem; /* 20px */
+  --font-size-2xl: 1.5rem; /* 24px */
+  --font-size-3xl: 1.875rem; /* 30px */
+  --font-size-4xl: 2.25rem; /* 36px */
+  --font-size-5xl: 3rem; /* 48px */
+  --font-size-6xl: 3.75rem; /* 60px */
+  --font-size-7xl: 4.5rem; /* 72px */
+  --font-size-8xl: 6rem; /* 96px */
+  --font-size-2xs: 0.6875rem; /* 11px — mono labels */
+  /* Fluid type — scales with viewport width (min, preferred, max) */
+  --font-size-fluid-display: clamp(1.75rem, 4.12vw, 3.892rem); /* hero headline */
+  --font-size-fluid-title: clamp(1.6rem, 3.2vw, 2.75rem); /* card / project titles */
+  --font-size-fluid-nav: clamp(0.875rem, 1.32vw, 1.25rem); /* nav links */
+  --font-size-fluid-card: clamp(3rem, 10vw, 12rem); /* stacking card headings */
   /* Typefaces */
-  --font-main: "Catamaran", sans-serif;
-  --font-accent: "Geist Mono", monospace;
+  --font-sans: "Figtree", ui-sans-serif, system-ui, -apple-system, "Segoe UI",
+    sans-serif;
+  --font-display: "Catamaran", var(--font-sans);
+  --font-geist: "Geist", var(--font-sans);
+  --font-mono: "Geist Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+  /* Weights */
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --font-weight-extrabold: 800;
+  /* Line height */
+  --leading-compact: 0.8;
+  --leading-tight: 1.05;
+  --leading-snug: 1.2;
+  --leading-normal: 1.5;
+  --leading-loose: 1.4;
+  /* Letter spacing */
+  --tracking-tighter: -0.03em;
+  --tracking-tight: -0.02em;
+  --tracking-label: 0.14em;
+  /* Measure */
+  --measure-hero: 57.5rem; /* 920px */
+  --size-card-media: clamp(12rem, 30vw, 32rem); /* stacking card image box */
 }

@@ -2,3 +2,11 @@
 ._pg*
 .nova
 .edist
+
+node_modules/
+to-del
+.archive/
+.midcode/
+.unused-assets/
+.unused-css/
+.unused-html/

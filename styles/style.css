@@ -16,93 +16,123 @@
  * =============================================
  */
 
+@import url("./primitive.css");
+
+:root {
   /*Typefaces*/
-  --font-family-body: var(--)
-  --font-family-heading: var(--font-main), serif;
-  --font-family-project-title: var(--font-main), serif;
+  --font-family-body: var(--font-sans);
+  --font-family-heading: var(--font-display);
+  --font-family-project-title: var(--font-display);
+  --font-family-label: var(--font-mono);
 
   /* Core Colours */
-  --color-text-primary: var(--neutral-50);
-  --color-text-secondary: var(--neutral-100);
+  --color-text-primary: var(--neutral-750);
+  --color-text-secondary: var(--neutral-400);
   --color-accent-primary: var(--accent1-400);
   --color-accent-secondary: var(--accent1-400);
-  --color-overlay-primary: rgba(82, 0, 255, 0.5);
-  --color-highlight: lemonchiffon;
-  --color-fallback: #ff057c; /* Fallback color for glitch effect on 404 page */
+  --color-overlay-primary: var(--overlay-violet-50);
+  --color-highlight: var(--lemonchiffon);
+  --color-fallback: var(--hotpink-500); /* Fallback color for glitch effect on 404 page */
   /* Backgrounds */
+  /*
   --color-bg: #fdfdfd;
   --color-bg-about: #f5f5f5;
   --color-bg-footer: #f5f5f5;
-  --color-bg-holding-page: rgba(82, 0, 255, 0.6);
+  */
+  --color-bg: var(--brand-100);
+  --color-bg-about: var(--brand-150);
+  --color-bg-footer: var(--brand-150);
+
+  --color-bg-holding-page: var(--overlay-violet-60);
 
   /* Headings */
-  --h1-color: var(neutral-50);
-  --h2-color: #5200ff;
-  --h3-color: #5200ff;
-  --h4-color: #5200ff;
-  --h5-color: #5200ff;
-  --h6-color: #5200ff;
+  --h1-color: var(--neutral-500);
+  --h2-color: var(--neutral-500);
+  --h3-color: var(--violet-500);
+  --h4-color: var(--violet-500);
+  --h5-color: var(--violet-500);
+  --h6-color: var(--violet-500);
 
   /* Special Text Colours */
-  --color-text-holding-title: #ebedf0;
-  --color-text-project-category: #ffffff;
-  --color-text-project-description: #222;
-  --color-text-project-sidebar: #222;
-  --color-text-project-title: #5200ff;
-  --color-text-work-grid-title: #ffffff;
+  --color-text-holding-title: var(--brand-500);
+  --color-text-project-category: var(--brand-500);
+  --color-text-project-description: var(--ink-800);
+  --color-text-project-sidebar: var(--ink-800);
+  --color-text-project-title: var(--violet-500);
+  --color-text-work-grid-title: var(--brand-400);
   /* Link States */
-  --color-link: #5200ff;
-  --color-link-hover: #111;
-  --color-link-visited: #5200ff;
+  --color-link: var(--violet-500);
+  --color-link-hover: var(--ink-950);
+  --color-link-visited: var(--violet-500);
   /* Navigation */
-  --color-nav-link: #5200ff;
-  --color-nav-link-hover: #321575;
-  --color-nav-arrow: #5200ff;
-  --color-nav-arrow-hover: #000;
-  --color-nav-arrow-stroke: #5200ff;
-  --color-nav-arrow-stroke-hover: #000;
+  --color-nav-link: var(--violet-500);
+  --color-nav-link-hover: var(--violet-900);
+  --color-nav-arrow: var(--violet-500);
+  --color-nav-arrow-hover: var(--black);
+  --color-nav-arrow-stroke: var(--violet-500);
+  --color-nav-arrow-stroke-hover: var(--black);
   /* Components */
-  --color-bg-full-width: #f5f5f5;
-  --color-bg-project-description: #f5f5f5;
-  --color-bg-sidebar-project: orangered;
-  --color-bg-sidebar-work: lemonchiffon;
-  --color-gradient-hero: linear-gradient(90deg, #ff00ff, #00ffff);
+  --color-bg-full-width: var(--paper-200);
+  --color-bg-project-description: var(--paper-200);
+  --color-bg-sidebar-project: var(--orangered);
+  --color-bg-sidebar-work: var(--lemonchiffon);
+  --color-bg-hero-fallback: var(--midnight-950); /* Shown if the hero shader can't run */
+  /* Stacking work cards */
+  --color-text-card: var(--white);
+  --color-bg-card-media: var(--overlay-white-10);
+  --color-bg-card-1: var(--brand-950);
+  --color-bg-card-2: var(--accent2-950);
+  --color-bg-card-3: var(--accent1-950);
+  --color-bg-card-4: var(--neutral-800);
+  --color-bg-card-5: var(--violet-900);
+  --color-bg-card-6: var(--midnight-950);
+  --color-text-on-hero: var(--white);
+  --color-gradient-hero: linear-gradient(
+    90deg,
+    var(--fuchsia-500),
+    var(--cyan-500)
+  );
   --color-gradient-project-details: linear-gradient(
     -225deg,
-    #ff057c 0%,
-    #8d0b93 50%,
-    #321575 100%
+    var(--hotpink-500) 0%,
+    var(--magenta-700) 50%,
+    var(--violet-900) 100%
   );
   /* Special Elements */
-  --color-icon-heart: darkred;
-  --color-text-holding-footer: #f8f8ff;
-  --color-bg-selection: #5200ff;
-  --color-shadow-stroke: rgba(0, 0, 0, 0.4);
+  --color-icon-heart: var(--darkred);
+  --color-text-holding-footer: var(--paper-100);
+  --color-bg-selection: var(--violet-500);
+  --color-shadow-stroke: var(--overlay-black-40);
   /* Assets */
   --image-noise-texture: url(/assets/temp/noise.svg);
   /* Animation Durations */
-  --duration-fast: 0.15s; /* Quick interactions (hover states) */
-  --duration-normal: 0.3s; /* Standard transitions (button clicks) */
-  --duration-slow: 0.75s; /* Prominent animations (page transitions) */
+  --duration-fast: var(--motion-150); /* Quick interactions (hover states) */
+  --duration-normal: var(--motion-300); /* Standard transitions (button clicks) */
+  --duration-slow: var(--motion-750); /* Prominent animations (page transitions) */
   /* Rounded Corners */
-  --radius-sm: 0.5rem; /* Small interactive elements */
-  --radius-md: 1rem; /* Cards/containers */
-  --radius-lg: 2rem; /* Large decorative elements */
-  --radius-full: 50%; /* Circles/pills */
+  --radius-sm: var(--corner-8); /* Small interactive elements */
+  --radius-md: var(--corner-16); /* Cards/containers */
+  --radius-lg: var(--corner-32); /* Large decorative elements */
+  --radius-full: var(--corner-round); /* Circles/pills */
+  /* Work Grid */
+  --grid-gap: var(--space-3); /* Space between work tiles */
+  --grid-radius: var(--corner-24); /* Corner radius of work tiles */
+  --grid-ratio: var(--ratio-16-9); /* Shape of each work tile */
+  --grid-placeholder: var(--neutral-200); /* Blank tile colour */
   /* Padding Scale */
-  --padding-tiny: 0.5rem; /* Micro-spacing: icon padding, toggle switches */
-  --padding-small: 1rem; /* Compact spacing: mobile buttons, form tags */
-  --padding-medium: 2rem; /* Standard spacing: desktop buttons, card content */
-  --padding-large: 3rem; /* Section spacing: content blocks, banner padding */
-  --padding-jumbo: 4rem; /* Hero elements: full-width containers, page headers */
-  --padding-ultra: 8rem; /* Full-bleed spacing: edge-to-edge layouts, super-sized headers */
+  --padding-tiny: var(--space-2); /* Micro-spacing: icon padding, toggle switches */
+  --padding-small: var(--space-4); /* Compact spacing: mobile buttons, form tags */
+  --padding-medium: var(--space-8); /* Standard spacing: desktop buttons, card content */
+  --padding-large: var(--space-12); /* Section spacing: content blocks, banner padding */
+  --padding-jumbo: var(--space-16); /* Hero elements: full-width containers, page headers */
+  --padding-ultra: var(--space-32); /* Full-bleed spacing: edge-to-edge layouts, super-sized headers */
   /* Flex Gap Scale */
-  --gap-tiny: 0.5rem; /* Micro-gap: icon spacing, small button groups */
-  --gap-small: 1rem; /* Compact gap: card elements, form fields */
-  --gap-medium: 2rem; /* Standard gap: desktop card grids, section items */
-  --gap-large: 3rem; /* Section gap: major content blocks, banner spacing */
-  --gap-jumbo: 4rem; /* Hero gap: full-width containers, large card spacing */
-  --gap-ultra: 8rem; /* Edge-to-edge spacing: mega sections, spacious layouts */
+  --gap-tiny: var(--space-2); /* Micro-gap: icon spacing, small button groups */
+  --gap-small: var(--space-4); /* Compact gap: card elements, form fields */
+  --gap-medium: var(--space-8); /* Standard gap: desktop card grids, section items */
+  --gap-large: var(--space-12); /* Section gap: major content blocks, banner spacing */
+  --gap-jumbo: var(--space-16); /* Hero gap: full-width containers, large card spacing */
+  --gap-ultra: var(--space-32); /* Edge-to-edge spacing: mega sections, spacious layouts */
 }
 
 /* ======================
@@ -141,6 +171,9 @@ html {
 
 body {
   font-family: var(--font-family-body);
+  font-weight: var(--font-weight-normal);
+  line-height: var(--leading-normal);
+  text-rendering: optimizeLegibility;
   color: var(--color-text-primary);
   background: var(--color-bg);
   display: flex;
@@ -154,9 +187,7 @@ body {
 /* ------------------------------- */
 
 ::selection {
-  background: var(
-    --color-bg-selection
-  ); /* Uses your custom color for highlighted text */
+  background: var(--color-bg-selection); /* Uses your custom color for highlighted text */
 }
 
 /* ---------------------------------------- */
@@ -198,7 +229,7 @@ svg {
 /* Puts the box on its own line and adds space underneath */
 .margin-bottom {
   display: block; /* Makes it a block so it stacks nicely */
-  margin-bottom: 1rem; /* Adds space below – helps with layout breathing room */
+  margin-bottom: var(--space-4); /* Adds space below – helps with layout breathing room */
 }
 
 .width-third,
@@ -232,7 +263,7 @@ svg {
 
 /* Smooth transition when applying transformations – improves hover experience */
 .rotate {
-  transition: transform 0.3s ease;
+  transition: transform var(--duration-normal) ease;
 }
 
 /* Rotates the element slightly on hover – adds a playful effect */
@@ -325,7 +356,7 @@ svg {
   overflow: hidden;
   width: 100%;
   padding-top: 56.25%; /* 16:9 Aspect Ratio (because 9 ÷ 16 = 0.5625) */
-  margin-bottom: 1rem;
+  margin-bottom: var(--space-4);
 }
 /* The iframe is absolutely positioned to fill the container */
 .responsive-iframe {
@@ -367,46 +398,62 @@ svg {
 /* Heading Styles (h1 - h6) */
 
 h1 {
-  font-size: 2.2rem;
+  font-size: var(--font-size-4xl);
   font-family: var(--font-family-heading);
-  line-height: 1.2;
-  margin-bottom: 1rem;
+  font-weight: var(--font-weight-extrabold);
+  letter-spacing: var(--tracking-tight);
+  line-height: var(--leading-snug);
+  margin-bottom: var(--space-4);
   color: var(--h1-color);
 }
 
 h2 {
-  font-size: 2rem;
+  font-size: var(--font-size-3xl);
   font-family: var(--font-family-heading);
-  line-height: 1.2;
-  margin-bottom: 1rem;
+  font-weight: var(--font-weight-bold);
+  letter-spacing: var(--tracking-tighter);
+  line-height: var(--leading-snug);
+  margin-bottom: var(--space-4);
   color: var(--h2-color);
 }
 
 h3 {
-  font-size: 1.325rem;
-  margin-bottom: 1rem;
-  line-height: 1.2;
+  font-size: var(--font-size-xl);
+  font-family: var(--font-family-heading);
+  font-weight: var(--font-weight-bold);
+  letter-spacing: var(--tracking-tighter);
+  margin-bottom: var(--space-4);
+  line-height: var(--leading-snug);
   color: var(--h3-color);
 }
 
 h4 {
-  font-size: 1.2rem;
-  line-height: 1.2;
-  margin-bottom: 1rem;
+  font-size: var(--font-size-xl);
+  font-family: var(--font-family-heading);
+  font-weight: var(--font-weight-bold);
+  letter-spacing: var(--tracking-tighter);
+  line-height: var(--leading-snug);
+  margin-bottom: var(--space-4);
   color: var(--h4-color);
 }
 
 h5 {
-  font-size: 1.1rem;
-  line-height: 1.2;
-  margin-bottom: 1rem;
+  font-size: var(--font-size-lg);
+  font-family: var(--font-family-heading);
+  font-weight: var(--font-weight-bold);
+  letter-spacing: var(--tracking-tighter);
+  line-height: var(--leading-snug);
+  margin-bottom: var(--space-4);
   color: var(--h5-color);
 }
 
 h6 {
-  font-size: 1rem;
-  line-height: 1.2;
-  margin-bottom: 1rem;
+  font-size: var(--font-size-base);
+  font-family: var(--font-family-heading);
+  font-weight: var(--font-weight-bold);
+  letter-spacing: var(--tracking-tighter);
+  line-height: var(--leading-snug);
+  margin-bottom: var(--space-4);
   color: var(--h6-color);
 }
 
@@ -416,13 +463,13 @@ h6 {
 /* ------------------------------------------------------------------ */
 
 p {
-  font-size: 1rem;
-  line-height: 1.3;
-  margin-bottom: 1rem;
+  font-size: var(--font-size-base);
+  line-height: var(--leading-normal);
+  margin-bottom: var(--space-4);
 }
 
 strong {
-  font-weight: 700; /* Makes text bold */
+  font-weight: var(--font-weight-bold); /* Makes text bold */
 }
 
 em {
@@ -442,26 +489,32 @@ sup {
 
 /* Main hero headline — usually sits in the intro section */
 .hero-headline {
-  color: var(--neutral-50);
-  max-width: 40ch; /* Optimal line length for readability (~40 characters) */
+  color: var(--neutral-500);
+  font-size: var(--font-size-fluid-display);
+  font-weight: var(--font-weight-extrabold);
+  letter-spacing: var(--tracking-tight);
+  line-height: var(--leading-loose);
+  max-width: var(--measure-hero);
   text-wrap: balance; /* Prevents awkward line breaks (like elegant typography) */
   margin-inline: auto; /* Horizontally centers the text in its container */
 }
 
 /* Large project title — appears on individual project pages */
 .project-title {
-  font-size: 3.625rem;
+  font-size: var(--font-size-6xl);
   font-family: var(--font-family-project-title);
+  font-weight: var(--font-weight-bold);
+  letter-spacing: var(--tracking-tighter);
   color: var(--color-text-project-title);
-  margin-bottom: 1rem;
+  margin-bottom: var(--space-4);
 }
 
 /* Project description text — pairs with the project title */
 .project-description {
-  font-size: 1.225rem;
+  font-size: var(--font-size-xl);
   line-height: 1.2;
   color: var(--color-text-project-description);
-  margin-bottom: 1rem;
+  margin-bottom: var(--space-4);
 }
 
 /* 🧱 Full-width headings — useful in layouts that span edge-to-edge */
@@ -485,13 +538,21 @@ sup {
 
 /* 📂 Project grid title — used in grid view (like a portfolio gallery) */
 .work-grid-project-title {
-  font-size: 2.875rem;
+  font-size: var(--font-size-fluid-title);
+  font-weight: var(--font-weight-bold);
+  letter-spacing: var(--tracking-tighter);
+  line-height: var(--leading-tight);
   color: var(--color-text-work-grid-title);
   text-wrap: balance;
 }
 
 /* 🏷️ Project category label — displays the type or role of the project */
 .work-grid-project-category {
+  font-family: var(--font-family-label);
+  font-size: var(--font-size-2xs);
+  font-weight: var(--font-weight-medium);
+  letter-spacing: var(--tracking-label);
+  text-transform: uppercase;
   color: var(--color-text-project-category);
 }
 
@@ -544,6 +605,9 @@ a:active {
 /* -------------------------------------------------------------------------- */
 
 a.nav-link-primary {
+  font-family: var(--font-family-heading);
+  font-size: var(--font-size-fluid-nav);
+  font-weight: var(--font-weight-semibold);
   color: var(--color-nav-link);
 }
 a.nav-link-primary:hover {
@@ -609,6 +673,649 @@ a.nav-link-primary:hover {
   min-height: 6rem; /* Space reserved for logo + nav */
 }
 
+/* Shader background (work page) */
+.work-page .hero {
+  min-height: 100svh; /* the hero is the whole page for now */
+  position: relative;
+  isolation: isolate;
+  background: var(--color-bg-hero-fallback); /* fallback if WebGPU is unavailable */
+}
+
+.hero-shader {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  /* !important: the shader library writes inline pixel sizes on the canvas */
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.work-page .hero-headline,
+.work-page .hero a.nav-link-primary {
+  color: var(--color-text-on-hero);
+}
+
+/* Logo on the left, glass tab nav on the right, floating over the shader */
+.work-page .hero {
+  --hero-gutter: clamp(var(--space-4), 5.1vw, 5.5rem);
+  /* Headline sits a little further in than the logo on wide screens */
+  --headline-indent: clamp(0rem, (100vw - 48rem) * 0.025, var(--space-6));
+
+  /* Nav sizes all scale off the label size so everything stays in proportion */
+  --nav-font: clamp(0.9375rem, 1.16vw, var(--font-size-xl));
+  --nav-pad: var(--space-1);
+  --nav-height: calc(var(--nav-font) * 2.95);
+  --tab-height: calc(var(--nav-height) - var(--nav-pad) * 2);
+  --tab-width: calc(var(--nav-font) * 7.55);
+  --logo-height: calc(var(--nav-height) * 0.76);
+}
+
+/* Header floats on top so the headline centres in the full hero */
+.work-page .hero-header {
+  position: absolute;
+  inset: 0 0 auto;
+  z-index: 1;
+  min-height: 0;
+  padding: clamp(var(--space-4), 2.3vw, 2.5rem) var(--hero-gutter) 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.work-page .nav-branding {
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+  padding: 0;
+}
+
+.work-page .nav-branding .nav-branding-logo {
+  width: auto;
+  padding: 0;
+}
+
+.work-page .nav-branding-logo a,
+.work-page .nav-branding-logo img {
+  display: block; /* removes the gap under the image */
+}
+
+.work-page .nav-branding-logo img {
+  width: auto;
+  height: var(--logo-height);
+  opacity: 0.8;
+}
+
+.work-page .nav-branding-logo a {
+  border-radius: var(--space-1);
+}
+
+.work-page .nav-branding-logo a:focus-visible {
+  outline: 2px solid var(--white);
+  outline-offset: 6px;
+}
+
+.work-page .nav-branding-item {
+  padding: 0;
+}
+
+.work-page .nav-branding-group {
+  display: flex;
+  padding: var(--nav-pad);
+  background: rgb(2 74 112 / 0.4);
+  border-radius: var(--nav-font); /* 20px */
+}
+
+.work-page .hero a.nav-link-primary {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--tab-width);
+  height: var(--tab-height);
+  padding-inline: var(--space-4);
+  border-radius: calc(var(--nav-font) * 0.8); /* 16px */
+  font-family: var(--font-mono);
+  font-size: var(--nav-font);
+  font-weight: var(--font-weight-semibold);
+  line-height: 1.4;
+  text-align: center;
+  transition:
+    background-color 160ms cubic-bezier(0.23, 1, 0.32, 1),
+    box-shadow 160ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+/* Phones: tabs shrink to fit their labels and the logo gets smaller */
+@media (max-width: 37.5rem) {
+  .work-page .hero {
+    --logo-height: calc(var(--nav-height) * 0.58);
+  }
+
+  .work-page .hero a.nav-link-primary {
+    width: auto;
+    padding-inline: var(--space-3);
+  }
+}
+
+/* Trim the line box so the label sits in the middle of the tab */
+@supports (text-box: trim-both cap alphabetic) {
+  .work-page .hero a.nav-link-primary {
+    display: block;
+    height: auto;
+    padding-block: calc((var(--tab-height) - 1cap) / 2);
+    text-box: trim-both cap alphabetic;
+  }
+}
+
+.work-page .hero a.nav-link-primary[aria-current="page"] {
+  position: relative;
+  isolation: isolate;
+  background: rgb(255 255 255 / 0.16);
+  /* Soft edge under the moving glow */
+  box-shadow:
+    inset 0 0 0 1px rgb(255 255 255 / 0.1),
+    inset 0 1px 1px rgb(255 255 255 / 0.12),
+    inset 0 0 10px rgb(170 240 255 / 0.12);
+}
+
+/* Active tab: a streak of light that travels around the edge.
+   ::before is the sharp ring, ::after is a blurred copy for the glow. */
+@property --tab-glow-angle {
+  syntax: "<angle>";
+  inherits: true;
+  initial-value: 0deg;
+}
+
+.work-page .hero a.nav-link-primary[aria-current="page"]::before,
+.work-page .hero a.nav-link-primary[aria-current="page"]::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  padding: 1px;
+  border-radius: inherit;
+  background: conic-gradient(
+    from var(--tab-glow-angle),
+    rgb(170 240 255 / 0) 0deg,
+    rgb(170 240 255 / 0) 180deg,
+    rgb(170 240 255 / 0.6) 270deg,
+    rgb(255 255 255) 330deg,
+    rgb(170 240 255 / 0) 360deg
+  );
+  /* mask out the middle so only the border ring shows */
+  -webkit-mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask:
+    linear-gradient(#000 0 0) content-box exclude,
+    linear-gradient(#000 0 0);
+  pointer-events: none;
+}
+
+.work-page .hero a.nav-link-primary[aria-current="page"]::after {
+  inset: -4px;
+  padding: 5px;
+  filter: blur(6px);
+  opacity: 0.85;
+}
+
+.work-page .hero a.nav-link-primary[aria-current="page"] {
+  animation: tab-glow-orbit 4.5s linear infinite;
+}
+
+@keyframes tab-glow-orbit {
+  to {
+    --tab-glow-angle: 360deg;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .work-page .hero a.nav-link-primary[aria-current="page"] {
+    animation: none;
+    --tab-glow-angle: 45deg;
+  }
+}
+
+@media (hover: hover) {
+  .work-page .hero a.nav-link-primary:not([aria-current="page"]):hover {
+    background: rgb(255 255 255 / 0.08);
+  }
+}
+
+.work-page .hero a.nav-link-primary:not([aria-current="page"]):active {
+  background: rgb(255 255 255 / 0.12);
+}
+
+.work-page .hero a.nav-link-primary:focus-visible {
+  outline: 2px solid var(--white);
+  outline-offset: 2px;
+}
+
+/* Left-aligned, regular-weight display headline over the shader */
+.work-page .hero-headline-wrapper {
+  align-items: flex-start;
+  text-align: left;
+  padding: clamp(var(--space-4), 2.3vw, 2.5rem) var(--hero-gutter) clamp(var(--space-4), 5.1vw, 5.5rem)
+    calc(var(--hero-gutter) + var(--headline-indent));
+}
+
+.work-page .hero-headline {
+  font-family: var(--font-geist);
+  font-size: clamp(2.25rem, 3.75vw, 4.0625rem); /* 65px max */
+  font-weight: var(--font-weight-normal);
+  letter-spacing: 0;
+  line-height: 1.4;
+  max-width: 16.2em; /* line break after "designer" */
+  margin: 0;
+  text-wrap: pretty;
+}
+
+/* -------------------------------------------------------------------------- */
+/* Work section: placeholder projects under a handwritten "my work" heading    */
+/* -------------------------------------------------------------------------- */
+
+@font-face {
+  font-family: "Jelink";
+  src: url("../fonts/Jelink.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+.work-section {
+  --work-gutter: clamp(var(--space-4), 5.1vw, 5.5rem); /* same as the hero */
+  --work-ink: #09090b;
+  --work-body: #3f3f47;
+  --work-muted: #9f9fa9;
+  --work-rule: #d4d4d8;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-10);
+  /* extra bottom padding leaves room for the X and K shapes */
+  padding: clamp(var(--space-4), 4.9vw, 5.25rem) var(--work-gutter) max(43vw, 14rem);
+  background: #fafafa;
+  color: var(--work-ink);
+}
+
+/* Paper texture */
+.work-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url("../assets/section-texture.webp") center / cover;
+  mix-blend-mode: overlay;
+  pointer-events: none;
+}
+
+.work-section > :not(canvas) {
+  position: relative; /* above the grain */
+}
+
+/* Pink "A" shape, overlapping the bottom of the hero */
+.section-a-shader {
+  --a-size: clamp(20rem, 43vw, 52rem);
+  position: absolute;
+  top: calc(var(--a-size) * -0.48);
+  left: calc(3.3vw - var(--a-size) * 0.12);
+  z-index: 1;
+  /* !important: the shader library writes inline pixel sizes on the canvas */
+  width: var(--a-size) !important;
+  height: var(--a-size) !important;
+  pointer-events: none;
+}
+
+/* X and K shapes at the bottom of the section. Anchored to the bottom so
+   they stay put however long the text above gets. */
+.work-shape {
+  position: absolute;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.work-shape--x {
+  left: -1.25vw;
+  bottom: -8vw;
+  /* !important: the shader library writes inline pixel sizes on the canvas */
+  width: 53vw !important;
+  height: 53vw !important;
+}
+
+.work-shape--k {
+  left: 46vw;
+  bottom: -9vw;
+  width: 43vw !important;
+  height: 62vw !important;
+  rotate: 7.49deg;
+}
+
+.work-section__heading {
+  align-self: flex-end;
+  margin: 0 0 clamp(var(--space-4), 7.25vw, 7.75rem);
+  font-family: "Jelink", var(--font-geist);
+  font-size: clamp(4rem, 10.5vw, 11.25rem);
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: 0;
+  color: var(--work-ink);
+  text-box: trim-both cap alphabetic;
+  white-space: nowrap;
+}
+
+.work-section__divider {
+  width: 100%;
+  margin: 0;
+  border: 0;
+  border-top: 1px solid var(--work-rule);
+}
+
+.work-project {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 1.75rem var(--space-4);
+}
+
+.work-project--pink { --accent: #fb64b6; }
+.work-project--yellow { --accent: #ffb900; }
+.work-project--blue { --accent: #00bcff; }
+
+.work-project__media {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--space-4);
+}
+
+.work-project__image {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 507 / 490;
+  object-fit: cover;
+  border-radius: 8px;
+  background: #ececee;
+}
+
+.work-project__meta,
+.work-project__body {
+  grid-column: span 3;
+  padding-top: var(--space-10);
+}
+
+.work-project__title {
+  margin: 0 0 0.625rem;
+  font-family: var(--font-geist);
+  font-size: clamp(var(--font-size-2xl), 1.85vw, 2rem); /* 32px */
+  font-weight: var(--font-weight-medium);
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+  color: var(--work-ink);
+}
+
+.work-project__date {
+  margin: 0;
+  font-family: var(--font-geist);
+  font-size: clamp(var(--font-size-base), 1.16vw, var(--font-size-xl)); /* 20px */
+  font-weight: var(--font-weight-medium);
+  line-height: 1.2;
+  color: var(--work-muted);
+  font-variant-numeric: tabular-nums;
+}
+
+.work-project__body {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: var(--space-10);
+}
+
+.work-project__summary {
+  margin: 0;
+  font-family: var(--font-geist);
+  font-size: var(--font-size-base);
+  line-height: 1.6;
+  color: var(--work-body);
+  text-wrap: pretty;
+}
+
+.work-project a.work-project__link {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  border-radius: 100vmax;
+  font-family: var(--font-mono);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-medium);
+  line-height: 1.6;
+  color: var(--work-ink);
+  text-decoration: none;
+}
+
+.work-project__arrow {
+  width: 2.125rem; /* 34px */
+  height: 2.125rem;
+  padding: 0.125rem;
+  color: var(--accent);
+  transition: transform 220ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+@media (hover: hover) {
+  .work-project__link:hover .work-project__arrow {
+    transform: translate(2px, -2px);
+  }
+}
+
+/* Hand-drawn underline on hover (js/draw-underline.js), in the project colour */
+.text-draw__label {
+  position: relative;
+  display: inline-block;
+}
+
+.text-draw__box {
+  color: var(--accent);
+  width: 100%;
+  height: .625em;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  pointer-events: none;
+}
+
+.text-draw__box svg {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  overflow: visible !important;
+}
+
+.work-project__link:focus-visible {
+  outline: 2px solid var(--work-ink);
+  outline-offset: 4px;
+}
+
+/* Smaller screens: one big image on top, two smaller ones below */
+@media (max-width: 75rem) {
+  .work-project__media {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .work-project__image:first-child {
+    grid-column: 1 / -1;
+  }
+}
+
+/* Tablet and down: copy stacks under the images */
+@media (max-width: 56.25rem) {
+  .work-project__meta,
+  .work-project__body {
+    grid-column: 1 / -1;
+  }
+
+  .work-project__body {
+    padding-top: 0;
+  }
+}
+
+/* Phones: the heading drops below the A, and the first image leads full width */
+@media (max-width: 37.5rem) {
+  .work-section {
+    padding-top: 10rem;
+  }
+
+  .work-section .section-a-shader {
+    left: calc(var(--space-4) - var(--a-size) * 0.12);
+  }
+
+  .work-section__heading {
+    margin-bottom: var(--space-2);
+  }
+
+  .work-project__media {
+    gap: var(--space-2);
+  }
+
+  .work-project__meta {
+    padding-top: var(--space-2);
+  }
+}
+
+/* -------------------------------------------------------------------------- */
+/* Footer: a sky the page fades into, with clouds you can push around          */
+/* -------------------------------------------------------------------------- */
+
+/* Fades from the page background into sky blue, with clouds drawn on top
+   by js/cloud-atlas.js */
+.site-footer {
+  --footer-ink: #0b2a3c;
+  --footer-focus: #024a70;
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  min-height: clamp(22rem, 36vw, 38rem);
+  background: linear-gradient(
+    to bottom,
+    #fafafa 0%,
+    #eef9fd 18%,
+    #d4f3fd 40%,
+    #b9f0fe 65%,
+    #a7effe 100%
+  );
+}
+
+.footer-clouds {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.site-footer__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.25rem;
+  padding: clamp(24px, 3vw, 40px) clamp(var(--space-4), 5.1vw, 5.5rem);
+}
+
+@media (min-width: 640px) {
+  .site-footer__inner {
+    flex-direction: row;
+  }
+}
+
+/* Copyright line */
+.footer-legal {
+  margin: 0;
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--footer-ink);
+}
+
+.site-footer__social {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+/* Round glass social buttons */
+.site-footer .social-orb {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border: 1px solid rgb(255 255 255 / 0.7);
+  border-radius: 999px;
+  background-color: rgb(255 255 255 / 0.45);
+  -webkit-backdrop-filter: blur(10px) saturate(1.3);
+  backdrop-filter: blur(10px) saturate(1.3);
+  box-shadow: 0 2px 8px -2px rgb(11 42 60 / 0.12);
+  color: var(--footer-ink);
+  /* slight overshoot so the press feels bouncy */
+  scale: 1;
+  transition:
+    scale 260ms cubic-bezier(0.34, 1.56, 0.64, 1),
+    background-color 180ms cubic-bezier(0.16, 1, 0.3, 1),
+    border-color 180ms cubic-bezier(0.16, 1, 0.3, 1),
+    box-shadow 180ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.site-footer .social-orb svg {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.site-footer .social-orb:active {
+  scale: 0.86;
+  transition-duration: 90ms;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .site-footer .social-orb:hover {
+    scale: 1.14;
+    border-color: rgb(255 255 255 / 0.95);
+    background-color: rgb(255 255 255 / 0.7);
+    box-shadow: 0 6px 16px -6px rgb(11 42 60 / 0.25);
+  }
+
+  .site-footer .social-orb:hover:active {
+    scale: 0.86;
+  }
+}
+
+/* Pressed / focused */
+.site-footer .social-orb:active,
+.site-footer .social-orb:focus-visible {
+  border-color: rgb(255 255 255);
+  background-color: rgb(255 255 255 / 0.85);
+  box-shadow:
+    0 0 0 4px rgb(255 255 255 / 0.4),
+    0 0 24px -2px rgb(255 255 255 / 0.95);
+}
+
+.site-footer .social-orb:focus-visible {
+  outline: 2px solid var(--footer-focus);
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .site-footer .social-orb,
+  .site-footer .social-orb:hover,
+  .site-footer .social-orb:active {
+    scale: 1;
+    transition: none;
+  }
+}
+
 .nav-branding {
   display: flex;
   flex-direction: column;
@@ -630,12 +1337,17 @@ a.nav-link-primary:hover {
   /* TODO: Adjust the width of the logo on mobile devices here */
 }
 
+/* Wordmark logo (wide, not square) — work page */
+.work-page .nav-branding-logo {
+  width: 6rem;
+}
+
 .hero-headline-wrapper {
   width: 100%;
   display: flex;
   flex-direction: column;
   flex: 1;
-  gap: 3rem;
+  gap: var(--space-12);
   align-items: center;
   justify-content: center;
   padding: var(--padding-small);
@@ -643,7 +1355,7 @@ a.nav-link-primary:hover {
 }
 
 .hero-icon {
-  font-size: 4rem;
+  font-size: var(--font-size-6xl);
 }
 
 .hero-footer {
@@ -686,7 +1398,7 @@ a.nav-link-primary:hover {
   background: var(
     --color-bg-full-width
   ); /* Background color for full-width sections */
-  margin-bottom: 1rem;
+  margin-bottom: var(--space-4);
 }
 
 .full-width-headline-wrapper {
@@ -707,11 +1419,11 @@ a.nav-link-primary:hover {
   align-items: center;
   justify-content: center;
   padding: var(--padding-small);
-  margin-bottom: 1rem;
+  margin-bottom: var(--space-4);
 }
 .section-item {
   padding: var(--padding-small);
-  margin: 1rem;
+  margin: var(--space-4);
 }
 
 /* 
@@ -757,15 +1469,135 @@ a.nav-link-primary:hover {
   width: 100%;
 }
 
-/* Defining the work page grid */
+/* Defining the work page grid: 1 column on mobile, 2 columns from 768px up */
 .grid {
   display: grid;
-  grid-template-columns: repeat(
-    auto-fit,
-    minmax(300px, 1fr)
-  ); /* Creates a responsive grid */
-  grid-gap: 1rem; /* Space between grid items */
-  /* The auto-fit and minmax() function help ensure responsiveness across screen sizes */
+  grid-template-columns: 1fr;
+  grid-gap: var(--grid-gap);
+}
+
+/* Each tile: a fixed-shape box. Drop an <img>, <video> or <object> into the
+   figure (or restyle the placeholder) and it fills the box. */
+.work-page-grid-item figure {
+  aspect-ratio: var(--grid-ratio);
+  border-radius: var(--grid-radius);
+  overflow: hidden;
+}
+
+.work-page-grid-item figure > * {
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  object-fit: cover;
+}
+
+/* Blank tile — edit or replace in work.html */
+.work-placeholder {
+  background: var(--grid-placeholder);
+}
+
+.work-page-grid-item .overlay {
+  border-radius: var(--grid-radius);
+}
+
+/* Stacking work cards: each card slides over the previous one on scroll.
+   Don't put display:flex on the parent of .stacking-cards__collection. */
+.stacking-cards__collection {
+  width: 100%;
+}
+
+.stacking-cards__list {
+  display: flex;
+  flex-flow: column;
+}
+
+.stacking-cards__item {
+  position: relative;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 100vh;
+  margin-top: calc(var(--space-4) * -1);
+  padding-top: var(--space-20);
+  padding-bottom: var(--space-20);
+  border-top-left-radius: var(--corner-16);
+  border-top-right-radius: var(--corner-16);
+  color: var(--color-text-card);
+}
+
+.stacking-cards__item.is--one {
+  background-color: var(--color-bg-card-1);
+}
+
+.stacking-cards__item.is--two {
+  background-color: var(--color-bg-card-2);
+}
+
+.stacking-cards__item.is--three {
+  background-color: var(--color-bg-card-3);
+}
+
+.stacking-cards__item.is--four {
+  background-color: var(--color-bg-card-4);
+}
+
+.stacking-cards__item.is--five {
+  background-color: var(--color-bg-card-5);
+}
+
+.stacking-cards__item.is--six {
+  background-color: var(--color-bg-card-6);
+}
+
+.stacking-cards__item-h {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: var(--font-size-fluid-card);
+  font-weight: var(--font-weight-extrabold);
+  letter-spacing: var(--tracking-tight);
+  line-height: var(--leading-compact);
+  text-align: center;
+  text-transform: uppercase;
+  color: inherit;
+}
+
+.stacking-card__heading-faded {
+  opacity: 0.5;
+}
+
+.stacking-cards__item-img {
+  width: var(--size-card-media);
+  aspect-ratio: 1;
+  margin-top: calc(var(--space-1) * -1);
+  border-radius: var(--corner-12);
+  background: var(--color-bg-card-media); /* blank until you add an image */
+  object-fit: cover;
+}
+
+.stacking-cards__item-top {
+  position: absolute;
+  top: var(--space-10);
+  left: var(--space-10);
+  right: var(--space-10);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.stacking-card__top-span {
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-medium);
+}
+
+/* Makes the whole card a link to its project page */
+.stacking-cards__item-link {
+  position: absolute;
+  inset: 0;
+  border-top-left-radius: inherit;
+  border-top-right-radius: inherit;
 }
 
 /* Individual Work Grid Item */
@@ -817,6 +1649,7 @@ a.nav-link-primary:hover {
 /* Optional container for future overlay customization */
 .project-details-overlay {
   /* Placeholder: no custom styles yet */
+  background: var(--brand-100);
 }
 
 /*
@@ -843,7 +1676,7 @@ a.nav-link-primary:hover {
 
 /* Individual navigation item styles */
 .sidebar-nav-item {
-  margin-bottom: 1rem; /* Space between each navigation item */
+  margin-bottom: var(--space-4); /* Space between each navigation item */
 }
 
 /* 
@@ -866,7 +1699,7 @@ a.nav-link-primary:hover {
 .about-grid {
   display: grid; /* Set to grid layout */
   grid-template-columns: 1fr; /* Single column layout for mobile and smaller screens */
-  grid-gap: 3rem; /* Space between grid items */
+  grid-gap: var(--space-12); /* Space between grid items */
   background: var(--color-bg-about); /* Background color for the section */
   padding: var(--padding-small); /* Padding around the grid */
   flex: 1; /* Flex-grow to take up available space */
@@ -902,7 +1735,7 @@ a.nav-link-primary:hover {
 .footer-global {
   display: grid;
   grid-template-columns: 1fr; /* Single column layout */
-  grid-gap: 3rem; /* Consistent spacing between sections */
+  grid-gap: var(--space-12); /* Consistent spacing between sections */
   min-height: auto; /* Allows footer to expand based on content, no fixed height */
   background: var(--color-bg-footer); /* Using CSS variable for theming */
   padding: var(--padding-small); /* Internal spacing */
@@ -942,16 +1775,16 @@ a.nav-link-primary:hover {
 /* 📜 Reusable footer list styles */
 /* ------------------------------- */
 .footer-list {
-  margin-bottom: 2rem;
+  margin-bottom: var(--space-8);
 }
 .footer-awards-list {
-  margin-bottom: 2rem;
+  margin-bottom: var(--space-8);
 }
 .footer-works-list {
-  margin-bottom: 2rem;
+  margin-bottom: var(--space-8);
 }
 .footer-socials-list {
-  margin-bottom: 2rem;
+  margin-bottom: var(--space-8);
 }
 
 /* -------------------------------------------------------------------------- */
@@ -961,7 +1794,7 @@ a.nav-link-primary:hover {
 /* Apply this class to ALL list items (awards, works, social, bullets) */
 .footer-item {
   line-height: 1.2; /* Consistent line height for footer items to improve spacing */
-  margin-bottom: 0.25rem;
+  margin-bottom: var(--space-1);
 }
 
 /* ------------------------------- */
@@ -972,13 +1805,13 @@ a.nav-link-primary:hover {
 .footer-bullet-list {
   list-style-type: square;
   list-style-position: inside;
-  margin-bottom: 1rem;
+  margin-bottom: var(--space-4);
 }
 
 .footer-bullet-list .footer-item {
-  margin-bottom: 0.25rem;
-  padding-left: 0.5rem;
-  text-indent: -0.5rem; /* Pulls text back toward bullet */
+  margin-bottom: var(--space-1);
+  padding-left: var(--space-2);
+  text-indent: calc(var(--space-2) * -1); /* Pulls text back toward bullet */
 }
 
 /* -------------------------------------------------------------------------- */
@@ -991,15 +1824,15 @@ a.nav-link-primary:hover {
 }
 
 .footer-fineprint {
-  font-size: 0.875rem; /* Slightly smaller for disclaimers or captions */
+  font-size: var(--font-size-sm); /* Slightly smaller for disclaimers or captions */
   color: var(--color-text-secondary); /* Themed color */
 }
 
 /* New item badges */
 .badge-new {
   background: var(--color-highlight);
-  padding: 0.1rem;
-  font-size: 0.8125rem;
+  padding: var(--space-0-5);
+  font-size: var(--font-size-sm);
   text-transform: uppercase;
 }
 
@@ -1044,7 +1877,7 @@ a.nav-link-primary:hover {
 /* Container for the project content with full-width display */
 .project-full-width {
   width: 100%;
-  margin-bottom: 2rem;
+  margin-bottom: var(--space-8);
 }
 
 /* Sidebar Styles */
@@ -1063,7 +1896,7 @@ a.nav-link-primary:hover {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  margin-bottom: 1rem; /* Space below the image */
+  margin-bottom: var(--space-4); /* Space below the image */
 }
 
 /* Container for project description */
@@ -1075,7 +1908,7 @@ a.nav-link-primary:hover {
   background: var(--color-bg-project-description);
   padding: var(--padding-small);
   width: 100%;
-  margin-bottom: 1rem; /* Space below the description */
+  margin-bottom: var(--space-4); /* Space below the description */
 }
 
 /* Column styles for one-column, two-column and four-column layouts (mobile-first) */
@@ -1092,7 +1925,7 @@ a.nav-link-primary:hover {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 1rem;
+  margin-bottom: var(--space-4);
 }
 /* Project details section */
 .project-details {
@@ -1132,12 +1965,12 @@ a.nav-link-primary:hover {
 /* ------------------------------- */
 
 .project-info-list {
-  margin-bottom: 1rem;
+  margin-bottom: var(--space-4);
 }
 .project-item {
-  font-size: 1rem;
+  font-size: var(--font-size-base);
   line-height: 1.2; /* Consistent line height for project items to improve spacing */
-  margin-bottom: 0.25rem;
+  margin-bottom: var(--space-1);
 }
 
 /*
@@ -1160,7 +1993,7 @@ a.nav-link-primary:hover {
 .list-item {
   line-height: 1.3;
   list-style-type: disc;
-  margin-left: 1.2rem;
+  margin-left: var(--space-5);
 }
 
 /* 
@@ -1187,11 +2020,11 @@ a.nav-link-primary:hover {
 .holding-page-animation {
   width: 10rem;
   margin: 0 auto;
-  margin-bottom: 3rem;
+  margin-bottom: var(--space-12);
 }
 
 .holding-page-title {
-  font-size: 1.5rem;
+  font-size: var(--font-size-2xl);
   color: var(--color-text-holding-title);
 }
 
@@ -1204,7 +2037,7 @@ a.nav-link-primary:hover {
 }
 
 .holding-page-copyright {
-  font-size: 0.8rem; /* Smaller font size for copyright text */
+  font-size: var(--font-size-xs); /* Smaller font size for copyright text */
   color: var(
     --color-text-holding-footer
   ); /* Custom color for the footer text */
@@ -1298,6 +2131,11 @@ to keep your styles reusable and consistent.
 
 @media (min-width: 768px) {
   /* TODO: Adjust  layout for tablets */
+
+  /* Work Page Grid: two columns */
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 /* Large devices (desktops, 992px and up) */
@@ -1318,19 +2156,19 @@ to keep your styles reusable and consistent.
     width: 66.666%;
   }
   .holding-page-title {
-    font-size: 2rem;
+    font-size: var(--font-size-3xl);
   }
 
   h1 {
-    font-size: 4.275rem;
+    font-size: var(--font-size-7xl);
   }
 
   h2 {
-    font-size: 2.25rem;
+    font-size: var(--font-size-4xl);
   }
 
   h3 {
-    font-size: 1.625rem;
+    font-size: var(--font-size-2xl);
   }
 
   .h1-full-width,
@@ -1378,6 +2216,10 @@ to keep your styles reusable and consistent.
     /* TODO: Adjust the width of the logo on large devices here. */
   }
 
+  .work-page .nav-branding-logo {
+    width: 8.5rem;
+  }
+
   .hero {
     min-height: 100vh;
   }
@@ -1396,14 +2238,7 @@ to keep your styles reusable and consistent.
   }
 
   .error-404 {
-    font-size: 5rem;
-  }
-
-  /* Work Page Grid for Large Devices */
-
-  .grid {
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-    grid-gap: 1rem;
+    font-size: var(--font-size-7xl);
   }
 
   /* Grayscale filter with full-colour on hover and tap */
@@ -1445,8 +2280,8 @@ to keep your styles reusable and consistent.
     height: 80vh;
     position: -webkit-sticky;
     position: sticky;
-    top: 8rem;
-    padding-right: 2rem;
+    top: var(--space-32);
+    padding-right: var(--space-8);
   }
 
   /* Main Project Image Area on Large Devices */
@@ -1478,7 +2313,7 @@ to keep your styles reusable and consistent.
   }
 
   .arrow {
-    padding-right: 1rem;
+    padding-right: var(--space-4);
   }
 
   /* About Page Grid for Large Devices */
@@ -1544,7 +2379,7 @@ to keep your styles reusable and consistent.
     height: 80vh;
     position: -webkit-sticky;
     position: sticky;
-    top: 1rem;
+    top: var(--space-4);
   }
 
   /* Main Work Area on Large Devices */
@@ -1558,20 +2393,12 @@ to keep your styles reusable and consistent.
 
 @media (min-width: 1200px) {
   /* TODO: Add styles here for X-large devices. */
-
-  .grid {
-    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
-  }
 }
 
 /* XX-Large devices (larger desktops, 1400px and up) */
 
 @media (min-width: 1400px) {
   /* TODO: Add styles here for XX-large devices. */
-
-  .grid {
-    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
-  }
 }
 
 /*
@@ -1589,3 +2416,13 @@ That’s a wrap, class! 🧑‍🎓✨
 /* 🎉 You made it to the end! */
 /* This is a great place to celebrate your progress, add Easter eggs, or leave notes for your future self. */
 /* Happy coding, and don’t forget to take breaks, stay hydrated, and share your work proudly. 💻✨🎨 */
+
+/* Clip the X shape where it hangs past the bottom of the page */
+.page-clip {
+  overflow: clip;
+}
+
+/* No focus outline on mouse click, only keyboard */
+.work-page a:focus:not(:focus-visible) {
+  outline: none;
+}
