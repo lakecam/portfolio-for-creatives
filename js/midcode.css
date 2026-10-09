@@ -1,0 +1,46 @@
+/*
+ * midcode.css: written by midcode (https://midcode.app) from the "mid:" classes in this project's code.
+ * Don't edit it by hand: it's rewritten whenever those classes change. The theme is in .midcode/theme.css.
+ */
+/*! tailwindcss v4.3.3 | MIT License | https://tailwindcss.com */
+@layer mid-properties;
+@layer mid-theme, mid-base, mid-components, mid-utilities;
+@layer mid-theme {
+  :root, :host {
+    --mid-spacing: 0.25rem;
+  }
+}
+@layer mid-utilities {
+  .mid\:text-\[24px\] {
+    font-size: 24px !important;
+  }
+  .mid\:leading-24 {
+    --tw-leading: calc(var(--mid-spacing) * 24) !important;
+    line-height: calc(var(--mid-spacing) * 24) !important;
+  }
+}
+@property --tw-leading {
+  syntax: "*";
+  inherits: false;
+}
+@layer mid-properties {
+  @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
+    *, ::before, ::after, ::backdrop {
+      --tw-leading: initial;
+    }
+  }
+}
+
+.mid-base, .mid-base *, .mid-base::before, .mid-base::after, .mid-base ::before, .mid-base ::after { box-sizing: border-box; margin: 0; padding: 0; border: 0 solid; }
+.mid-base:is(h1, h2, h3, h4, h5, h6), .mid-base :is(h1, h2, h3, h4, h5, h6) { font-size: inherit; font-weight: inherit; }
+.mid-base:is(a), .mid-base :is(a) { color: inherit; text-decoration: inherit; }
+.mid-base:is(b, strong), .mid-base :is(b, strong) { font-weight: bolder; }
+.mid-base:is(ol, ul, menu), .mid-base :is(ol, ul, menu) { list-style: none; }
+.mid-base:is(img, svg, video, canvas, audio, iframe, embed, object), .mid-base :is(img, svg, video, canvas, audio, iframe, embed, object) { display: block; vertical-align: middle; }
+.mid-base:is(img, video), .mid-base :is(img, video) { max-width: 100%; height: auto; }
+.mid-base:is(button, input, select, optgroup, textarea), .mid-base :is(button, input, select, optgroup, textarea) { font: inherit; font-feature-settings: inherit; font-variation-settings: inherit; letter-spacing: inherit; color: inherit; border-radius: 0; background-color: transparent; opacity: 1; }
+.mid-base:is(button, [role="button"]), .mid-base :is(button, [role="button"]) { cursor: pointer; }
+.mid-base:is(textarea), .mid-base :is(textarea) { resize: vertical; }
+.mid-base:is(table), .mid-base :is(table) { text-indent: 0; border-color: inherit; border-collapse: collapse; }
+.mid-base:is(hr), .mid-base :is(hr) { height: 0; color: inherit; border-top-width: 1px; }
+.mid-base ::placeholder { opacity: 1; color: color-mix(in oklab, currentcolor 50%, transparent); }

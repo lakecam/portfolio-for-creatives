@@ -17,6 +17,7 @@
  */
 
 @import url("./primitive.css");
+@import url("../js/midcode.css");
 
 :root {
   /*Typefaces*/

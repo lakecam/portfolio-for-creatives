@@ -1,4 +1,5 @@
 import { createShader } from "https://esm.sh/shaders@3.2.475/js";
+//import './midcode.css'
 
 const canvas = document.querySelector(".hero-shader");
 const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
