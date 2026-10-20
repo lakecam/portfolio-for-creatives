@@ -1,76 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Free Creative Portfolio Template: October 2025 Version | Error Page</title>
-    <meta name="description" content="When writing a meta description, keep it between 140 and 160 characters so Google can display your entire message. Don’t forget to include your keyword!" />
+    <title>Lake Cam | Page Not Found</title>
+    <meta name="description" content="This page doesn't exist. Head back to Lake Cam's portfolio to see the work." />
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/svg+xml" href="assets/branding-images/favicon.svg" />
-    <link rel="icon" type="image/png" href="assets/branding-images/favicon.png" />
+    <!-- Paths start with / so this page still works at any missing address -->
+    <link rel="icon" type="image/svg+xml" href="/assets/branding-images/favicon.svg" />
+    <link rel="icon" type="image/png" href="/assets/branding-images/favicon.png" />
     <meta property="og:image" content="screenshot.jpg" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Catamaran:wght@100..900&family=Figtree:wght@300..900&family=Geist:wght@100..900&family=Geist+Mono:ital,wght@0,100..900;1,100..900&display=swap" />
-    <link rel="stylesheet" href="./styles/primitive.css" />
-    <link rel="stylesheet" href="./styles/style.css" />
+    <link rel="stylesheet" href="/styles/primitive.css" />
+    <link rel="stylesheet" href="/styles/style.css" />
+    <link rel="stylesheet" href="/styles/falling-letters.css" />
   </head>
 
-  <body class="error-page">
-    <section class="hero">
+  <body class="work-page error-page">
+    <!-- 404: the letters of the logo fall in with js/falling-letters.js -->
+    <section class="hero section-resource">
+      <!-- Same navbar as the home page (no tab is current here) -->
       <header class="hero-header">
         <ul class="nav-branding">
-          <li><a href="index.html#work" class="custom-navigation">Work</a></li>
+          <!-- Logo (standalone LI) -->
           <li class="nav-branding-logo">
-            <a href="index.html"><img src="assets/branding-images/logo.svg" alt="Your portfolio logo" /></a>
+            <a href="/">
+              <img src="/assets/branding-images/lake.svg" alt="Lake Cam" />
+            </a>
           </li>
-          <li><a href="about.html" class="custom-navigation">About</a></li>
+          <li class="nav-branding-item">
+            <ul class="nav-branding-group">
+              <li class="nav-branding-item">
+                <a href="/" class="nav-link-primary">Home</a>
+              </li>
+              <li class="nav-branding-item">
+                <a href="/#work" class="nav-link-primary">Work</a>
+              </li>
+              <li class="nav-branding-item">
+                <a href="/about.html" class="nav-link-primary">About</a>
+              </li>
+            </ul>
+          </li>
         </ul>
       </header>
-      <div class="error-headline-wrapper">
-        <a href="index.html#work"> <object type="image/svg+xml" data="assets/temp/boy-character-floating.svg" class="error-page-animation"></object></a>
-        <h2 class="error-page-title error-404">404 File Not Found</h2>
-        <h3>Create a custom error page that matches your personal brand.</h3>
-        <p>The best 404 pages have become an art in themselves. Clever 404 pages almost act like 🐇 Easter eggs &mdash; hidden treats buried in a site &mdash; and that feeling of having found something unique can overcome the user's frustration of not getting to the page they wanted. See: <a href="https://www.creativebloq.com/web-design/best-404-pages-812505"> The best 404 pages for clever web design inspiration </a> and <a href="https://www.svgator.com/blog/404-page-error-animation-examples/">50+ 404 Page Error Animations to Aid Visitor Retention</a>.</p>
+      <h1 class="error-code" aria-label="404, page not found">404</h1>
+      <div class="canvas-matter" aria-hidden="true">
+        <div class="canvas-matter__before"></div>
+        <div id="canvas-target" class="canvas-matter__target"></div>
       </div>
+      <a href="/" class="error-home-link">Back to home</a>
     </section>
-    <ul class="footer-global">
-      <li class="footer-tagline">
-        <h2>Let's Connect!</h2>
-        <p>Feel free to reach out with any questions, collaborations, or just to chat about design.</p>
-      </li>
 
-      <li class="footer-highlights">
-        <h2>Awards & Recognition</h2>
-        <ul class="footer-awards-list">
-          <li class="footer-item"><a href="#">Dean’s List – Year or Term</a></li>
-          <li class="footer-item"><a href="#">Your Award – Name of Student Award and Year</a></li>
-          <li class="footer-item"><a href="#">Honourable Mention – Project or Competition Name</a></li>
-          <li class="footer-item"><a href="#">Other Recognition or Accolade</a></li>
-        </ul>
-      </li>
-
-      <li class="footer-contact-social">
-        <h2>Contact & Social</h2>
-        <ul class="footer-socials-list">
-          <li class="footer-item"><a href="#">Insta</a></li>
-          <li class="footer-item"><a href="#">LinkedIn</a></li>
-          <li class="footer-item"><a href="#">Behance</a></li>
-        </ul>
-      </li>
-
-      <li class="footer-full-width">
-        <p><a href="#top">Smooth scroll to the top</a></p>
-        <p class="footer-fineprint">
-          &copy; <span id="copyright-years">2020-</span>. Hand crafted with
-          <span class="heart">❤</span>
-          by James Neufeld.
-        </p>
-        <script>
-          document.getElementById("copyright-years").textContent += new Date().getFullYear();
-        </script>
-      </li>
-    </ul>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/matter-js/0.19.0/matter.min.js"></script>
+    <script src="/js/falling-letters.js"></script>
   </body>
 </html>
