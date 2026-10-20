@@ -1,0 +1,92 @@
+/* ----------------------------------------------------------------
+   Logo Loader
+   ----------------------------------------------------------------
+   A green screen covers the page while it loads. The Lake logo
+   tilts back into a stack of copies, smashes flat, bounces, and
+   then the green wipes up to show the page.
+
+   Related files:
+     • JS:  js/logo-loader.js
+---------------------------------------------------------------- */
+
+/* Full-screen cover that sits on top of everything */
+.logo-loader {
+  position: fixed;
+  inset: 0%;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  perspective: 40em;
+}
+
+/* Green background that wipes up at the end */
+.logo-loader-bg {
+  position: absolute;
+  inset: 0%;
+  z-index: 0;
+  background-color: #00cb5b;
+  transform-origin: 50% 0%;
+}
+
+/* The logo and its copies stack in the same grid cell */
+.logo-loader-stack {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  width: 12em;
+  transform-style: preserve-3d;
+}
+
+.logo-loader-logo {
+  position: relative;
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.logo-loader-logo-img {
+  display: block;
+  width: 100%;
+  height: auto;
+  visibility: hidden; /* The coloured mask below draws the logo instead */
+}
+
+/* Paints the logo in one dark colour, using the SVG as a mask */
+.logo-loader-logo::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: #131419;
+  -webkit-mask: url("../assets/branding-images/lake.svg") center / contain no-repeat;
+  mask: url("../assets/branding-images/lake.svg") center / contain no-repeat;
+}
+
+/* Progress bar near the bottom of the screen */
+.logo-loader-track {
+  position: absolute;
+  bottom: 3.5em;
+  left: 0%;
+  right: 0%;
+  z-index: 1;
+  width: 8em;
+  height: 0.25em;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: hidden;
+  border-radius: 100em;
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+.logo-loader-bar {
+  position: absolute;
+  inset: 0%;
+  background-color: #ffffff;
+  transform-origin: 0% 50%;
+  transform: scaleX(0);
+}
+
+/* Starts hidden so nothing flashes before the script takes over */
+[data-logo-loader-reset] {
+  opacity: 0;
+}

@@ -36,9 +36,31 @@
     <link rel="stylesheet" href="./styles/tab-glow.css" />
     <link rel="stylesheet" href="./styles/draw-underline.css" />
     <link rel="stylesheet" href="./styles/cloud-atlas.css" />
+    <link rel="stylesheet" href="./styles/logo-loader.css" />
   </head>
 
   <body class="work-page" id="top">
+    <!-- Loading screen: covers the page until js/logo-loader.js plays it out -->
+    <div data-logo-loader-init="" aria-hidden="true" class="logo-loader">
+      <div data-logo-loader-bg="" class="logo-loader-bg"></div>
+      <div
+        data-logo-loader-stack=""
+        data-logo-loader-reset=""
+        class="logo-loader-stack"
+      >
+        <div data-logo-loader-logo="" class="logo-loader-logo">
+          <img
+            src="assets/branding-images/lake.svg"
+            alt=""
+            class="logo-loader-logo-img"
+          />
+        </div>
+      </div>
+      <div data-logo-loader-track="" class="logo-loader-track">
+        <div data-logo-loader-bar="" class="logo-loader-bar"></div>
+      </div>
+    </div>
+
     <!-- Clips the shapes that hang off the bottom of the page -->
     <div class="page-clip">
       <section class="hero gradient-animation">
@@ -404,6 +426,7 @@
     <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/gsap.min.js"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/DrawSVGPlugin.min.js"></script>
     <script defer src="./js/draw-underline.js"></script>
+    <script defer src="./js/logo-loader.js"></script>
     <script>
       // Hold project videos on their poster frame for reduced motion,
       // and only play them while they're on screen
