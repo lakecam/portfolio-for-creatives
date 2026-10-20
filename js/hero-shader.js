@@ -221,7 +221,7 @@ const startWhenNear = (target, start) => {
 };
 
 // X and K shapes at the bottom of the work section
-const kCanvas = document.querySelector(".work-shape--k");
+const kCanvas = document.querySelector(".work-shape-k");
 
 if (kCanvas) {
   startWhenNear(kCanvas, () =>
@@ -252,7 +252,7 @@ if (kCanvas) {
   );
 }
 
-const xCanvas = document.querySelector(".work-shape--x");
+const xCanvas = document.querySelector(".work-shape-x");
 
 if (xCanvas) {
   startWhenNear(xCanvas, () =>

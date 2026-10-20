@@ -1,0 +1,64 @@
+/* ----------------------------------------------------------------
+   Active Tab Glow
+   ----------------------------------------------------------------
+   A streak of light travels around the edge of the active nav tab.
+   ::before is the sharp ring and ::after is a blurred copy for the glow.
+   It holds still for people who prefer reduced motion.
+---------------------------------------------------------------- */
+
+@property --tab-glow-angle {
+  syntax: "<angle>";
+  inherits: true;
+  initial-value: 0deg;
+}
+
+.work-page .hero a.nav-link-primary[aria-current="page"]::before,
+.work-page .hero a.nav-link-primary[aria-current="page"]::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  padding: 1px;
+  border-radius: inherit;
+  background: conic-gradient(
+    from var(--tab-glow-angle),
+    rgb(170 240 255 / 0) 0deg,
+    rgb(170 240 255 / 0) 180deg,
+    rgb(170 240 255 / 0.6) 270deg,
+    rgb(255 255 255) 330deg,
+    rgb(170 240 255 / 0) 360deg
+  );
+  /* Masks out the middle so only the ring around the edge shows */
+  -webkit-mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask:
+    linear-gradient(#000 0 0) content-box exclude,
+    linear-gradient(#000 0 0);
+  pointer-events: none;
+}
+
+.work-page .hero a.nav-link-primary[aria-current="page"]::after {
+  inset: -4px;
+  padding: 5px;
+  filter: blur(6px);
+  opacity: 0.85;
+}
+
+.work-page .hero a.nav-link-primary[aria-current="page"] {
+  animation: tab-glow-orbit 4.5s linear infinite;
+}
+
+@keyframes tab-glow-orbit {
+  to {
+    --tab-glow-angle: 360deg;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .work-page .hero a.nav-link-primary[aria-current="page"] {
+    animation: none;
+    --tab-glow-angle: 45deg;
+  }
+}

@@ -1,0 +1,63 @@
+/* ----------------------------------------------------------------
+   Shader Shapes
+   ----------------------------------------------------------------
+   Sizes and places the shader canvases: the hero background, the
+   pink A, and the X and K at the bottom of the work section.
+
+   Related files:
+     • JS:  js/hero-shader.js
+---------------------------------------------------------------- */
+
+/* Hero background */
+.hero-shader {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  /* !important is needed because the shader script sets its own pixel size */
+  width: 100% !important;
+  height: 100% !important;
+}
+
+/* Pink "A" shape, overlapping the bottom of the hero */
+.section-a-shader {
+  --a-size: clamp(20rem, 43vw, 52rem);
+  position: absolute;
+  top: calc(var(--a-size) * -0.48);
+  left: calc(3.3vw - var(--a-size) * 0.12);
+  z-index: 1;
+  /* !important is needed because the shader script sets its own pixel size */
+  width: var(--a-size) !important;
+  height: var(--a-size) !important;
+  pointer-events: none;
+}
+
+/* Phones: the A moves in line with the page edge */
+@media (max-width: 37.5rem) {
+  .work-section .section-a-shader {
+    left: calc(1rem - var(--a-size) * 0.12);
+  }
+}
+
+/* X and K shapes at the bottom of the work section. They're anchored to the
+   bottom so they stay put however long the text above gets. */
+.work-shape {
+  position: absolute;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.work-shape-x {
+  left: -1.25vw;
+  bottom: -8vw;
+  /* !important is needed because the shader script sets its own pixel size */
+  width: 53vw !important;
+  height: 53vw !important;
+}
+
+.work-shape-k {
+  left: 46vw;
+  bottom: -9vw;
+  width: 43vw !important;
+  height: 62vw !important;
+  rotate: 7.49deg;
+}

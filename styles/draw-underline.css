@@ -1,0 +1,31 @@
+/* ----------------------------------------------------------------
+   Hand-Drawn Underline
+   ----------------------------------------------------------------
+   A scribbled line draws in under See work on hover, in the
+   project's accent colour.
+
+   Related files:
+     • JS:  js/draw-underline.js
+---------------------------------------------------------------- */
+
+.text-draw-label {
+  position: relative;
+  display: inline-block;
+}
+
+.text-draw-box {
+  color: var(--accent);
+  width: 100%;
+  height: .625em;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  pointer-events: none;
+}
+
+.text-draw-box svg {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  overflow: visible !important;
+}
