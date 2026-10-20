@@ -16,7 +16,7 @@
  * =============================================
  */
 
-@import url("./primitive.css");
+/* primitive.css is linked before this file in each page head */
 
 :root {
   /*Typefaces*/
@@ -156,10 +156,6 @@
 html {
   box-sizing: border-box; /* Makes sure padding and borders don't add extra width to elements */
   scroll-behavior: smooth; /* Adds smooth scrolling between sections */
-  cursor: url("../assets/temp/up-cursor.png"), auto !important; /* Custom cursor (change the URL below to use your own) */
-
-  /* TODO: Replace the URL above to add a custom cursor. 
-     If you want to use the default browser cursor, just delete this line. */
 }
 
 /* Ensure all elements, including pseudo-elements, follow border-box sizing */
@@ -1628,7 +1624,6 @@ a.nav-link-primary:hover {
   width: 100%;
   height: 100%;
   opacity: 0; /* Initially invisible */
-  transition: var(--duration-slow) ease;
   display: flex;
   justify-content: center;
   align-items: center;

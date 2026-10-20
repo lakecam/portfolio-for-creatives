@@ -1,16 +1,6 @@
 /* PRIMITIVE TOKENS */
 
-/* Body Font */
-@import url("https://fonts.googleapis.com/css2?family=Figtree:wght@300..900&display=swap");
-
-/* Display Font */
-@import url("https://fonts.googleapis.com/css2?family=Catamaran:wght@100..900&display=swap");
-
-/* Hero Headline Font */
-@import url("https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap");
-
-/* Mono Font */
-@import url("https://fonts.googleapis.com/css2?family=Geist+Mono:ital,wght@0,100..900;1,100..900&display=swap");
+/* Fonts (Figtree, Catamaran, Geist, Geist Mono) load from a <link> in each page head */
 
 :root {
   /* Neutral */

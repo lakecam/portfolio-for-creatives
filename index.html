@@ -23,13 +23,14 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"
     />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
-      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
+    <!-- shader library, its textures, and GSAP -->
+    <link rel="preconnect" href="https://esm.sh" crossorigin />
+    <link rel="preconnect" href="https://data.shaders.com" crossorigin />
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Catamaran:wght@100..900&family=Figtree:wght@300..900&family=Geist:wght@100..900&family=Geist+Mono:ital,wght@0,100..900;1,100..900&display=swap" />
+    <link rel="stylesheet" href="./styles/primitive.css" />
     <link rel="stylesheet" href="./styles/style.css" />
   </head>
 
@@ -546,29 +547,44 @@
       </footer>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/gsap.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/ScrollTrigger.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/DrawSVGPlugin.min.js"></script>
-    <script src="./js/draw-underline.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/gsap.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/ScrollTrigger.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/DrawSVGPlugin.min.js"></script>
+    <script defer src="./js/draw-underline.js"></script>
     <script>
-      // Hold project videos on their poster frame for reduced motion
+      // Hold project videos on their poster frame for reduced motion,
+      // and only play them while they're on screen
+      const projectVideos = document.querySelectorAll(".work-project video");
+
       if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-        document.querySelectorAll(".work-project video").forEach((video) => {
+        projectVideos.forEach((video) => {
           video.removeAttribute("autoplay");
           video.pause();
         });
+      } else {
+        const videoWatcher = new IntersectionObserver((entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.play().catch(() => {});
+            } else {
+              entry.target.pause();
+            }
+          });
+        });
+        projectVideos.forEach((video) => videoWatcher.observe(video));
       }
     </script>
     <script type="module" src="./js/hero-shader.js"></script>
     <script type="module" src="./js/cloud-atlas.js"></script>
 
     <script>
-      gsap.registerPlugin(ScrollTrigger);
-
       function initStackingCardsParallax() {
         const cards = document.querySelectorAll("[data-stacking-cards-item]");
 
-        if (cards.length < 2) return;
+        // skip while the cards are hidden
+        if (cards.length < 2 || cards[0].closest("[hidden]")) return;
+
+        gsap.registerPlugin(ScrollTrigger);
 
         cards.forEach((card, i) => {
           // Skip over the first section
@@ -614,20 +630,5 @@
       });
     </script>
 
-    <script>
-      myID = document.getElementById("myID");
-
-      var myScrollFunc = function () {
-        if (!myID) return;
-        var y = window.scrollY;
-        if (y >= 800) {
-          myID.className = "bottomMenu show";
-        } else {
-          myID.className = "bottomMenu hide";
-        }
-      };
-
-      window.addEventListener("scroll", myScrollFunc);
-    </script>
   </body>
 </html>
