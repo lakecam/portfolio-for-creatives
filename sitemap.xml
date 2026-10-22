@@ -1,13 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
   <url>
-    <loc>https://lakecam.co/</loc>
-    <lastmod>2026-10-20</lastmod>
+       <loc>https://lakecam.co/</loc>
+       <lastmod>2026-10-20T19:56:15+00:00</lastmod>
+       <priority>1.0000</priority>
   </url>
   <url>
-    <loc>https://lakecam.co/about.html</loc>
-    <lastmod>2026-10-20</lastmod>
+       <loc>https://lakecam.co/index.html</loc>
+       <lastmod>2026-10-20T19:56:15+00:00</lastmod>
+       <priority>0.8000</priority>
   </url>
-  <!-- project-1 to project-4.html are 404 placeholders for now.
-       Add each one here once its case study is up. -->
+  <url>
+       <loc>https://lakecam.co/about.html</loc>
+       <lastmod>2026-10-20T19:56:15+00:00</lastmod>
+       <priority>0.8000</priority>
+  </url>
+  <url>
+       <loc>https://lakecam.co/project-3.html</loc>
+       <lastmod>2026-10-20T19:56:15+00:00</lastmod>
+       <priority>0.8000</priority>
+  </url>
+  <url>
+       <loc>https://lakecam.co/project-1.html</loc>
+       <lastmod>2026-10-20T19:56:15+00:00</lastmod>
+       <priority>0.8000</priority>
+  </url>
+  <url>
+       <loc>https://lakecam.co/project-2.html</loc>
+       <lastmod>2026-10-20T19:56:15+00:00</lastmod>
+       <priority>0.8000</priority>
+  </url>
 </urlset>
