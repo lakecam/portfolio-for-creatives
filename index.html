@@ -35,7 +35,6 @@
     <link rel="stylesheet" href="./styles/style.css" />
     <link rel="stylesheet" href="./styles/hero-shader.css" />
     <link rel="stylesheet" href="./styles/tab-glow.css" />
-    <link rel="stylesheet" href="./styles/draw-underline.css" />
     <link rel="stylesheet" href="./styles/cloud-atlas.css" />
     <link rel="stylesheet" href="./styles/logo-loader.css" />
   </head>
@@ -113,8 +112,8 @@
               class="work-project-image"
               src="assets/placeholders/project-3-a.mp4"
               poster="assets/placeholders/project-3-a-poster.webp"
-              width="1440"
-              height="1060"
+              width="960"
+              height="706"
               autoplay
               muted
               loop
@@ -125,18 +124,22 @@
             <img
               class="work-project-image"
               src="assets/placeholders/project-3-b.webp"
+              srcset="assets/placeholders/project-3-b-640.webp 640w, assets/placeholders/project-3-b.webp 1200w"
+              sizes="(max-width: 75rem) 50vw, 33vw"
               alt="POBA logo surrounded by portraits of people"
-              width="1600"
-              height="900"
+              width="1200"
+              height="675"
               loading="lazy"
               decoding="async"
             />
             <img
               class="work-project-image"
               src="assets/placeholders/project-3-c.webp"
+              srcset="assets/placeholders/project-3-c-640.webp 640w, assets/placeholders/project-3-c.webp 1200w"
+              sizes="(max-width: 75rem) 50vw, 33vw"
               alt="POBA app screens for joining and hosting board game nights"
-              width="1600"
-              height="1016"
+              width="1200"
+              height="762"
               loading="lazy"
               decoding="async"
             />
@@ -162,6 +165,8 @@
             <img
               class="work-project-image"
               src="assets/placeholders/project-1-a.webp"
+              srcset="assets/placeholders/project-1-a-640.webp 640w, assets/placeholders/project-1-a.webp 1200w"
+              sizes="(max-width: 75rem) 100vw, 33vw"
               alt="DiboPay sign-up screen on a phone"
               width="1200"
               height="1200"
@@ -171,6 +176,8 @@
             <img
               class="work-project-image"
               src="assets/placeholders/project-1-b.webp"
+              srcset="assets/placeholders/project-1-b-640.webp 640w, assets/placeholders/project-1-b.webp 1200w"
+              sizes="(max-width: 75rem) 50vw, 33vw"
               alt="DiboPay bank reports and cash flow screens on two phones"
               width="1200"
               height="1200"
@@ -180,6 +187,8 @@
             <img
               class="work-project-image"
               src="assets/placeholders/project-1-c.webp"
+              srcset="assets/placeholders/project-1-c-640.webp 640w, assets/placeholders/project-1-c.webp 1200w"
+              sizes="(max-width: 75rem) 50vw, 33vw"
               alt="DiboPay account cards showing a total balance"
               width="1200"
               height="1200"
@@ -208,9 +217,11 @@
             <img
               class="work-project-image"
               src="assets/placeholders/project-2-a.webp"
+              srcset="assets/placeholders/project-2-a-640.webp 640w, assets/placeholders/project-2-a.webp 1200w"
+              sizes="(max-width: 75rem) 100vw, 33vw"
               alt="Desktop app board of notes, folders and photos on a laptop"
-              width="1306"
-              height="1030"
+              width="1200"
+              height="946"
               loading="lazy"
               decoding="async"
             />
@@ -225,10 +236,12 @@
             />
             <img
               class="work-project-image"
-              src="assets/placeholders/project-2-c.webp"
+              src="assets/placeholders/project-2-c-search.webp"
+              srcset="assets/placeholders/project-2-c-search-640.webp 640w, assets/placeholders/project-2-c-search.webp 1200w"
+              sizes="(max-width: 75rem) 50vw, 33vw"
               alt="Desktop search bar with a semantic search for screenshots, listing four web inspiration images over a Mac dock"
-              width="2000"
-              height="1322"
+              width="1200"
+              height="793"
               loading="lazy"
               decoding="async"
             />
@@ -400,9 +413,7 @@
     </div>
 
     <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/gsap.min.js"></script>
-    <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/DrawSVGPlugin.min.js"></script>
     <script defer src="./js/button-045.js"></script>
-    <script defer src="./js/draw-underline.js"></script>
     <script defer src="./js/logo-loader.js"></script>
     <script>
       // Hold project videos on their poster frame for reduced motion,
