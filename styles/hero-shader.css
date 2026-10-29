@@ -38,26 +38,38 @@
   }
 }
 
-/* X and K shapes at the bottom of the work section. They're anchored to the
-   bottom so they stay put however long the text above gets. */
+/* K and E, the same size as the A, behind the about me glass card: the K
+   across its top-left corner, the E across its bottom-right corner and a
+   little lower. Sizes come from --shape-size and --card-width on .work-about. */
 .work-shape {
   position: absolute;
   z-index: 1;
   pointer-events: none;
-}
-
-.work-shape-x {
-  left: -1.25vw;
-  bottom: -8vw;
+  will-change: transform; /* moved every frame by js/hero-shader.js */
   /* !important is needed because the shader script sets its own pixel size */
-  width: 53vw !important;
-  height: 53vw !important;
+  width: var(--shape-size) !important;
+  height: var(--shape-size) !important;
 }
 
 .work-shape-k {
-  left: 46vw;
-  bottom: -9vw;
-  width: 43vw !important;
-  height: 62vw !important;
+  top: 0;
+  left: calc(50% - var(--card-width) / 2 - var(--shape-size) * 0.55);
   rotate: 7.49deg;
+}
+
+.work-shape-x {
+  bottom: 0;
+  left: calc(50% + var(--card-width) / 2 - var(--shape-size) * 0.42);
+}
+
+/* Phones: the card is the full width, so the shapes hang off the two edges */
+@media (max-width: 37.5rem) {
+  .work-shape-k {
+    left: calc(var(--shape-size) * -0.32);
+  }
+
+  .work-shape-x {
+    left: auto;
+    right: calc(var(--shape-size) * -0.32);
+  }
 }

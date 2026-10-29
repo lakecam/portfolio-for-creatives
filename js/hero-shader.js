@@ -231,7 +231,7 @@ if (kCanvas) {
           type: "Holographic",
           id: "shapeK",
           props: {
-            scale: 0.574,
+            scale: 0.8, // same as the A
             speed: motion(1),
             shape: {
               type: "svg",
@@ -239,8 +239,8 @@ if (kCanvas) {
               svgUrl: `${ASSETS}/UoFjWTESzqPy.svg`,
               depth: 0.27,
               bevel: 0.02,
-              rotX: 15,
-              rotY: 30,
+              rotX: sway(15, 6, 24, 0.16),
+              rotY: sway(30, 14, 46, 0.22),
               rotZ: 0,
             },
             shapeSdfUrl: `${ASSETS}/KkesyqPdzbpT_sdf.bin`,
@@ -263,7 +263,7 @@ if (xCanvas) {
           id: "shapeX",
           props: {
             center: { x: 0.47, y: 0.53 },
-            scale: 0.7479,
+            scale: 0.8, // same as the A
             speed: motion(0.5),
             waterColor: "#00eb3f",
             shape: {
@@ -272,8 +272,8 @@ if (xCanvas) {
               svgUrl: `${ASSETS}/kdqLOe6Cd11R.svg`,
               depth: 0.2,
               bevel: 0.02,
-              rotX: -43.5,
-              rotY: -25.9,
+              rotX: sway(-43.5, -52, -35, 0.14),
+              rotY: sway(-25.9, -40, -12, 0.2),
               rotZ: 2.7,
             },
             shapeSdfUrl: `${ASSETS}/Xu32NVFxke9a_sdf.bin`,
@@ -283,4 +283,65 @@ if (xCanvas) {
       ],
     }).catch(() => xCanvas.remove())
   );
+}
+
+// K and E react to the about me copy, like the old site's about panel: they sit
+// low and further out while it scrolls up, rise and come forward as it
+// arrives, then keep a slow bob. After that they drift at different speeds as
+// the page scrolls (the E faster, as if nearer), so they read as layered depth
+// rather than flat stickers. Scroll sets the target and the shapes ease toward
+// it, so nothing snaps.
+const about = document.querySelector(".work-about");
+const aboutShapes = [
+  { el: kCanvas, dx: 5, dy: 10, turn: -12, depth: 0.05, phase: 0 },
+  { el: xCanvas, dx: 9, dy: 15, turn: 14, depth: 0.12, phase: 1.7 },
+].filter((shape) => shape.el);
+
+if (about && aboutShapes.length && !reduceMotion) {
+  let eased = 0;
+  let easedScroll = 0;
+  let frame = 0;
+
+  const tick = (now) => {
+    const top = about.getBoundingClientRect().top;
+    // 0 while the about copy's top is at the bottom of the screen, 1 once it
+    // reaches 30% from the top
+    const target = Math.min(1, Math.max(0, (innerHeight - top) / (innerHeight * 0.7)));
+    eased += (target - eased) * 0.08;
+    // How far the copy is from that resting spot, for the parallax
+    easedScroll += (top - innerHeight * 0.3 - easedScroll) * 0.12;
+
+    const t = now / 1000;
+    const rest = 1 - eased;
+
+    for (const { el, dx, dy, turn, depth, phase } of aboutShapes) {
+      const x = dx * rest; // vw, further out until the copy arrives
+      const y = dy * rest + Math.sin(t * 0.4 + phase) * 0.8; // vw, low until it arrives, then a bob
+      const parallax = easedScroll * depth; // px
+      const angle = turn * rest + Math.sin(t * 0.2 + phase) * 3; // deg
+      const scale = 0.82 + 0.18 * eased; // comes forward
+      el.style.transform = `translate3d(${x}vw, calc(${y}vw + ${parallax}px), 0) rotate(${angle}deg) scale(${scale})`;
+    }
+
+    frame = requestAnimationFrame(tick);
+  };
+
+  // Only run the loop while the copy or a shape can be seen
+  const onScreen = new Set();
+  const watcher = new IntersectionObserver(
+    (entries) => {
+      for (const entry of entries) {
+        if (entry.isIntersecting) onScreen.add(entry.target);
+        else onScreen.delete(entry.target);
+      }
+      if (onScreen.size && !frame) frame = requestAnimationFrame(tick);
+      if (!onScreen.size && frame) {
+        cancelAnimationFrame(frame);
+        frame = 0;
+      }
+    },
+    { rootMargin: "200px 0px" }
+  );
+  watcher.observe(about);
+  aboutShapes.forEach(({ el }) => watcher.observe(el));
 }
