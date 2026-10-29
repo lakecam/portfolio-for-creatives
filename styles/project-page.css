@@ -125,7 +125,7 @@
   line-height: 1.4;
 }
 
-.project-fact dt {
+.project-fact-label {
   font-size: 0.75rem;
   font-weight: 700;
   text-transform: uppercase;
@@ -133,7 +133,7 @@
   text-box: trim-both cap alphabetic;
 }
 
-.project-fact dd {
+.project-fact-content {
   font-size: 1rem;
   font-weight: 500;
   color: var(--color-project-ink);
