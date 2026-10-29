@@ -1010,10 +1010,28 @@ a.nav-link-primary:hover {
   gap: 1.75rem 1rem;
 }
 
-/* Project accent colours (arrow and underline) */
-.work-project-pink { --accent: #fb64b6; }
-.work-project-yellow { --accent: #ffb900; }
-.work-project-blue { --accent: #00bcff; }
+/* Project accent colours, plus the See work button's gradient, text and glow */
+.work-project-pink {
+  --accent: #fb64b6;
+  --btn-top: #ff8fcb;
+  --btn-bottom: #e6007a;
+  --btn-ink: #ffffff;
+  --btn-glow: rgba(230, 0, 122, 0.35);
+}
+.work-project-yellow {
+  --accent: #ffb900;
+  --btn-top: #ffd84d;
+  --btn-bottom: #f59e00;
+  --btn-ink: #4a2c00; /* White text is unreadable on yellow */
+  --btn-glow: rgba(245, 158, 0, 0.4);
+}
+.work-project-blue {
+  --accent: #00bcff;
+  --btn-top: #5cd6ff;
+  --btn-bottom: #0094e6;
+  --btn-ink: #ffffff;
+  --btn-glow: rgba(0, 148, 230, 0.35);
+}
 
 .work-project-media {
   grid-column: 1 / -1;
@@ -1074,37 +1092,50 @@ a.nav-link-primary:hover {
   text-wrap: pretty;
 }
 
-/* See work link */
+/* See Work button: glossy pill in the project's colour (squish from button-045.css) */
 .work-project a.work-project-link {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  border-radius: 100vmax;
-  font-family: "Jelink", var(--font-hero); /* Same handwriting font as the "my work" heading */
-  font-size: 1rem;
-  font-weight: 400; /* Jelink only comes in one weight */
-  line-height: 1.6;
-  color: var(--color-text-work-ink);
-  text-decoration: none;
+  --button-045-border-radius: 100vmax;
+  --button-045-color-focus: var(--color-text-work-ink);
+  --button-045-focus-inset: -4px;
+  font-family: var(--font-hero);
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: var(--btn-ink);
 }
 
-.work-project-arrow {
-  width: 2.125rem; /* 34px */
-  height: 2.125rem;
-  padding: 0.125rem;
-  color: var(--accent);
-  transition: transform 220ms cubic-bezier(0.23, 1, 0.32, 1);
+.work-project-link .button-045__inner {
+  position: relative;
+  min-height: 3rem;
+  padding: 0.625rem 1.75rem;
+  background: linear-gradient(180deg, var(--btn-top) 0%, var(--btn-bottom) 100%);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.55),
+    inset 0 -2px 4px rgba(0, 0, 0, 0.08),
+    0 4px 12px var(--btn-glow);
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.12);
+  isolation: isolate;
+  transition: box-shadow 220ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+/* Soft shine across the top half */
+.work-project-link .button-045__inner::before {
+  content: "";
+  position: absolute;
+  inset: 2px 6px 50%;
+  z-index: -1;
+  border-radius: 100vmax;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.45), rgba(255, 255, 255, 0));
+  pointer-events: none;
 }
 
 @media (hover: hover) {
-  .work-project-link:hover .work-project-arrow {
-    transform: translate(2px, -2px);
+  .work-project-link:hover .button-045__inner {
+    box-shadow:
+      inset 0 1px 0 rgba(255, 255, 255, 0.55),
+      inset 0 -2px 4px rgba(0, 0, 0, 0.08),
+      0 8px 20px var(--btn-glow);
   }
-}
-
-.work-project-link:focus-visible {
-  outline: 2px solid var(--color-text-work-ink);
-  outline-offset: 4px;
 }
 
 /* Smaller screens: one big image on top, two smaller ones below */
@@ -1375,25 +1406,24 @@ a.nav-link-primary:hover {
   gap: 0.5rem;
 }
 
-/* Round glass social buttons */
+/* Round glass social buttons (squish from button-045.css) */
 .site-footer .social-orb {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
+  --button-045-border-radius: 999px;
+  --button-045-color-focus: var(--color-focus-footer);
+  --button-045-focus-inset: -3px;
+  color: var(--color-text-footer);
+}
+
+.site-footer .social-orb .button-045__inner {
   width: 44px;
   height: 44px;
   padding: 0;
   border: 1px solid rgb(255 255 255 / 0.7);
-  border-radius: 999px;
   background-color: rgb(255 255 255 / 0.45);
   -webkit-backdrop-filter: blur(10px) saturate(1.3);
   backdrop-filter: blur(10px) saturate(1.3);
   box-shadow: 0 2px 8px -2px rgb(11 42 60 / 0.12);
-  color: var(--color-text-footer);
-  /* A slight overshoot makes the press feel bouncy */
-  scale: 1;
   transition:
-    scale 260ms cubic-bezier(0.34, 1.56, 0.64, 1),
     background-color 180ms cubic-bezier(0.16, 1, 0.3, 1),
     border-color 180ms cubic-bezier(0.16, 1, 0.3, 1),
     box-shadow 180ms cubic-bezier(0.16, 1, 0.3, 1);
@@ -1404,46 +1434,22 @@ a.nav-link-primary:hover {
   height: 1.25rem;
 }
 
-.site-footer .social-orb:active {
-  scale: 0.86;
-  transition-duration: 90ms;
-}
-
 @media (hover: hover) and (pointer: fine) {
-  .site-footer .social-orb:hover {
-    scale: 1.14;
+  .site-footer .social-orb:hover .button-045__inner {
     border-color: rgb(255 255 255 / 0.95);
     background-color: rgb(255 255 255 / 0.7);
     box-shadow: 0 6px 16px -6px rgb(11 42 60 / 0.25);
   }
-
-  .site-footer .social-orb:hover:active {
-    scale: 0.86;
-  }
 }
 
 /* Pressed and focused */
-.site-footer .social-orb:active,
-.site-footer .social-orb:focus-visible {
+.site-footer .social-orb:active .button-045__inner,
+.site-footer .social-orb:focus-visible .button-045__inner {
   border-color: rgb(255 255 255);
   background-color: rgb(255 255 255 / 0.85);
   box-shadow:
     0 0 0 4px rgb(255 255 255 / 0.4),
     0 0 24px -2px rgb(255 255 255 / 0.95);
-}
-
-.site-footer .social-orb:focus-visible {
-  outline: 2px solid var(--color-focus-footer);
-  outline-offset: 3px;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .site-footer .social-orb,
-  .site-footer .social-orb:hover,
-  .site-footer .social-orb:active {
-    scale: 1;
-    transition: none;
-  }
 }
 
 /* -------------------------------------------------------------------------- */

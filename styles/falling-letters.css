@@ -65,9 +65,9 @@
   left: 50%;
   z-index: 2;
   translate: -50% 0;
-  padding: 0.625rem 1rem;
-  border-radius: 100em;
-  background: var(--neutral-950); /* Stays readable when letters pile up behind it */
+  --button-045-border-radius: 100em;
+  --button-045-color-focus: var(--neutral-50);
+  --button-045-focus-inset: -4px;
   font-family: var(--font-accent);
   font-size: 0.875rem;
   font-weight: 500;
@@ -85,9 +85,9 @@
   color: var(--neutral-50);
 }
 
-.error-page a.error-home-link:focus-visible {
-  outline: 2px solid var(--neutral-50);
-  outline-offset: 4px;
+.error-home-link .button-045__inner {
+  padding: 0.625rem 1rem;
+  background: var(--neutral-950); /* Stays readable when letters pile up behind it */
 }
 
 .canvas-matter {

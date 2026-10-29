@@ -1,0 +1,69 @@
+/* ----------------------------------------------------------------
+   Button 045: squish and elastic pulse on hover, press and focus
+   ----------------------------------------------------------------
+   Base structure only. Each button sets its own look on
+   .button-045__inner and its focus ring with the variables below.
+
+   Related files:
+     • JS:  js/button-045.js (needs GSAP)
+---------------------------------------------------------------- */
+
+:root {
+  --button-045-color: #fff;
+  --button-045-color-background: #ffaa32;
+  --button-045-color-focus: #000;
+  --button-045-padding: 0.75em 1em;
+  --button-045-border-radius: 2.5em;
+  --button-045-focus-inset: -0.125em;
+  --button-045-ease-focus: cubic-bezier(0.32, 0.72, 0, 1);
+}
+
+.button-045 {
+  color: var(--button-045-color);
+  -webkit-user-select: none;
+  user-select: none;
+  background-color: #0000;
+  outline-style: none;
+  padding: 0;
+  line-height: 1;
+  text-decoration: none;
+  display: inline-grid;
+  position: relative;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.button-045::after {
+  content: '';
+  display: block;
+  position: absolute;
+  inset: var(--button-045-focus-inset);
+  border-radius: var(--button-045-border-radius);
+  transition: box-shadow 0.3s var(--button-045-ease-focus);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.button-045:is(:focus-visible)::after {
+  box-shadow: 0 0 0 0.125em var(--button-045-color-focus);
+}
+
+.button-045__inner {
+  grid-column-gap: .125em;
+  grid-row-gap: .125em;
+  pointer-events: none;
+  width: 100%;
+  height: 100%;
+  padding: var(--button-045-padding);
+  background-color: var(--button-045-color-background);
+  border-radius: var(--button-045-border-radius);
+  grid-area: 1 / 1;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.button-045__icon {
+  flex: none;
+  width: .75em;
+  height: .75em;
+}
