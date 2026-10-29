@@ -1098,8 +1098,8 @@ a.nav-link-primary:hover {
   --button-045-color-focus: var(--color-text-work-ink);
   --button-045-focus-inset: -4px;
   font-family: var(--font-hero);
-  font-size: 1.25rem;
-  font-weight: 700;
+  font-size: 1rem;
+  font-weight: 500;
   letter-spacing: -0.01em;
   color: var(--btn-ink);
 }
