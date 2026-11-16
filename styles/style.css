@@ -21,8 +21,8 @@
 :root {
   /*Typefaces*/
   --font-family-body: var(--font-body);
-  --font-family-heading: var(--font-main);
-  --font-family-project-title: var(--font-main);
+  --font-family-heading: var(--font-body);
+  --font-family-project-title: var(--font-body);
   --font-family-label: var(--font-accent);
 
   /* Core Colours */
@@ -45,9 +45,9 @@
   --color-bg-holding-page: rgba(82, 0, 255, 0.6);
 
   /* Headings */
-  --h1-color: var(--neutral-500);
-  --h2-color: var(--neutral-500);
-  --h3-color: #5200ff;
+  --h1-color: var(--neutral-700);
+  --h2-color: var(--neutral-700);
+  --h3-color: var(--neutral-700);
   --h4-color: #5200ff;
   --h5-color: #5200ff;
   --h6-color: #5200ff;
@@ -224,10 +224,18 @@ svg {
   width: 100%;
 }
 
+.full-width {
+  width: 100%;
+}
+
 /* Adds a dashed border to help you see the box while you're designing */
 .border {
   border: 1px dashed var(--color-accent-primary); /* This uses your custom accent color */
   /* TODO: Delete this later – it’s just here to help you see the box while you work */
+}
+
+.inverted {
+  filter: invert();
 }
 
 /* ---------------------- */
@@ -387,16 +395,18 @@ svg {
 h1 {
   font-size: 2.2rem;
   font-family: var(--font-family-heading);
+  font-weight: 400;
   line-height: 1.2;
   margin-bottom: 1rem;
   color: var(--h1-color);
 }
 
-h2 {
+h2,
+.big-stat {
   font-size: 1.875rem;
   font-family: var(--font-family-heading);
-  font-weight: 700;
-  letter-spacing: -0.03em;
+  font-weight: 400;
+  /*letter-spacing: -0.03em;*/
   line-height: 1.2;
   margin-bottom: 1rem;
   color: var(--h2-color);
@@ -405,7 +415,7 @@ h2 {
 h3 {
   font-size: 1.25rem;
   font-family: var(--font-family-heading);
-  font-weight: 700;
+  font-weight: 400;
   letter-spacing: -0.03em;
   margin-bottom: 1rem;
   line-height: 1.2;
@@ -497,6 +507,12 @@ sup {
 .h2-full-width {
   width: 100%;
   padding: var(--padding-small);
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  font-weight: 600;
 }
 
 /* ✨ Highlighted text — great for emphasis */
@@ -899,6 +915,10 @@ a.nav-link-primary:hover {
     --color-bg-full-width
   ); /* Background color for full-width sections */
   margin-bottom: 1rem;
+}
+
+.full-width-section.no-background {
+  background: none;
 }
 
 .full-width-headline-wrapper {
@@ -1405,7 +1425,7 @@ a.nav-link-primary:hover {
 /* -------------------------------------------------------------------------- */
 /* ☁️  Sky Footer                                                             */
 /* Fades from the page background into sky blue. The clouds are drawn         */
-/* by js/cloud-atlas.js (see cloud-atlas.css).                                */
+/* by js/cloud-atlas.js                                                       */
 /* -------------------------------------------------------------------------- */
 
 .site-footer {
@@ -1441,15 +1461,13 @@ a.nav-link-primary:hover {
   }
 }
 
-/* Copyright line */
-.footer-legal {
-  margin: 0;
-  font-family: var(--font-accent);
-  font-size: 0.6875rem;
-  font-weight: 500;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--color-text-footer);
+.footer-clouds {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
 }
 
 .site-footer-social {
@@ -1601,8 +1619,13 @@ a.nav-link-primary:hover {
 }
 
 .footer-fineprint {
-  font-size: 0.875rem; /* Slightly smaller for disclaimers or captions */
-  color: var(--color-text-secondary); /* Themed color */
+  margin: 0;
+  font-family: var(--font-accent);
+  font-size: 0.6875rem; /* Slightly smaller for disclaimers or captions */
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-text-footer);
 }
 
 /* New item badges */
@@ -1711,6 +1734,101 @@ a.nav-link-primary:hover {
   background: var(
     --color-gradient-project-details
   ); /* TODO: Remove gradient background if you prefer a simpler design */
+}
+
+.project-page-problem-tile {
+  background: var(--fuchsia-100);
+  border-radius: var(--radius-md);
+  padding: var(--padding-small);
+}
+
+.background-black {
+  background: #000;
+}
+
+.background-black p,
+.background-black h2 {
+  filter: invert();
+}
+
+.icon-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 20rem;
+  padding: var(--padding-small);
+  border-radius: var(--radius-md);
+  background: var(--color-bg-project-description);
+}
+
+.icon-card-icon {
+  width: 1.5rem;
+}
+
+.icon-card-bg-poba {
+  background: url("/assets/project-3/hero.webp"), var(--accent2-500);
+  /*background: blue;*/
+  color: #fff;
+}
+
+.icon-card-bg-black {
+  background: #000;
+  color: #fff;
+}
+
+.icon-card-bg-poba h3,
+.icon-card-bg-black h3 {
+  color: #fff;
+}
+
+.figure-card {
+  background: var(--neutral-200);
+  padding: var(--padding-tiny);
+  border-radius: var(--radius-sm);
+}
+.figure-card img {
+  border-radius: var(--radius-sm);
+}
+.figure-card figcaption {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 0.5rem;
+  padding-bottom: 0.2rem;
+  padding-left: 0.4rem;
+  padding-right: 0.4rem;
+}
+.main-caption {
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.figure-card.figure-card-dark {
+  background: var(--neutral-800);
+}
+.figure-card-dark {
+  color: var(--neutral-400);
+}
+.figure-card-dark .main-caption {
+  color: #fff;
+}
+
+.pill {
+  background: #fff;
+  border-radius: 1rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  align-content: center;
+  height: fit-content;
+  font-weight: bold;
+}
+
+.pill.pill-black {
+  background: #000;
+  color: #fff;
 }
 
 /* Previous/Next Arrow Styles */

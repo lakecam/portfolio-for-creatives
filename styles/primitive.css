@@ -51,6 +51,9 @@
   --accent2-800: #193cb8;
   --accent2-900: #1c398e;
   --accent2-950: #162556;
+  /* Other Colours */
+  --fuchsia-100: #fae8ff;
+  --fuchsia-200: #f6cfff;
   /* Overlays */
   --overlay-10: rgba(39, 39, 42, 0.1);
   --overlay-25: rgba(39, 39, 42, 0.25);
@@ -59,7 +62,6 @@
   /* Typefaces */
   --font-body: "Figtree", ui-sans-serif, system-ui, -apple-system, "Segoe UI",
     sans-serif;
-  --font-main: "Catamaran", var(--font-body);
   --font-hero: "Geist", var(--font-body);
   --font-accent: "Geist Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
 }
