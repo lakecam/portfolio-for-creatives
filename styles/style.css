@@ -1038,7 +1038,7 @@ a.nav-link-primary:hover {
   --accent: #ffb900;
   --btn-top: #ffd84d;
   --btn-bottom: #f59e00;
-  --btn-ink: #4a2c00; /* White text is unreadable on yellow */
+  --btn-ink: #4a2c00;
   --btn-glow: rgba(245, 158, 0, 0.4);
 }
 .work-project-blue {
@@ -1145,10 +1145,7 @@ a.nav-link-primary:hover {
   pointer-events: none;
 }
 
-/* About me: a frosted glass card. The K and E (same size as the A) sit
-   behind its top-left and bottom-right corners, so they read sharp outside
-   the glass and soft through it, sharing the space instead of avoiding it.
-   Shape positions live in hero-shader.css. */
+/* About me: a frosted glass card with big floating letters underneath */
 .work-about {
   --shape-size: clamp(20rem, 43vw, 52rem); /* matches the A */
   --card-width: min(50rem, 100%);
@@ -1173,7 +1170,6 @@ a.nav-link-primary:hover {
     rgba(255, 255, 255, 0.62),
     rgba(255, 255, 255, 0.34)
   );
-  -webkit-backdrop-filter: blur(28px) saturate(1.5);
   backdrop-filter: blur(28px) saturate(1.5);
   box-shadow:
     inset 0 1px 0 rgba(255, 255, 255, 0.9),
@@ -1188,13 +1184,6 @@ a.nav-link-primary:hover {
 .about-card .work-project-summary {
   font-size: clamp(1rem, 1.1vw, 1.125rem);
   color: var(--color-text-work-ink);
-}
-
-/* No glass support: a near-solid card keeps the copy readable over the shapes */
-@supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
-  .about-card {
-    background: rgba(255, 255, 255, 0.92);
-  }
 }
 
 @media (hover: hover) {
