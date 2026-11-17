@@ -954,19 +954,15 @@ a.nav-link-primary:hover {
 ██ ███ ██ ██    ██ ██   ██ ██  ██      ██      ██   ██ ██    ██ ██      
  ███ ███   ██████  ██   ██ ██   ██     ██      ██   ██  ██████  ███████ 
 
+ (Main home page)
+ 
 */
 
 /* -------------------------------------------------------------------------- */
 /* 🗂️ Work Section                                                            */
-/* Projects listed under a handwritten "my work" heading.                     */
+/* Projects listed under the "my work" heading.                               */
 /* The A, X and K shapes are drawn by js/hero-shader.js (see hero-shader.css) */
-/* and the See work underline by js/draw-underline.js.                        */
 /* -------------------------------------------------------------------------- */
-
-/* Clips the X and K shapes where they hang past the bottom of the page */
-.page-clip {
-  overflow: clip;
-}
 
 /* Handwritten font for the heading and the See work links */
 @font-face {

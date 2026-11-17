@@ -1,4 +1,3 @@
-// ?bundle: one file instead of ~200 separate module requests
 import { createShader } from "https://esm.sh/shaders@3.2.475/js?bundle";
 
 const canvas = document.querySelector(".hero-shader");

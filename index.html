@@ -8,29 +8,10 @@
     />
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="icon"
-      type="image/svg+xml"
-      href="assets/branding-images/favicon.svg"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      href="assets/branding-images/favicon.png"
-    />
+    <link rel="icon" type="image/svg+xml" href="assets/branding-images/favicon.svg" />
+    <link rel="icon" type="image/png" href="assets/branding-images/favicon.png" />
     <meta property="og:image" content="screenshot.jpg" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"
-    />
-
-    <!-- Connects early to the sites the shaders, fonts and GSAP load from -->
-
-    <link rel="preconnect" href="https://esm.sh" crossorigin />
-    <link rel="preconnect" href="https://data.shaders.com" crossorigin />
-    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css" />
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Catamaran:wght@100..900&family=Figtree:wght@300..900&family=Geist:wght@100..900&family=Geist+Mono:ital,wght@0,100..900;1,100..900&display=swap"
@@ -68,374 +49,280 @@
       </div>
     </div>
 
-    <!-- Clips the shapes that hang off the bottom of the page -->
+    <section class="hero gradient-animation">
+      <canvas class="hero-shader" aria-hidden="true"></canvas>
+      <header class="hero-header">
+        <ul class="nav-branding">
+          <!-- Logo (standalone LI) -->
+          <li class="nav-branding-logo">
+            <a href="/">
+              <img src="assets/branding-images/lake.svg" alt="Lake Cam" />
+            </a>
+          </li>
+          <li class="nav-branding-item">
+            <ul class="nav-branding-group">
+              <li class="nav-branding-item">
+                <a href="/" class="nav-link-primary" aria-current="page"
+                  >Home</a
+                >
+              </li>
+              <li class="nav-branding-item">
+                <a href="#work" class="nav-link-primary">Work</a>
+              </li>
+              <li class="nav-branding-item">
+                <a href="/about" class="nav-link-primary">About</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </header>
+      <div class="hero-headline-wrapper">
+        <h1 class="hero-headline">
+          Lake Cam is a product designer who lives between pixels and code
+        </h1>
+      </div>
+    </section>
 
-    <div class="page-clip">
-      <section class="hero gradient-animation">
-        <canvas class="hero-shader" aria-hidden="true"></canvas>
-        <header class="hero-header">
-          <ul class="nav-branding">
-            <!-- Logo (standalone LI) -->
-            <li class="nav-branding-logo">
-              <a href="/">
-                <img src="assets/branding-images/lake.svg" alt="Lake Cam" />
-              </a>
-            </li>
-            <li class="nav-branding-item">
-              <ul class="nav-branding-group">
-                <li class="nav-branding-item">
-                  <a href="/" class="nav-link-primary" aria-current="page"
-                    >Home</a
-                  >
-                </li>
-                <li class="nav-branding-item">
-                  <a href="#work" class="nav-link-primary">Work</a>
-                </li>
-                <li class="nav-branding-item">
-                  <a href="/about" class="nav-link-primary">About</a>
-                </li>
-              </ul>
-            </li>
-          </ul>
-        </header>
-        <div class="hero-headline-wrapper">
-          <h1 class="hero-headline">
-            Lake Cam is a product designer who lives between pixels and code
-          </h1>
+    <!-- WORK STARTS -->
+
+    <section class="work-section" id="work">
+      <canvas class="section-a-shader" aria-hidden="true"></canvas>
+      <h2 class="work-section-heading">my work</h2>
+
+      <!-- PROJECT 1 -->
+
+      <article class="work-project work-project-blue">
+        <div class="work-project-media">
+          <video
+            class="work-project-image"
+            src="assets/placeholders/project-3-a.mp4"
+            poster="assets/placeholders/project-3-a-poster.webp"
+            width="960"
+            height="706"
+            autoplay
+            muted
+            loop
+            playsinline
+            preload="metadata"
+            aria-hidden="true"
+          ></video>
+          <img
+            class="work-project-image"
+            src="assets/placeholders/project-3-b.webp"
+            srcset="
+              assets/placeholders/project-3-b-640.webp  640w,
+              assets/placeholders/project-3-b.webp     1200w
+            "
+            sizes="(max-width: 75rem) 50vw, 33vw"
+            alt="POBA logo surrounded by portraits of people"
+            width="1200"
+            height="675"
+            loading="lazy"
+          />
+          <img
+            class="work-project-image"
+            src="assets/placeholders/project-3-c.webp"
+            srcset="
+              assets/placeholders/project-3-c-640.webp  640w,
+              assets/placeholders/project-3-c.webp     1200w
+            "
+            sizes="(max-width: 75rem) 50vw, 33vw"
+            alt="POBA app screens for joining and hosting board game nights"
+            width="1200"
+            height="762"
+            loading="lazy"
+          />
+        </div>
+        <div class="work-project-meta">
+          <h3 class="work-project-title">Poba</h3>
+          <p class="work-project-date">Month 2026</p>
+        </div>
+        <div class="work-project-body">
+          <p class="work-project-summary">
+            An app that turns board game nights into real friendships. Players find or host a night nearby, and after each one, those who want to play again become a regular group. 
+          </p>
+          <a
+            class="work-project-link button-045"
+            data-button-045=""
+            href="work/poba"
+            ><span class="button-045__inner" data-button-045-inner=""
+              ><span class="button-045__text">See Work</span></span
+            ></a
+          >
+        </div>
+      </article>
+      
+      <hr class="work-section-divider" />
+      
+      <!-- PROJECT 2 -->
+      <article class="work-project work-project-pink">
+        <div class="work-project-media">
+          <img
+            class="work-project-image"
+            src="assets/placeholders/project-1-a.webp"
+            srcset="
+              assets/placeholders/project-1-a-640.webp  640w,
+              assets/placeholders/project-1-a.webp     1200w
+            "
+            sizes="(max-width: 75rem) 100vw, 33vw"
+            alt="DiboPay sign-up screen on a phone"
+            width="1200"
+            height="1200"
+            loading="lazy"
+          />
+          <img
+            class="work-project-image"
+            src="assets/placeholders/project-1-b.webp"
+            srcset="
+              assets/placeholders/project-1-b-640.webp  640w,
+              assets/placeholders/project-1-b.webp     1200w
+            "
+            sizes="(max-width: 75rem) 50vw, 33vw"
+            alt="DiboPay bank reports and cash flow screens on two phones"
+            width="1200"
+            height="1200"
+            loading="lazy"
+          />
+          <img
+            class="work-project-image"
+            src="assets/placeholders/project-1-c.webp"
+            srcset="
+              assets/placeholders/project-1-c-640.webp  640w,
+              assets/placeholders/project-1-c.webp     1200w
+            "
+            sizes="(max-width: 75rem) 50vw, 33vw"
+            alt="DiboPay account cards showing a total balance"
+            width="1200"
+            height="1200"
+            loading="lazy"
+          />
+        </div>
+        <div class="work-project-meta">
+          <h3 class="work-project-title">Lumat</h3>
+          <p class="work-project-date">Month 2026</p>
+        </div>
+        <div class="work-project-body">
+          <p class="work-project-summary">
+            A Mac app for anyone who makes charts from data. It checks a spreadsheet for errors, then turns it into on-brand charts that update when the file changes, with no account and no upload.
+          </p>
+          <a
+            class="work-project-link button-045"
+            data-button-045=""
+            href="work/lumat"
+            ><span class="button-045__inner" data-button-045-inner=""
+              ><span class="button-045__text">See Work</span></span
+            ></a
+          >
+        </div>
+      </article>
+      <hr class="work-section-divider" />
+
+      <!-- PROJECT 3 -->
+
+      <article class="work-project work-project-yellow">
+        <div class="work-project-media">
+          <img
+            class="work-project-image"
+            src="assets/placeholders/project-2-a.webp"
+            srcset="
+              assets/placeholders/project-2-a-640.webp  640w,
+              assets/placeholders/project-2-a.webp     1200w
+            "
+            sizes="(max-width: 75rem) 100vw, 33vw"
+            alt="Desktop app board of notes, folders and photos on a laptop"
+            width="1200"
+            height="946"
+            loading="lazy"
+          />
+          <img
+            class="work-project-image"
+            src="assets/placeholders/project-2-b.svg"
+            alt="Terminal window on a halftone photo reading: when I move between inputs and execution, I need relevant context quick and across formats"
+            width="1920"
+            height="1080"
+            loading="lazy"
+          />
+          <img
+            class="work-project-image"
+            src="assets/placeholders/project-2-c-search.webp"
+            srcset="
+              assets/placeholders/project-2-c-search-640.webp  640w,
+              assets/placeholders/project-2-c-search.webp     1200w
+            "
+            sizes="(max-width: 75rem) 50vw, 33vw"
+            alt="Desktop search bar with a semantic search for screenshots, listing four web inspiration images over a Mac dock"
+            width="1200"
+            height="793"
+            loading="lazy"
+          />
+        </div>
+        <div class="work-project-meta">
+          <h3 class="work-project-title">Monty</h3>
+          <p class="work-project-date">Month 2026</p>
+        </div>
+        <div class="work-project-body">
+          <p class="work-project-summary">
+            A Mac app that saves screenshots, files and notes with 1 shortcut, finds them by meaning instead of filename, and shows how they connect.
+          </p>
+          <a
+            class="work-project-link button-045"
+            data-button-045=""
+            href="work/monty"
+            ><span class="button-045__inner" data-button-045-inner=""
+              ><span class="button-045__text">See Work</span></span
+            ></a
+          >
+        </div>
+      </article>
+
+      <hr class="work-section-divider" />
+
+      <!-- ABOUT ME -->
+
+      <section class="work-about" id="about">
+        <canvas class="work-shape work-shape-k" aria-hidden="true"></canvas>
+        <canvas class="work-shape work-shape-x" aria-hidden="true"></canvas>
+        <div class="about-card">
+          <h2 class="work-project-title">About Me</h2>
+          <div class="work-project-summary">
+            <p>
+              Lake Cam is a product designer and design engineer from
+              Malaysia, now based in Canada. With 3+ years of experience in
+              crafting design systems and enterprise software, he has also
+              been super into the indie dev scene and the idea of making
+              software that feels human and homemade.
+            </p>
+            <p>
+              Outside work, he is also an avid historian of 1990s–2010s pop
+              culture, a massive Survivor and Big Brother fan, casually thinks
+              about rowing (and maybe doing it) and has a deep interest in
+              human geography and Southeast Asian history.
+            </p>
+          </div>
         </div>
       </section>
+    </section>
+    
+    <!-- Shared footer -->
+    <div id="footer-placeholder"></div>
+    
+    <!-- Shared header and footer -->
+    <script>
+      // fetch("includes/header-1.html")
+      //   .then((response) => response.text())
+      //   .then((data) => {
+      //     document.getElementById("header-placeholder").innerHTML = data;
+      //   });
 
-      <!-- WORK STARTS -->
-
-      <section class="work-section" id="work" aria-labelledby="work-heading">
-        <canvas class="section-a-shader" aria-hidden="true"></canvas>
-        <h2 class="work-section-heading" id="work-heading">my work</h2>
-
-        <!-- PROJECT 1 -->
-
-        <article class="work-project work-project-blue">
-          <div class="work-project-media">
-            <video
-              class="work-project-image"
-              src="assets/placeholders/project-3-a.mp4"
-              poster="assets/placeholders/project-3-a-poster.webp"
-              width="960"
-              height="706"
-              autoplay
-              muted
-              loop
-              playsinline
-              preload="metadata"
-              aria-hidden="true"
-            ></video>
-            <img
-              class="work-project-image"
-              src="assets/placeholders/project-3-b.webp"
-              srcset="
-                assets/placeholders/project-3-b-640.webp  640w,
-                assets/placeholders/project-3-b.webp     1200w
-              "
-              sizes="(max-width: 75rem) 50vw, 33vw"
-              alt="POBA logo surrounded by portraits of people"
-              width="1200"
-              height="675"
-              loading="lazy"
-              decoding="async"
-            />
-            <img
-              class="work-project-image"
-              src="assets/placeholders/project-3-c.webp"
-              srcset="
-                assets/placeholders/project-3-c-640.webp  640w,
-                assets/placeholders/project-3-c.webp     1200w
-              "
-              sizes="(max-width: 75rem) 50vw, 33vw"
-              alt="POBA app screens for joining and hosting board game nights"
-              width="1200"
-              height="762"
-              loading="lazy"
-              decoding="async"
-            />
-          </div>
-          <div class="work-project-meta">
-            <h3 class="work-project-title">Poba</h3>
-            <p class="work-project-date">Month 2026</p>
-          </div>
-          <div class="work-project-body">
-            <p class="work-project-summary">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem
-              ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod
-              tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum
-              dolor sit amet, consectetur adipiscing elit.
-            </p>
-            <a
-              class="work-project-link button-045"
-              data-button-045=""
-              href="work/poba"
-              ><span class="button-045__inner" data-button-045-inner=""
-                ><span class="button-045__text">See Work</span></span
-              ></a
-            >
-          </div>
-
-          <!-- PROJECT 2 -->
-        </article>
-        <hr class="work-section-divider" />
-        <article class="work-project work-project-pink">
-          <div class="work-project-media">
-            <img
-              class="work-project-image"
-              src="assets/placeholders/project-1-a.webp"
-              srcset="
-                assets/placeholders/project-1-a-640.webp  640w,
-                assets/placeholders/project-1-a.webp     1200w
-              "
-              sizes="(max-width: 75rem) 100vw, 33vw"
-              alt="DiboPay sign-up screen on a phone"
-              width="1200"
-              height="1200"
-              loading="lazy"
-              decoding="async"
-            />
-            <img
-              class="work-project-image"
-              src="assets/placeholders/project-1-b.webp"
-              srcset="
-                assets/placeholders/project-1-b-640.webp  640w,
-                assets/placeholders/project-1-b.webp     1200w
-              "
-              sizes="(max-width: 75rem) 50vw, 33vw"
-              alt="DiboPay bank reports and cash flow screens on two phones"
-              width="1200"
-              height="1200"
-              loading="lazy"
-              decoding="async"
-            />
-            <img
-              class="work-project-image"
-              src="assets/placeholders/project-1-c.webp"
-              srcset="
-                assets/placeholders/project-1-c-640.webp  640w,
-                assets/placeholders/project-1-c.webp     1200w
-              "
-              sizes="(max-width: 75rem) 50vw, 33vw"
-              alt="DiboPay account cards showing a total balance"
-              width="1200"
-              height="1200"
-              loading="lazy"
-              decoding="async"
-            />
-          </div>
-          <div class="work-project-meta">
-            <h3 class="work-project-title">Placeholder</h3>
-            <p class="work-project-date">Month 2026</p>
-          </div>
-          <div class="work-project-body">
-            <p class="work-project-summary">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem
-              ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod
-              tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum
-              dolor sit amet, consectetur adipiscing elit.
-            </p>
-            <a
-              class="work-project-link button-045"
-              data-button-045=""
-              href="work/lumat"
-              ><span class="button-045__inner" data-button-045-inner=""
-                ><span class="button-045__text">See Work</span></span
-              ></a
-            >
-          </div>
-        </article>
-        <hr class="work-section-divider" />
-
-        <!-- PROJECT 3 -->
-
-        <article class="work-project work-project-yellow">
-          <div class="work-project-media">
-            <img
-              class="work-project-image"
-              src="assets/placeholders/project-2-a.webp"
-              srcset="
-                assets/placeholders/project-2-a-640.webp  640w,
-                assets/placeholders/project-2-a.webp     1200w
-              "
-              sizes="(max-width: 75rem) 100vw, 33vw"
-              alt="Desktop app board of notes, folders and photos on a laptop"
-              width="1200"
-              height="946"
-              loading="lazy"
-              decoding="async"
-            />
-            <img
-              class="work-project-image"
-              src="assets/placeholders/project-2-b.svg"
-              alt="Terminal window on a halftone photo reading: when I move between inputs and execution, I need relevant context quick and across formats"
-              width="1920"
-              height="1080"
-              loading="lazy"
-              decoding="async"
-            />
-            <img
-              class="work-project-image"
-              src="assets/placeholders/project-2-c-search.webp"
-              srcset="
-                assets/placeholders/project-2-c-search-640.webp  640w,
-                assets/placeholders/project-2-c-search.webp     1200w
-              "
-              sizes="(max-width: 75rem) 50vw, 33vw"
-              alt="Desktop search bar with a semantic search for screenshots, listing four web inspiration images over a Mac dock"
-              width="1200"
-              height="793"
-              loading="lazy"
-              decoding="async"
-            />
-          </div>
-          <div class="work-project-meta">
-            <h3 class="work-project-title">Placeholder</h3>
-            <p class="work-project-date">Month 2026</p>
-          </div>
-          <div class="work-project-body">
-            <p class="work-project-summary">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem
-              ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod
-              tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum
-              dolor sit amet, consectetur adipiscing elit.
-            </p>
-            <a
-              class="work-project-link button-045"
-              data-button-045=""
-              href="work/monty"
-              ><span class="button-045__inner" data-button-045-inner=""
-                ><span class="button-045__text">See Work</span></span
-              ></a
-            >
-          </div>
-        </article>
-
-        <hr class="work-section-divider" />
-
-        <!-- PROJECT 4 -->
-
-        <article class="work-project work-project-pink">
-          <div class="work-project-media">
-            <img
-              class="work-project-image"
-              src="assets/placeholders/project-1-a.webp"
-              srcset="
-                assets/placeholders/project-1-a-640.webp  640w,
-                assets/placeholders/project-1-a.webp     1200w
-              "
-              sizes="(max-width: 75rem) 100vw, 33vw"
-              alt="DiboPay sign-up screen on a phone"
-              width="1200"
-              height="1200"
-              loading="lazy"
-              decoding="async"
-            />
-            <img
-              class="work-project-image"
-              src="assets/placeholders/project-1-b.webp"
-              srcset="
-                assets/placeholders/project-1-b-640.webp  640w,
-                assets/placeholders/project-1-b.webp     1200w
-              "
-              sizes="(max-width: 75rem) 50vw, 33vw"
-              alt="DiboPay bank reports and cash flow screens on two phones"
-              width="1200"
-              height="1200"
-              loading="lazy"
-              decoding="async"
-            />
-            <img
-              class="work-project-image"
-              src="assets/placeholders/project-1-c.webp"
-              srcset="
-                assets/placeholders/project-1-c-640.webp  640w,
-                assets/placeholders/project-1-c.webp     1200w
-              "
-              sizes="(max-width: 75rem) 50vw, 33vw"
-              alt="DiboPay account cards showing a total balance"
-              width="1200"
-              height="1200"
-              loading="lazy"
-              decoding="async"
-            />
-          </div>
-          <div class="work-project-meta">
-            <h3 class="work-project-title">Placeholder</h3>
-            <p class="work-project-date">Month 2026</p>
-          </div>
-          <div class="work-project-body">
-            <p class="work-project-summary">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem
-              ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod
-              tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum
-              dolor sit amet, consectetur adipiscing elit.
-            </p>
-            <a
-              class="work-project-link button-045"
-              data-button-045=""
-              href="work/vamo"
-              ><span class="button-045__inner" data-button-045-inner=""
-                ><span class="button-045__text">See Work</span></span
-              ></a
-            >
-          </div>
-        </article>
-
-        <!-- ABOUT ME: a frosted glass card with the 3D K and E behind its corners,
-             crisp outside the glass and blurred through it -->
-
-        <section class="work-about" id="about" aria-labelledby="about-heading">
-          <canvas class="work-shape work-shape-k" aria-hidden="true"></canvas>
-          <canvas class="work-shape work-shape-x" aria-hidden="true"></canvas>
-          <div class="about-card">
-            <h2 class="work-project-title" id="about-heading">About Me</h2>
-            <div class="work-project-summary">
-              <p>
-                Lake Cam is a product designer and design engineer from
-                Malaysia, now based in Canada. With 3+ years of experience in
-                crafting design systems and enterprise software, he has also
-                been super into the indie dev scene and the idea of making
-                software that feels human and homemade.
-              </p>
-              <p>
-                Outside work, he is also an avid historian of 1990s–2010s pop
-                culture, a massive Survivor and Big Brother fan, casually thinks
-                about rowing (and maybe doing it) and has a deep interest in
-                human geography and Southeast Asian history.
-              </p>
-            </div>
-          </div>
-        </section>
-      </section>
-      
-      <!-- Shared footer -->
-      <div id="footer-placeholder"></div>
-      
-      <!-- Shared header and footer -->
-      <script>
-        // fetch("includes/header-1.html")
-        //   .then((response) => response.text())
-        //   .then((data) => {
-        //     document.getElementById("header-placeholder").innerHTML = data;
-        //   });
-  
-        fetch("/includes/footer-1.html")
-          .then((response) => response.text())
-          .then((data) => {
-            document.getElementById("footer-placeholder").innerHTML = data;
-            document.getElementById("copyright-years").textContent = new Date().getFullYear();
-            
-            import("/js/cloud-atlas.js");
-          });
-      </script>
-    </div>
+      fetch("/includes/footer-1.html")
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById("footer-placeholder").innerHTML = data;
+          document.getElementById("copyright-years").textContent = new Date().getFullYear();
+          
+          import("/js/cloud-atlas.js");
+        });
+    </script>
 
     <!-- CONTENT END -->
 
