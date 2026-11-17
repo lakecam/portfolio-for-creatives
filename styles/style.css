@@ -1743,7 +1743,8 @@ a.nav-link-primary:hover {
 }
 
 .background-black p,
-.background-black h2 {
+.background-black h2,
+.background-black h3{
   filter: invert();
 }
 

@@ -334,29 +334,6 @@
     ></script>
     <script defer src="./js/button-045.js"></script>
     <script defer src="./js/logo-loader.js"></script>
-    <script>
-      // Hold project videos on their poster frame for reduced motion,
-      // and only play them while they're on screen
-      const projectVideos = document.querySelectorAll(".work-project video");
-
-      if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-        projectVideos.forEach((video) => {
-          video.removeAttribute("autoplay");
-          video.pause();
-        });
-      } else {
-        const videoWatcher = new IntersectionObserver((entries) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              entry.target.play().catch(() => {});
-            } else {
-              entry.target.pause();
-            }
-          });
-        });
-        projectVideos.forEach((video) => videoWatcher.observe(video));
-      }
-    </script>
     <script type="module" src="./js/hero-shader.js"></script>
 
   </body>
