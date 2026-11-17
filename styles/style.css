@@ -34,11 +34,6 @@
   --color-highlight: lemonchiffon;
   --color-fallback: #ff057c; /* Fallback color for glitch effect on 404 page */
   /* Backgrounds */
-  /*
-  --color-bg: #fdfdfd;
-  --color-bg-about: #f5f5f5;
-  --color-bg-footer: #f5f5f5;
-  */
   --color-bg: var(--neutral-50); /* same neutral as the work section, so no lime shows at the edges */
   --color-bg-about: #e2fab1;
   --color-bg-footer: #e2fab1;
@@ -56,7 +51,6 @@
   --color-text-holding-title: var(--brand-500);
   --color-text-project-category: var(--brand-500);
   --color-text-project-description: #222;
-  --color-text-project-sidebar: #222;
   --color-text-project-title: #5200ff;
   --color-text-work-grid-title: var(--brand-400);
   /* Link States */
@@ -73,8 +67,6 @@
   /* Components */
   --color-bg-full-width: #f5f5f5;
   --color-bg-project-description: #f5f5f5;
-  --color-bg-sidebar-project: orangered;
-  --color-bg-sidebar-work: lemonchiffon;
   --color-bg-hero-fallback: #070c12; /* Shown if the hero shader can't run */
   --color-text-on-hero: #ffffff;
   /* Work Section */
@@ -1004,9 +996,6 @@ a.nav-link-primary:hover {
   margin: 0 0 clamp(1rem, 7.25vw, 7.75rem);
   font-family: "Jelink", var(--font-hero);
   font-size: clamp(4rem, 10.5vw, 11.25rem);
-  font-weight: 400;
-  line-height: 1;
-  letter-spacing: 0;
   color: var(--color-text-work-ink);
   text-box: trim-both cap alphabetic;
   white-space: nowrap;
@@ -1019,7 +1008,7 @@ a.nav-link-primary:hover {
   border-top: 1px solid var(--color-border-work);
 }
 
-/* Each project: three images, then the title and summary side by side */
+/* Each project: three images/videos, then the title and summary side by side */
 .work-project {
   display: grid;
   grid-template-columns: repeat(6, minmax(0, 1fr));
@@ -1250,24 +1239,10 @@ a.nav-link-primary:hover {
 
 /* Padding around work grid and project page */
 .portfolio,
-.project-wrapper,
-.work-sidebar-wrapper {
+.project-wrapper {
   padding: var(
     --padding-tiny
   ); /* Padding to keep content from touching edges */
-}
-
-/* Work Sidebar on Mobile */
-.work-sidebar {
-  width: 100%;
-  background: var(
-    --color-bg-sidebar-work
-  ); /* Background color for the sidebar */
-}
-
-/* Main Work Area with Sidebar on Mobile */
-.work-details {
-  width: 100%;
 }
 
 /* Defining the work page grid */
@@ -1332,32 +1307,6 @@ a.nav-link-primary:hover {
   /* Placeholder: no custom styles yet */
 }
 
-/*
-
-███████ ██ ██████  ███████ ██████   █████  ██████  
-██      ██ ██   ██ ██      ██   ██ ██   ██ ██   ██ 
-███████ ██ ██   ██ █████   ██████  ███████ ██████  
-     ██ ██ ██   ██ ██      ██   ██ ██   ██ ██   ██ 
-███████ ██ ██████  ███████ ██████  ██   ██ ██   ██ 
-                                                   
-                                                   
-*/
-
-/* -------------------------------------------------------------------------- */
-/* 🗂️ Sidebar Navigation Styles                                                 */
-/* This section contains styles for the sidebar navigation on the portfolio    */
-/* website. The aim is to create a simple and clean sidebar for better access. */
-/* -------------------------------------------------------------------------- */
-
-/* Sidebar navigation list styles */
-.sidebar-nav-list {
-  padding: var(--padding-small); /* Adds padding around the navigation list */
-}
-
-/* Individual navigation item styles */
-.sidebar-nav-item {
-  margin-bottom: 1rem; /* Space between each navigation item */
-}
 
 /* 
 
@@ -1665,16 +1614,6 @@ a.nav-link-primary:hover {
   margin-bottom: 2rem;
 }
 
-/* Sidebar Styles */
-.project-aside {
-  width: 100%;
-  padding: var(--padding-small);
-  display: flex;
-  flex-direction: column;
-  color: var(--color-text-project-sidebar);
-  background: var(--color-bg-sidebar-project);
-}
-
 /* Container for project images with center alignment */
 .project-image-container {
   display: flex;
@@ -1727,6 +1666,13 @@ a.nav-link-primary:hover {
   padding: var(--padding-small);
 }
 
+.project-page-problem-tile.problem-tile-monty {
+  background: var(--yellow-200);
+}
+
+.background-white {
+  background: #ffffff;
+}
 .background-black {
   background: #000;
 }
@@ -1755,6 +1701,10 @@ a.nav-link-primary:hover {
   background: url("/assets/project-3/hero.webp"), var(--accent2-500);
   /*background: blue;*/
   color: #fff;
+}
+
+.icon-card-bg-lime-300 {
+  background: var(--lime-300);
 }
 
 .icon-card-bg-black {
@@ -1800,6 +1750,35 @@ a.nav-link-primary:hover {
   color: #fff;
 }
 
+.journey-map-container {
+  align-items: start;
+}
+.journey-map-container .section-item {
+  flex: 1;
+}
+.journey-map-card-wrapper {
+  min-height: 10rem;
+  display: flex;
+}
+.journey-map-card {
+  display: flex;
+  width: 100%;
+  background: #ffffff;
+  border-radius: var(--radius-sm);
+  padding: var(--padding-small);
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.user-flow-container {
+  background: var(--neutral-50);
+  border-radius: var(--radius-md);
+}
+.user-flow-card-wrapper {
+  height: 11.25rem;
+}
+
 .pill {
   background: #fff;
   border-radius: 1rem;
@@ -1815,6 +1794,33 @@ a.nav-link-primary:hover {
 .pill.pill-black {
   background: #000;
   color: #fff;
+}
+.pill.pill-warm {
+  background: #f3ece6;
+  color: #525252;
+}
+.pill.pill-red {
+  background: #fde7ef;
+  color: #d6336c;
+}
+
+.breadcrumb-number {
+  background: var(--neutral-200);
+  border-radius: 100%;
+  width: 2rem;
+  height: 2rem;
+  text-align: center;
+  align-content: center;
+  margin-top: var(--gap-small);
+  margin-bottom: var(--gap-small);
+}
+
+.hero.hero-lumat {
+  background: var(--lime-300);
+}
+
+.background-amber-200 {
+  background: var(--amber-200);
 }
 
 /* Previous/Next Arrow Styles */
@@ -2145,17 +2151,6 @@ to keep your styles reusable and consistent.
     padding: var(--padding-small);
   }
 
-  /* Sidebar on Large Devices */
-
-  .project-aside {
-    width: 35%;
-    height: 80vh;
-    position: -webkit-sticky;
-    position: sticky;
-    top: 8rem;
-    padding-right: 2rem;
-  }
-
   /* Main Project Image Area on Large Devices */
 
   .project-details {
@@ -2242,22 +2237,6 @@ to keep your styles reusable and consistent.
     grid-column: 1 / 4; /* Spans all three columns */
     text-align: center;
     align-self: end; /* Aligns content to bottom */
-  }
-
-  /* Work Sidebar on Large Devices */
-
-  .work-sidebar {
-    width: 25%;
-    height: 80vh;
-    position: -webkit-sticky;
-    position: sticky;
-    top: 1rem;
-  }
-
-  /* Main Work Area on Large Devices */
-
-  .work-details {
-    width: 75%;
   }
 }
 

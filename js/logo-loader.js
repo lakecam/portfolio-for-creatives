@@ -1,4 +1,4 @@
-// Logo Stack Loader (Osmo Supply), with the Lake logo.
+// Logo Stack Loader (Osmo Supply)
 // Plays once when the page opens, then hides itself.
 
 function initLogoLoader() {

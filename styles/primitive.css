@@ -54,6 +54,10 @@
   /* Other Colours */
   --fuchsia-100: #fae8ff;
   --fuchsia-200: #f6cfff;
+  --purple-200: #e9d4ff;
+  --lime-300: #bbf451;
+  --amber-200: #fee685;
+  --yellow-200: #fff197;
   /* Overlays */
   --overlay-10: rgba(39, 39, 42, 0.1);
   --overlay-25: rgba(39, 39, 42, 0.25);
