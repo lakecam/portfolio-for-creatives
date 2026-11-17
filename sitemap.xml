@@ -4,32 +4,17 @@
 
   <url>
        <loc>https://lakecam.co/</loc>
-       <lastmod>2026-10-29T15:47:23+00:00</lastmod>
+       <lastmod>2026-11-17T06:20:00+00:00</lastmod>
        <priority>1.0000</priority>
   </url>
   <url>
        <loc>https://lakecam.co/about</loc>
-       <lastmod>2026-10-29T15:47:23+00:00</lastmod>
+       <lastmod>2026-11-17T06:20:00+00:00</lastmod>
        <priority>0.8000</priority>
   </url>
   <url>
        <loc>https://lakecam.co/work/poba/</loc>
-       <lastmod>2026-10-29T15:47:23+00:00</lastmod>
-       <priority>0.6400</priority>
-  </url>
-  <url>
-       <loc>https://lakecam.co/work/lumat/</loc>
-       <lastmod>2026-10-29T15:47:23+00:00</lastmod>
-       <priority>0.6400</priority>
-  </url>
-  <url>
-       <loc>https://lakecam.co/work/monty/</loc>
-       <lastmod>2026-10-29T15:47:23+00:00</lastmod>
-       <priority>0.6400</priority>
-  </url>
-  <url>
-       <loc>https://lakecam.co/work/vamo/</loc>
-       <lastmod>2026-10-29T15:47:23+00:00</lastmod>
+       <lastmod>2026-11-17T06:20:00+00:00</lastmod>
        <priority>0.6400</priority>
   </url>
 </urlset>
