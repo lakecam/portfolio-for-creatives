@@ -65,7 +65,7 @@
   --color-nav-arrow-stroke: #5200ff;
   --color-nav-arrow-stroke-hover: #000;
   /* Components */
-  --color-bg-full-width: #f5f5f5;
+  --color-bg-full-width: var(--neutral-50);
   --color-bg-project-description: #f5f5f5;
   --color-bg-hero-fallback: #070c12; /* Shown if the hero shader can't run */
   --color-text-on-hero: #ffffff;
@@ -1609,7 +1609,7 @@ a.nav-link-primary:hover {
 /* Full-width wrapper for the project section */
 .project-wrapper-full-width {
   width: 100%;
-  padding: var(--padding-small);
+  /*padding: var(--padding-small);*/
 }
 
 /* Container for the project content with full-width display */
@@ -1674,6 +1674,13 @@ a.nav-link-primary:hover {
   background: var(--yellow-200);
 }
 
+.big-stat {
+  font-size: 4.5rem;
+}
+.medium-stat {
+  font-size: 2rem;
+}
+
 .big-stat-card {
   border-radius: var(--radius-md);
   padding: var(--padding-small);
@@ -1687,13 +1694,19 @@ a.nav-link-primary:hover {
   background: #ffffff;
 }
 .background-black {
-  background: #000;
+  background: #0a0a0a;
+}
+.background-darkgray {
+  background: #373737;
 }
 
 .background-black p,
 .background-black h2,
-.background-black h3{
-  filter: invert();
+.background-black h3,
+.background-darkgray p,
+.background-darkgray h2,
+.background-darkgray h3{
+  color: #fff;
 }
 
 .icon-card {
@@ -1731,7 +1744,7 @@ a.nav-link-primary:hover {
 }
 
 .figure-card {
-  background: var(--neutral-200);
+  background: var(--neutral-100);
   padding: var(--padding-tiny);
   border-radius: var(--radius-sm);
 }
@@ -1847,6 +1860,9 @@ a.nav-link-primary:hover {
 
 .background-amber-200 {
   background: var(--amber-200);
+}
+.background-lumat-texture {
+  background: url("/assets/lumat-texture.svg");
 }
 
 /* Previous/Next Arrow Styles */
@@ -2174,7 +2190,7 @@ to keep your styles reusable and consistent.
   /* Project Full Width Styles */
 
   .project-wrapper-full-width {
-    padding: var(--padding-small);
+    /*padding: var(--padding-small);*/
   }
 
   /* Main Project Image Area on Large Devices */
