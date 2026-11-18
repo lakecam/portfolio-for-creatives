@@ -205,6 +205,12 @@ svg {
   flex-direction: column;
 }
 
+.spacebetween-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 /* Puts the box on its own line and adds space underneath */
 .margin-bottom {
   display: block; /* Makes it a block so it stacks nicely */
@@ -1668,6 +1674,10 @@ a.nav-link-primary:hover {
   background: var(--fuchsia-100);
   border-radius: var(--radius-md);
   padding: var(--padding-small);
+  display: flex;
+  flex-direction: column;
+  min-height: 15rem;
+  justify-content: space-between;
 }
 
 .project-page-problem-tile.problem-tile-monty {
@@ -1851,6 +1861,18 @@ a.nav-link-primary:hover {
 .pill.pill-red {
   background: #fde7ef;
   color: #d6336c;
+}
+
+.boxy-pill {
+  background: var(--yellow-300);
+  border-radius: var(--radius-sm);
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  padding-top: 0.4rem;
+  padding-bottom: 0.4rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+  text-transform: uppercase;
 }
 
 .breadcrumb-number {
