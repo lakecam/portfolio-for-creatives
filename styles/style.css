@@ -244,6 +244,10 @@ svg {
   text-align: center;
 }
 
+.bold {
+  font-weight: bold;
+}
+
 /* ------------------------------ */
 /* 🌀 Animation & Interaction Tools */
 /* ------------------------------ */
@@ -1670,6 +1674,15 @@ a.nav-link-primary:hover {
   background: var(--yellow-200);
 }
 
+.big-stat-card {
+  border-radius: var(--radius-md);
+  padding: var(--padding-small);
+  background: var(--neutral-200);
+}
+.big-stat-card.big-stat-card-purple {
+  background: var(--purple-200);
+}
+
 .background-white {
   background: #ffffff;
 }
@@ -1777,6 +1790,19 @@ a.nav-link-primary:hover {
 }
 .user-flow-card-wrapper {
   height: 11.25rem;
+}
+
+.problem-coloured-step-lime {
+  border-left: 4px solid var(--lime-300);
+  padding-left: var(--gap-small);
+}
+.problem-coloured-step-pink {
+  border-left: 4px solid var(--pink-300);
+  padding-left: var(--gap-small);
+}
+.problem-coloured-step-yellow {
+  border-left: 4px solid var(--yellow-400);
+  padding-left: var(--gap-small);
 }
 
 .pill {
