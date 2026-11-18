@@ -296,6 +296,10 @@ svg {
   padding: var(--padding-small); /* smaller, mobile-safe default */
 }
 
+.padding-left-small {
+  padding-left: var(--padding-small);
+}
+
 /* ----------------------------- */
 /* 🧩 Flex Gap Utilities (Mobile First) */
 /* ----------------------------- */
@@ -1687,7 +1691,15 @@ a.nav-link-primary:hover {
 .big-stat {
   font-size: 4.5rem;
 }
+
 .medium-stat {
+  font-size: 3rem;
+}
+.medium-stat img {
+  height: 1lh;
+}
+
+.small-stat {
   font-size: 2rem;
 }
 
@@ -1863,7 +1875,8 @@ a.nav-link-primary:hover {
   color: #d6336c;
 }
 
-.boxy-pill {
+.boxy-pill,
+.boxy-pill-fuchsia{
   background: var(--yellow-300);
   border-radius: var(--radius-sm);
   padding-left: 0.75rem;
@@ -1873,6 +1886,10 @@ a.nav-link-primary:hover {
   font-size: 0.75rem;
   font-weight: 500;
   text-transform: uppercase;
+}
+
+.boxy-pill-fuchsia {
+  background: var(--fuchsia-200);
 }
 
 .breadcrumb-number {
