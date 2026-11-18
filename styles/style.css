@@ -1734,7 +1734,7 @@ a.nav-link-primary:hover {
 }
 
 .icon-card-bg-black {
-  background: #000;
+  background: #0a0a0a;
   color: #fff;
 }
 
@@ -1795,6 +1795,16 @@ a.nav-link-primary:hover {
   text-align: center;
   align-items: center;
   justify-content: center;
+}
+
+@media (min-width: 768px) {
+  .journey-map-caption-box {
+    border-top: 1px solid var(--neutral-200);
+    margin-top: var(--gap-medium);
+  }
+  .journey-map-caption-box-inner {
+    margin-top: calc(-1 * var(--gap-medium));
+  }
 }
 
 .user-flow-container {
