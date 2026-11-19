@@ -78,12 +78,6 @@
   --color-text-footer: #0b2a3c;
   --color-focus-footer: #024a70;
   --color-gradient-hero: linear-gradient(90deg, #ff00ff, #00ffff);
-  --color-gradient-project-details: linear-gradient(
-    -225deg,
-    #ff057c 0%,
-    #8d0b93 50%,
-    #321575 100%
-  );
   /* Special Elements */
   --color-icon-heart: darkred;
   --color-text-holding-footer: #f8f8ff;
@@ -1321,11 +1315,6 @@ a.nav-link-primary:hover {
   opacity: 1; /* Set opacity on hover */
 }
 
-/* Optional container for future overlay customization */
-.project-details-overlay {
-  /* Placeholder: no custom styles yet */
-}
-
 
 /* 
 
@@ -1660,23 +1649,6 @@ a.nav-link-primary:hover {
 .col-4 {
   width: 100%;
   padding: var(--padding-small);
-}
-
-/* Project image styling */
-.project-image {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 1rem;
-}
-/* Project details section */
-.project-details {
-  width: 100%;
-  padding: var(--padding-small);
-  background: var(
-    --color-gradient-project-details
-  ); /* TODO: Remove gradient background if you prefer a simpler design */
 }
 
 .project-page-problem-tile {
@@ -2284,10 +2256,6 @@ to keep your styles reusable and consistent.
   }
 
   /* Main Project Image Area on Large Devices */
-
-  .project-details {
-    width: 65%;
-  }
 
   .project-image-container,
   .project-description-container {
