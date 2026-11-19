@@ -672,6 +672,10 @@ a.nav-link-primary:hover {
   color: var(--color-text-on-hero);
 }
 
+.project-page {
+  background: #ffffff;
+}
+
 /* -------------------------------------------------------------------------- */
 /* 🧭 Work Page Header                                                         */
 /* The logo sits on the left and a glass tab bar on the right, floating       */
