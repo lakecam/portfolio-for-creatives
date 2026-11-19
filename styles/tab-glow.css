@@ -1,9 +1,8 @@
 /* ----------------------------------------------------------------
    Active Tab Glow
    ----------------------------------------------------------------
-   A streak of light travels around the edge of the active nav tab.
+   A streak of light travels around the edge of the element.
    ::before is the sharp ring and ::after is a blurred copy for the glow.
-   It holds still for people who prefer reduced motion.
 ---------------------------------------------------------------- */
 
 @property --tab-glow-angle {
@@ -12,8 +11,8 @@
   initial-value: 0deg;
 }
 
-.work-page .hero a.nav-link-primary[aria-current="page"]::before,
-.work-page .hero a.nav-link-primary[aria-current="page"]::after {
+.tab-glow::before,
+.tab-glow::after {
   content: "";
   position: absolute;
   inset: 0;
@@ -39,26 +38,19 @@
   pointer-events: none;
 }
 
-.work-page .hero a.nav-link-primary[aria-current="page"]::after {
+.tab-glow::after {
   inset: -4px;
   padding: 5px;
   filter: blur(6px);
   opacity: 0.85;
 }
 
-.work-page .hero a.nav-link-primary[aria-current="page"] {
+.tab-glow {
   animation: tab-glow-orbit 4.5s linear infinite;
 }
 
 @keyframes tab-glow-orbit {
   to {
     --tab-glow-angle: 360deg;
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .work-page .hero a.nav-link-primary[aria-current="page"] {
-    animation: none;
-    --tab-glow-angle: 45deg;
   }
 }
