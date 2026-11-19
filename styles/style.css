@@ -1914,6 +1914,10 @@ a.nav-link-primary:hover {
   background: url("/assets/lumat-texture.svg");
 }
 
+.background-spriig-texture {
+  background: url("/assets/lake-cam--spriig--texture.jpg");
+}
+
 /* Previous/Next Arrow Styles */
 
 .project-navigation {
