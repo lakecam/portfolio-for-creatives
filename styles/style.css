@@ -912,7 +912,7 @@ a.nav-link-primary:hover {
 
 .full-width-section {
   width: 100%;
-  min-height: 80vh; /* Takes up most of the screen height */
+  min-height: 60vh; /* Takes up most of the screen height */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -951,6 +951,11 @@ a.nav-link-primary:hover {
   padding: var(--padding-small);
   margin: 1rem;
 }
+
+.justify-start {
+  justify-content: flex-start;
+}
+
 
 /* 
 
@@ -1892,6 +1897,11 @@ a.nav-link-primary:hover {
   background: var(--fuchsia-200);
 }
 
+.left-border-block {
+  border-left: 1px solid var(--neutral-200);
+  padding-left: var(--gap-small);
+}
+
 .breadcrumb-number {
   background: var(--neutral-200);
   border-radius: 100%;
@@ -1907,6 +1917,9 @@ a.nav-link-primary:hover {
   background: var(--lime-300);
 }
 
+.background-fuchsia-200 {
+  background: var(--fuchsia-200);
+}
 .background-amber-200 {
   background: var(--amber-200);
 }
