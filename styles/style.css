@@ -1652,6 +1652,7 @@ a.nav-link-primary:hover {
 /* Column styles for one-column, two-column and four-column layouts (mobile-first) */
 .col-1,
 .col-2,
+.col-3,
 .col-4 {
   width: 100%;
   padding: var(--padding-small);
@@ -2279,6 +2280,9 @@ to keep your styles reusable and consistent.
   /* Column styles for two-column and four-column layouts (desktop) */
   .col-2 {
     width: 50%;
+  }
+  .col-3 {
+    width: 33.3%;
   }
   .col-4 {
     width: 25%;
