@@ -1732,7 +1732,10 @@ a.nav-link-primary:hover {
 .background-black h3,
 .background-darkgray p,
 .background-darkgray h2,
-.background-darkgray h3{
+.background-darkgray h3,
+.background-poba-blue p,
+.background-poba-blue h2,
+.background-poba-blue h3 {
   color: #fff;
 }
 
@@ -1922,6 +1925,10 @@ a.nav-link-primary:hover {
 }
 .background-amber-200 {
   background: var(--amber-200);
+}
+.background-poba-blue {
+  background: #0A60B8;
+  color: #fff;
 }
 .background-lumat-texture {
   background: url("/assets/lumat-texture.svg");
@@ -2208,6 +2215,23 @@ to keep your styles reusable and consistent.
 
   .hero {
     min-height: 100vh;
+  }
+
+  .project-page .hero {
+    min-height: 33vw;
+  }
+  .project-page .nav-branding-group {
+    background: rgb(63 63 71 / 0.2);
+  }
+  
+  .project-hero-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
 
   .hero-headline-wrapper {
