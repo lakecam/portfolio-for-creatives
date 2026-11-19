@@ -1355,6 +1355,20 @@ a.nav-link-primary:hover {
 /* The grid has 3 main sections: an image, text, and footer.                   */
 /* -------------------------------------------------------------------------- */
 
+.about-content {
+  margin-top: 10rem;
+}
+
+@media (min-width: 700px) {
+  .about-content {
+    margin-top: 14rem;
+  }
+}
+
+.about-card-wrapper {
+  padding: 2rem;
+}
+
 /* Grid container for the About section */
 .about-grid {
   display: grid; /* Set to grid layout */
@@ -1409,6 +1423,10 @@ a.nav-link-primary:hover {
     #b9f0fe 65%,
     #a7effe 100%
   );
+}
+.site-footer.no-clouds {
+  background: none;
+  min-height: 3rem;
 }
 
 .site-footer-inner {
@@ -2318,6 +2336,11 @@ to keep your styles reusable and consistent.
   }
 
   /* About Page Grid for Large Devices */
+
+  .about {
+    max-width: 50rem;
+  }
+
 
   .about-grid {
     padding: var(--padding-jumbo);
