@@ -527,6 +527,12 @@ sup {
   font-weight: bold;
 }
 
+.text-highlight-lime {
+  background: var(--lime-300);
+  padding-left: 0.2rem;
+  padding-right: 0.2rem;
+}
+
 /* 📂 Project grid title — used in grid view (like a portfolio gallery) */
 .work-grid-project-title {
   font-size: 2.875rem;
@@ -1904,6 +1910,9 @@ a.nav-link-primary:hover {
 }
 .background-lumat-texture {
   background: url("/assets/lumat-texture.svg");
+}
+.background-lumat-texture-purple {
+  background: url("/assets/lumat-texture-purple.svg");
 }
 
 .background-spriig-texture {
