@@ -1054,7 +1054,7 @@ a.nav-link-primary:hover {
   padding: var(--padding-medium);
 }
 
-/* Project accent colours, plus the See work button's gradient, text and glow */
+/* Project accent colours */
 .work-project-pink {
   --accent: #fb64b6;
   --btn-top: #ff8fcb;
@@ -1075,6 +1075,13 @@ a.nav-link-primary:hover {
   --btn-bottom: #0094e6;
   --btn-ink: #ffffff;
   --btn-glow: rgba(0, 148, 230, 0.35);
+}
+.work-project-green {
+  --accent: var(--lime-500);
+  --btn-top: var(--lime-300);
+  --btn-bottom: var(--lime-500);
+  --btn-ink: var(--neutral-950);
+  --btn-glow: rgba(124, 207, 0, 0.35);
 }
 
 .work-project-media {
