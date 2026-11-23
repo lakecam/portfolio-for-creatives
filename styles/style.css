@@ -1044,11 +1044,14 @@ a.nav-link-primary:hover {
   border-top: 1px solid var(--color-border-work);
 }
 
-/* Each project: three images/videos, then the title and summary side by side */
+/* Each homepage project: hero image, then the title and summary side by side */
 .work-project {
   display: grid;
   grid-template-columns: repeat(6, minmax(0, 1fr));
   gap: 1.75rem 1rem;
+  background: #ffffff;
+  border-radius: var(--radius-md);
+  padding: var(--padding-medium);
 }
 
 /* Project accent colours, plus the See work button's gradient, text and glow */
@@ -1079,6 +1082,17 @@ a.nav-link-primary:hover {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1rem;
+}
+
+.work-project-tile {
+  grid-column: 1 / -1;
+}
+
+.work-project-tile-hero {
+  width: 100%;
+  aspect-ratio: 1234 / 626;
+  object-fit: cover;
+  border-radius: var(--radius-md);
 }
 
 .work-project-image {
