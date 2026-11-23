@@ -533,6 +533,12 @@ sup {
   padding-right: 0.2rem;
 }
 
+.text-highlight-amber {
+  background: var(--amber-200);
+  padding-left: 0.2rem;
+  padding-right: 0.2rem;
+}
+
 .text-yellow {
   color: var(--lemonite-600);
 }
@@ -1899,6 +1905,13 @@ a.nav-link-primary:hover {
   background: var(--yellow-200);
 }
 
+.project-page-problem-tile.problem-tile-white {
+  background: #ffffff;
+  min-height: auto;
+  justify-content: flex-start;
+  gap: var(--gap-small);
+}
+
 .big-stat {
   font-size: 4.5rem;
 }
@@ -1923,6 +1936,11 @@ a.nav-link-primary:hover {
   background: var(--purple-200);
 }
 
+.big-stat-unit {
+  font-size: 3rem;
+  opacity: 0.5;
+}
+
 .bordered-mini-card {
   background: var(--neural-neutrality-1000);
   color: var(--neutral-100);
@@ -1943,6 +1961,9 @@ a.nav-link-primary:hover {
 .background-darkgray {
   background: #373737;
 }
+.background-neutral-900 {
+  background: var(--neutral-900);
+}
 
 .background-black p,
 .background-black h2,
@@ -1950,9 +1971,14 @@ a.nav-link-primary:hover {
 .background-darkgray p,
 .background-darkgray h2,
 .background-darkgray h3,
+.background-neutral-900 p,
+.background-neutral-900 h2,
+.background-neutral-900 h3,
 .background-poba-blue p,
 .background-poba-blue h2,
-.background-poba-blue h3 {
+.background-poba-blue h3,
+.background-poba-audience p,
+.background-poba-audience h2 {
   color: #fff;
 }
 
@@ -2122,6 +2148,17 @@ a.nav-link-primary:hover {
   padding-left: var(--gap-small);
 }
 
+.top-border-block {
+  border-top: 1px solid var(--neutral-200);
+  padding-top: var(--gap-small);
+}
+
+.persona-name-row {
+  display: flex;
+  align-items: center;
+  gap: var(--gap-small);
+}
+
 .breadcrumb-number {
   background: var(--neutral-200);
   border-radius: 100%;
@@ -2143,8 +2180,21 @@ a.nav-link-primary:hover {
 .background-amber-200 {
   background: var(--amber-200);
 }
+.background-amber-50 {
+  background: var(--amber-50);
+}
+.background-blue-50 {
+  background: var(--blue-50);
+}
+.background-emerald-50 {
+  background: var(--emerald-50);
+}
 .background-poba-blue {
   background: #0A60B8;
+  color: #fff;
+}
+.background-poba-audience {
+  background: url("/assets/lake-cam--poba--audience--background.jpg") center / cover;
   color: #fff;
 }
 .background-lumat-texture {
