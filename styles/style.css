@@ -1482,13 +1482,21 @@ a.nav-link-primary:hover {
 /* 📄 Experience List           */
 /* ---------------------------- */
 
-/* Role and company on the left, dates on the right */
+.resume-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+/* Each job is a small card: role and company on the left, dates on the right */
 .resume-item {
   display: grid;
   grid-template-columns: 1fr auto;
   column-gap: 1.5rem;
-  padding-block: 1.5rem;
-  border-top: 1px solid rgb(113 113 123 / 0.25);
+  padding: 1.5rem;
+  border: 1px solid rgb(113 113 123 / 0.25);
+  border-radius: 20px;
+  background: #2c2c30;
 }
 
 .resume-item h3 {
