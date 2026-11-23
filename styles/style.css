@@ -533,6 +533,10 @@ sup {
   padding-right: 0.2rem;
 }
 
+.text-yellow {
+  color: var(--lemonite-600);
+}
+
 /* 📂 Project grid title — used in grid view (like a portfolio gallery) */
 .work-grid-project-title {
   font-size: 2.875rem;
@@ -1030,10 +1034,10 @@ a.nav-link-primary:hover {
 .work-section-heading {
   align-self: flex-end;
   margin: 0 0 clamp(1rem, 7.25vw, 7.75rem);
-  font-family: "Jelink", var(--font-hero);
-  font-size: clamp(4rem, 10.5vw, 11.25rem);
+  font-family: var(--font-hero);
+  font-size: clamp(4rem, 10.5vw, 6.75rem);
+  font-weight: 900;
   color: var(--color-text-work-ink);
-  text-box: trim-both cap alphabetic;
   white-space: nowrap;
 }
 
@@ -1121,8 +1125,8 @@ a.nav-link-primary:hover {
 .work-project-title {
   margin: 0 0 0.625rem;
   font-family: var(--font-hero);
-  font-size: clamp(1.5rem, 1.85vw, 2rem); /* 32px on large screens */
-  font-weight: 500;
+  font-size: 3rem;
+  font-weight: 800;
   line-height: 1.2;
   letter-spacing: -0.01em;
   color: var(--color-text-work-ink);
@@ -1131,11 +1135,11 @@ a.nav-link-primary:hover {
 .work-project-date {
   margin: 0;
   font-family: var(--font-hero);
-  font-size: clamp(1rem, 1.16vw, 1.25rem); /* 20px on large screens */
-  font-weight: 500;
+  font-size: 1rem;
+  font-weight: 700;
   line-height: 1.2;
   color: var(--color-text-work-muted);
-  font-variant-numeric: tabular-nums;
+  text-transform: uppercase;
 }
 
 .work-project-body {
@@ -1905,6 +1909,17 @@ a.nav-link-primary:hover {
 }
 .big-stat-card.big-stat-card-purple {
   background: var(--purple-200);
+}
+
+.bordered-mini-card {
+  background: var(--neural-neutrality-1000);
+  color: var(--neutral-100);
+
+  display: inline-block;
+  padding: 1rem;
+  border-radius: 18px;
+  box-shadow: 0 0 8px 2px rgba(255, 252, 63, 0.50), 1px 1px 4px 0 rgba(219, 157, 23, 0.40) inset, -1px -1px 4px 0 rgba(219, 157, 23, 0.64) inset;
+  text-align: center;
 }
 
 .background-white {
