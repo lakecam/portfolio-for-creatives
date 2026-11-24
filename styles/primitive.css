@@ -82,6 +82,6 @@
   /* Typefaces */
   --font-body: "Figtree", ui-sans-serif, system-ui, -apple-system, "Segoe UI",
     sans-serif;
-  --font-hero: "Geist", var(--font-body);
+  --font-hero: "Allo", var(--font-body);
   --font-accent: "Geist Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
 }
