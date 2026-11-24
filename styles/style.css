@@ -1443,6 +1443,11 @@ a.nav-link-primary:hover {
   min-width: 0;
 }
 
+/* Courses stacks under Education in the same column */
+.about-panel + .about-panel {
+  margin-top: 1.5rem;
+}
+
 /* Card behind each block of text */
 .about-panel {
   padding: 2rem;
