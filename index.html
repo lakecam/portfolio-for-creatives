@@ -49,33 +49,34 @@
       </div>
     </div>
 
+    <header class="hero-header">
+      <ul class="nav-branding">
+        <!-- Logo (standalone LI) -->
+        <li class="nav-branding-logo">
+          <a href="/">
+            <img src="assets/branding-images/lake.svg" alt="Lake Cam" />
+          </a>
+        </li>
+        <li class="nav-branding-item">
+          <ul class="nav-branding-group">
+            <li class="nav-branding-item">
+              <a href="/" class="nav-link-primary tab-glow" aria-current="page"
+                >Home</a
+              >
+            </li>
+            <li class="nav-branding-item">
+              <a href="#work" class="nav-link-primary">Work</a>
+            </li>
+            <li class="nav-branding-item">
+              <a href="/about" class="nav-link-primary">About</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </header>
+
     <section class="hero gradient-animation">
       <canvas class="hero-shader" aria-hidden="true"></canvas>
-      <header class="hero-header">
-        <ul class="nav-branding">
-          <!-- Logo (standalone LI) -->
-          <li class="nav-branding-logo">
-            <a href="/">
-              <img src="assets/branding-images/lake.svg" alt="Lake Cam" />
-            </a>
-          </li>
-          <li class="nav-branding-item">
-            <ul class="nav-branding-group">
-              <li class="nav-branding-item">
-                <a href="/" class="nav-link-primary tab-glow" aria-current="page"
-                  >Home</a
-                >
-              </li>
-              <li class="nav-branding-item">
-                <a href="#work" class="nav-link-primary">Work</a>
-              </li>
-              <li class="nav-branding-item">
-                <a href="/about" class="nav-link-primary">About</a>
-              </li>
-            </ul>
-          </li>
-        </ul>
-      </header>
       <div class="hero-headline-wrapper">
         <h1 class="hero-headline">
           Lake Cam is a product designer who lives between pixels and code
@@ -235,5 +236,6 @@
     <script defer src="./js/logo-loader.js"></script>
     <script type="module" src="./js/hero-shader.js"></script>
 
+    <script defer src="/js/sticky-nav.js"></script>
   </body>
 </html>

@@ -683,7 +683,7 @@ a.nav-link-primary:hover {
 }
 
 .work-page .hero-headline,
-.work-page .hero a.nav-link-primary {
+.work-page .hero-header a.nav-link-primary {
   color: var(--color-text-on-hero);
 }
 
@@ -706,11 +706,12 @@ a.nav-link-primary:hover {
 
 /* -------------------------------------------------------------------------- */
 /* 🧭 Work Page Header                                                         */
-/* The logo sits on the left and a glass tab bar on the right, floating       */
-/* over the shader. Sizes are set once here and reused below.                 */
+/* The logo sits on the left and a glass tab bar on the right, pinned to the  */
+/* top of the page. Sizes are set once here and reused below.                 */
 /* -------------------------------------------------------------------------- */
 
-.work-page .hero {
+.work-page .hero,
+.work-page .hero-header {
   --hero-gutter: clamp(1rem, 5.1vw, 5.5rem);
   /* Pushes the headline in a little further than the logo on wide screens */
   --headline-indent: clamp(0rem, (100vw - 48rem) * 0.025, 1.5rem);
@@ -724,12 +725,13 @@ a.nav-link-primary:hover {
   --logo-height: calc(var(--nav-height) * 0.76);
 }
 
-/* The header floats on top, so the headline centres in the full hero */
+/* The header stays pinned to the top while the page scrolls */
 .work-page .hero-header {
-  position: absolute;
+  position: fixed;
   inset: 0 0 auto;
-  z-index: 1;
+  z-index: 50; /* Above the page, below the loading screen */
   min-height: 0;
+  pointer-events: none; /* Only the logo and tabs catch clicks */
   padding: clamp(1rem, 2.3vw, 2.5rem) var(--hero-gutter) 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -748,6 +750,11 @@ a.nav-link-primary:hover {
   padding: 0;
 }
 
+.work-page .nav-branding-logo,
+.work-page .nav-branding-group {
+  pointer-events: auto;
+}
+
 .work-page .nav-branding-logo a,
 .work-page .nav-branding-logo img {
   display: block; /* Removes the little gap under the image */
@@ -760,7 +767,28 @@ a.nav-link-primary:hover {
 }
 
 .work-page .nav-branding-logo a {
+  position: relative;
+  isolation: isolate;
   border-radius: 0.25rem;
+}
+
+/* Once the page scrolls, the logo and tabs get a dark glass backing, so they
+   stay readable over the light sections. js/sticky-nav.js adds .is-scrolled */
+.work-page .nav-branding-logo a::before {
+  content: "";
+  position: absolute;
+  inset: calc(var(--nav-height) * -0.12) calc(var(--nav-height) * -0.3);
+  z-index: -1;
+  border-radius: var(--nav-font);
+  background: rgb(9 9 11 / 0.55);
+  -webkit-backdrop-filter: blur(16px);
+  backdrop-filter: blur(16px);
+  opacity: 0;
+  transition: opacity 200ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.work-page .hero-header.is-scrolled .nav-branding-logo a::before {
+  opacity: 1;
 }
 
 .work-page .nav-branding-logo a:focus-visible {
@@ -777,9 +805,16 @@ a.nav-link-primary:hover {
   padding: var(--nav-pad);
   background: rgb(2 74 112 / 0.4);
   border-radius: var(--nav-font); /* 20px on large screens */
+  transition: background-color 200ms cubic-bezier(0.23, 1, 0.32, 1);
 }
 
-.work-page .hero a.nav-link-primary {
+.work-page .hero-header.is-scrolled .nav-branding-group {
+  background-color: rgb(9 9 11 / 0.55);
+  -webkit-backdrop-filter: blur(16px);
+  backdrop-filter: blur(16px);
+}
+
+.work-page .hero-header a.nav-link-primary {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -800,11 +835,12 @@ a.nav-link-primary:hover {
 
 /* Phones: the tabs shrink to fit their labels and the logo gets smaller */
 @media (max-width: 37.5rem) {
-  .work-page .hero {
+  .work-page .hero,
+  .work-page .hero-header {
     --logo-height: calc(var(--nav-height) * 0.58);
   }
 
-  .work-page .hero a.nav-link-primary {
+  .work-page .hero-header a.nav-link-primary {
     width: auto;
     padding-inline: 0.75rem;
   }
@@ -812,7 +848,7 @@ a.nav-link-primary:hover {
 
 /* Trims the line box so the label sits in the middle of the tab */
 @supports (text-box: trim-both cap alphabetic) {
-  .work-page .hero a.nav-link-primary {
+  .work-page .hero-header a.nav-link-primary {
     display: block;
     height: auto;
     padding-block: calc((var(--tab-height) - 1cap) / 2);
@@ -821,7 +857,7 @@ a.nav-link-primary:hover {
 }
 
 /* Active tab (the moving glow lives in tab-glow.css) */
-.work-page .hero a.nav-link-primary[aria-current="page"] {
+.work-page .hero-header a.nav-link-primary[aria-current="page"] {
   position: relative;
   isolation: isolate;
   background: rgb(255 255 255 / 0.16);
@@ -839,16 +875,16 @@ a.nav-link-primary:hover {
 
 /* Hover, press and keyboard focus for the other tabs */
 @media (hover: hover) {
-  .work-page .hero a.nav-link-primary:not([aria-current="page"]):hover {
+  .work-page .hero-header a.nav-link-primary:not([aria-current="page"]):hover {
     background: rgb(255 255 255 / 0.08);
   }
 }
 
-.work-page .hero a.nav-link-primary:not([aria-current="page"]):active {
+.work-page .hero-header a.nav-link-primary:not([aria-current="page"]):active {
   background: rgb(255 255 255 / 0.12);
 }
 
-.work-page .hero a.nav-link-primary:focus-visible {
+.work-page .hero-header a.nav-link-primary:focus-visible {
   outline: 2px solid #ffffff;
   outline-offset: 2px;
 }

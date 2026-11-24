@@ -20,31 +20,32 @@
   </head>
 
   <body class="work-page about-page">
+    <!-- Same navbar as the home page -->
+    <header class="hero-header">
+      <ul class="nav-branding">
+        <!-- Logo (standalone LI) -->
+        <li class="nav-branding-logo">
+          <a href="/">
+            <img src="/assets/branding-images/lake.svg" alt="Lake Cam" />
+          </a>
+        </li>
+        <li class="nav-branding-item">
+          <ul class="nav-branding-group">
+            <li class="nav-branding-item">
+              <a href="/" class="nav-link-primary">Home</a>
+            </li>
+            <li class="nav-branding-item">
+              <a href="/#work" class="nav-link-primary">Work</a>
+            </li>
+            <li class="nav-branding-item">
+              <a href="/about" class="nav-link-primary tab-glow" aria-current="page">About</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </header>
+
     <section class="hero">
-      <!-- Same navbar as the home page -->
-      <header class="hero-header">
-        <ul class="nav-branding">
-          <!-- Logo (standalone LI) -->
-          <li class="nav-branding-logo">
-            <a href="/">
-              <img src="/assets/branding-images/lake.svg" alt="Lake Cam" />
-            </a>
-          </li>
-          <li class="nav-branding-item">
-            <ul class="nav-branding-group">
-              <li class="nav-branding-item">
-                <a href="/" class="nav-link-primary">Home</a>
-              </li>
-              <li class="nav-branding-item">
-                <a href="/#work" class="nav-link-primary">Work</a>
-              </li>
-              <li class="nav-branding-item">
-                <a href="/about" class="nav-link-primary tab-glow" aria-current="page">About</a>
-              </li>
-            </ul>
-          </li>
-        </ul>
-      </header>
     </section>
 
     <ul class="about-grid">
@@ -281,5 +282,6 @@
 
     <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/gsap.min.js"></script>
     <script defer src="/js/button-045.js"></script>
+    <script defer src="/js/sticky-nav.js"></script>
   </body>
 </html>

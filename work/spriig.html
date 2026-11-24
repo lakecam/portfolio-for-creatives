@@ -18,6 +18,30 @@
   </head>
 
   <body class="work-page project-page project-1">
+    <header class="hero-header">
+      <ul class="nav-branding">
+        <!-- Logo (standalone LI) -->
+        <li class="nav-branding-logo">
+          <a href="/">
+            <img src="/assets/branding-images/lake-dark.svg" alt="Lake Cam" />
+          </a>
+        </li>
+        <li class="nav-branding-item">
+          <ul class="nav-branding-group">
+            <li class="nav-branding-item">
+              <a href="/" class="nav-link-primary">Home</a>
+            </li>
+            <li class="nav-branding-item">
+              <a href="/#work" class="nav-link-primary tab-glow" aria-current="page">Work</a>
+            </li>
+            <li class="nav-branding-item">
+              <a href="/about" class="nav-link-primary">About</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </header>
+
     <section class="hero">
       <img
         class="project-hero-image"
@@ -26,29 +50,6 @@
         width="3456"
         height="1252"
       />
-      <header class="hero-header">
-        <ul class="nav-branding">
-          <!-- Logo (standalone LI) -->
-          <li class="nav-branding-logo">
-            <a href="/">
-              <img src="/assets/branding-images/lake-dark.svg" alt="Lake Cam" />
-            </a>
-          </li>
-          <li class="nav-branding-item">
-            <ul class="nav-branding-group">
-              <li class="nav-branding-item">
-                <a href="/" class="nav-link-primary">Home</a>
-              </li>
-              <li class="nav-branding-item">
-                <a href="/#work" class="nav-link-primary tab-glow" aria-current="page">Work</a>
-              </li>
-              <li class="nav-branding-item">
-                <a href="/about" class="nav-link-primary">About</a>
-              </li>
-            </ul>
-          </li>
-        </ul>
-      </header>
     </section>
 
     <div class="project-wrapper-full-width">
@@ -766,5 +767,6 @@
           import("/js/cloud-atlas.js");
         });
     </script>
+    <script defer src="/js/sticky-nav.js"></script>
   </body>
 </html>
