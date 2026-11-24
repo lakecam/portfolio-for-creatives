@@ -199,6 +199,10 @@ svg {
   flex-direction: column;
 }
 
+.flex {
+  display: flex;
+}
+
 .spacebetween-row {
   display: flex;
   justify-content: space-between;
@@ -500,6 +504,7 @@ sup {
   line-height: 1.2;
   color: var(--color-text-project-description);
   margin-bottom: 1rem;
+  align-self: stretch;
 }
 
 /* 🧱 Full-width headings — useful in layouts that span edge-to-edge */
@@ -947,7 +952,6 @@ a.nav-link-primary:hover {
   background: var(
     --color-bg-full-width
   ); /* Background color for full-width sections */
-  margin-bottom: 1rem;
 }
 
 .full-width-section.no-background {

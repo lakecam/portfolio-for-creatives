@@ -2,7 +2,6 @@
 ._pg*
 .nova
 .edist
-
 node_modules/
 to-del
 .archive/

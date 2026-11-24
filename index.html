@@ -92,7 +92,9 @@
       <!-- PROJECT 1 -->
       <article class="work-project work-project-blue">
         <div class="work-project-tile">
-          <img class="work-project-tile-hero" src="/assets/lake-cam--poba--hero-screens-product-design-ios-app.jpg" alt="Screenshots from Poba, an iOS app" />
+          <a href="/work/poba">
+            <img class="work-project-tile-hero" src="/assets/lake-cam--poba--hero-screens-product-design-ios-app.jpg" alt="Screenshots from Poba, an iOS app" />
+          </a>
         </div>
         <div class="work-project-meta">
           <h3 class="work-project-title">Poba</h3>
@@ -116,7 +118,9 @@
       <!-- PROJECT 2 -->
       <article class="work-project work-project-yellow">
         <div class="work-project-tile">
-          <img class="work-project-tile-hero" src="/assets/lake-cam--monty--hero-screen-product-design-mac-app.jpg" alt="Screenshots from Poba, an iOS app" />
+          <a href="/work/monty">
+            <img class="work-project-tile-hero" src="/assets/lake-cam--monty--hero-screen-product-design-mac-app.jpg" alt="Screenshots from Poba, an iOS app" />
+          </a>
         </div>
         <div class="work-project-meta">
           <h3 class="work-project-title">Monty</h3>
@@ -140,7 +144,10 @@
       <!-- PROJECT 3 -->
       <article class="work-project work-project-green">
         <div class="work-project-tile">
-          <img class="work-project-tile-hero" src="/assets/lake-cam--lumat--hero-screen-product-design-mac-app.jpg" alt="Screenshots from Poba, an iOS app" />
+          <a href="work/lumat">
+            <img class="work-project-tile-hero" src="/assets/lake-cam--lumat--hero-screen-product-design-mac-app.jpg" alt="Screenshots from Poba, an iOS app" loading="lazy" />
+            
+          </a>
         </div>
         <div class="work-project-meta">
           <h3 class="work-project-title">Lumat</h3>
@@ -164,7 +171,9 @@
       <!-- PROJECT 4 -->
       <article class="work-project work-project-pink">
         <div class="work-project-tile">
-          <img class="work-project-tile-hero" src="/assets/lake-cam--spriig--hero-orange.jpg" alt="Screenshots from Poba, an iOS app" />
+          <a href="work/spriig">
+            <img class="work-project-tile-hero" src="/assets/lake-cam--spriig--hero-orange.jpg" alt="Screenshots from Poba, an iOS app" loading="lazy" />
+          </a>
         </div>
         <div class="work-project-meta">
           <h3 class="work-project-title">Spriig</h3>
@@ -185,30 +194,6 @@
         </div>
       </article>
       
-      <!-- ABOUT ME -->
-
-      <!--<section class="work-about" id="about">
-        <canvas class="work-shape work-shape-k" aria-hidden="true"></canvas>
-        <canvas class="work-shape work-shape-x" aria-hidden="true"></canvas>
-        <div class="about-card">
-          <h2 class="work-project-title">About Me</h2>
-          <div class="work-project-summary">
-            <p>
-              Lake Cam is a product designer and design engineer from
-              Malaysia, now based in Canada. With 3+ years of experience in
-              crafting design systems and enterprise software, he has also
-              been super into the indie dev scene and the idea of making
-              software that feels human and homemade.
-            </p>
-            <p>
-              Outside work, he is also an avid historian of 1990s–2010s pop
-              culture, a massive Survivor and Big Brother fan, casually thinks
-              about rowing (and maybe doing it) and has a deep interest in
-              human geography and Southeast Asian history.
-            </p>
-          </div>
-        </div>
-      </section>-->
     </section>
     
     <!-- Shared footer -->
@@ -228,6 +213,7 @@
           document.getElementById("footer-placeholder").innerHTML = data;
           document.getElementById("copyright-years").textContent = new Date().getFullYear();
           
+          // Needed for the footer clouds
           import("/js/cloud-atlas.js");
         });
     </script>
