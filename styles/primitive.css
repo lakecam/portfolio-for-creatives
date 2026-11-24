@@ -1,6 +1,6 @@
 /* PRIMITIVE TOKENS */
 
-/* Fonts (Catamaran, Figtree, Geist, Geist Mono) are loaded with a <link> in each page head */
+/* Allo is self-hosted in /fonts and set up with @font-face in style.css */
 
 :root {
   /* Neutral */
@@ -80,8 +80,8 @@
   --overlay-50: rgba(39, 39, 42, 0.5);
   --overlay-75: rgba(39, 39, 42, 0.75);
   /* Typefaces */
-  --font-body: "Figtree", ui-sans-serif, system-ui, -apple-system, "Segoe UI",
+  --font-body: "Allo", ui-sans-serif, system-ui, -apple-system, "Segoe UI",
     sans-serif;
-  --font-hero: "Allo", var(--font-body);
-  --font-accent: "Geist Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+  --font-hero: var(--font-body);
+  --font-accent: var(--font-body);
 }
