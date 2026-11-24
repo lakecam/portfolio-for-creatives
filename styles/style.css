@@ -860,16 +860,16 @@ a.nav-link-primary:hover {
 .work-page .hero-headline-wrapper {
   align-items: flex-start;
   text-align: left;
-  padding: clamp(1rem, 2.3vw, 2.5rem) var(--hero-gutter) clamp(1rem, 5.1vw, 5.5rem)
-    calc(var(--hero-gutter) + var(--headline-indent));
+  padding: clamp(1rem, 2.3vw, 2.5rem) var(--hero-gutter) clamp(1rem, 17vw, 18.5rem)
+    calc(max(var(--hero-gutter), (100% - 81.25rem) / 2) + var(--headline-indent));
 }
 
 .work-page .hero-headline {
   font-family: var(--font-hero);
-  font-size: clamp(2.25rem, 3.75vw, 4.0625rem); /* Max 65px */
+  font-size: clamp(2.25rem, 3.25vw, 3.5rem); /* Max 56px */
   font-weight: 400;
   letter-spacing: 0;
-  line-height: 1.4;
+  line-height: 1.3;
   max-width: 16.2em; /* Makes the line break after "designer" */
   margin: 0;
   text-wrap: pretty;
@@ -1022,9 +1022,11 @@ a.nav-link-primary:hover {
   flex-direction: column;
   gap: 2.5rem;
   /* The about me block carries its own room for the K and E */
-  padding: clamp(1rem, 4.9vw, 5.25rem) var(--work-gutter) clamp(2rem, 4vw, 4rem);
+  padding: clamp(1rem, 4.9vw, 5.25rem) max(var(--work-gutter), (100% - 81.25rem) / 2)
+    clamp(2rem, 4vw, 4rem);
   background: var(--neutral-50);
   color: var(--color-text-work-ink);
+  overflow-x: clip; /* The K and X hang off the sides without a sideways scroll */
 }
 
 /* Paper texture over the section background */
@@ -1043,11 +1045,12 @@ a.nav-link-primary:hover {
 
 .work-section-heading {
   align-self: flex-end;
-  margin: 0 0 clamp(1rem, 7.25vw, 7.75rem);
+  margin: 0;
   font-family: var(--font-hero);
   font-size: clamp(4rem, 10.5vw, 6.75rem);
   font-weight: 900;
-  color: var(--color-text-work-ink);
+  line-height: 0.9;
+  color: var(--neutral-800);
   white-space: nowrap;
 }
 
@@ -1062,26 +1065,27 @@ a.nav-link-primary:hover {
 .work-project {
   display: grid;
   grid-template-columns: repeat(6, minmax(0, 1fr));
-  gap: 1.75rem 1rem;
+  gap: 2.5rem 1rem;
   background: #ffffff;
-  border-radius: var(--radius-md);
+  border: 1px solid var(--neutral-100);
+  border-radius: clamp(var(--radius-md), 1.85vw, 2rem);
   padding: var(--padding-medium);
 }
 
 /* Project accent colours */
-.work-project-pink {
-  --accent: #fb64b6;
-  --btn-top: #ff8fcb;
-  --btn-bottom: #e6007a;
-  --btn-ink: #ffffff;
-  --btn-glow: rgba(230, 0, 122, 0.35);
+.work-project-orange {
+  --accent: #fe9a00;
+  --btn-top: #fe9a00;
+  --btn-bottom: #e17100;
+  --btn-ink: var(--neutral-50);
+  --btn-glow: rgba(254, 154, 0, 0.4);
 }
 .work-project-yellow {
-  --accent: #ffb900;
-  --btn-top: #ffd84d;
-  --btn-bottom: #f59e00;
-  --btn-ink: #4a2c00;
-  --btn-glow: rgba(245, 158, 0, 0.4);
+  --accent: #f5f100;
+  --btn-top: #fffc3f;
+  --btn-bottom: #f5f100;
+  --btn-ink: var(--neutral-950);
+  --btn-glow: rgba(255, 252, 63, 0.4);
 }
 .work-project-blue {
   --accent: #00bcff;
@@ -1095,7 +1099,7 @@ a.nav-link-primary:hover {
   --btn-top: var(--lime-300);
   --btn-bottom: var(--lime-500);
   --btn-ink: var(--neutral-950);
-  --btn-glow: rgba(124, 207, 0, 0.35);
+  --btn-glow: rgba(173, 236, 64, 0.4);
 }
 
 .work-project-media {
@@ -1105,15 +1109,44 @@ a.nav-link-primary:hover {
   gap: 1rem;
 }
 
+/* The tile is a window: it stays still while the image moves up to it */
 .work-project-tile {
   grid-column: 1 / -1;
+  position: relative;
+  overflow: hidden;
+  isolation: isolate; /* Keeps the rounded corners clipping in Safari */
+  border-radius: clamp(0.875rem, 1.62vw, 1.75rem);
+}
+
+.work-project-tile a {
+  display: block;
 }
 
 .work-project-tile-hero {
+  display: block;
   width: 100%;
   aspect-ratio: 1234 / 626;
   object-fit: cover;
-  border-radius: var(--radius-md);
+  border-radius: inherit;
+  transition: scale 700ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+/* Shadow just inside the frame, so the image reads as sitting behind it */
+.work-project-tile::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  box-shadow:
+    inset 0 0 0 1px rgba(9, 9, 11, 0.06),
+    inset 0 0.25rem 1rem rgba(9, 9, 11, 0);
+  transition: box-shadow 700ms cubic-bezier(0.23, 1, 0.32, 1);
+  pointer-events: none;
+}
+
+/* Keyboard users get the same move when the image link has focus */
+.work-project-tile:has(a:focus-visible) .work-project-tile-hero {
+  scale: 1.06;
 }
 
 .work-project-image {
@@ -1129,7 +1162,15 @@ a.nav-link-primary:hover {
 .work-project-meta,
 .work-project-body {
   grid-column: span 3;
-  padding-top: 2.5rem;
+}
+
+/* Text sits in a little from the image edges */
+.work-project-meta {
+  padding-left: 1.5rem;
+}
+
+.work-project-body {
+  padding-right: 1.5rem;
 }
 
 .work-project-title {
@@ -1148,7 +1189,7 @@ a.nav-link-primary:hover {
   font-size: 1rem;
   font-weight: 700;
   line-height: 1.2;
-  color: var(--color-text-work-muted);
+  color: var(--neutral-500);
   text-transform: uppercase;
 }
 
@@ -1163,7 +1204,7 @@ a.nav-link-primary:hover {
   margin: 0;
   font-family: var(--font-hero);
   font-size: 1rem;
-  line-height: 1.6;
+  line-height: 1.5;
   color: var(--color-text-work-body);
   text-wrap: pretty;
 }
@@ -1175,7 +1216,7 @@ a.nav-link-primary:hover {
   --button-045-focus-inset: -4px;
   font-family: var(--font-hero);
   font-size: 1rem;
-  font-weight: 500;
+  font-weight: 700;
   letter-spacing: -0.01em;
   color: var(--btn-ink);
 }
@@ -1205,10 +1246,10 @@ a.nav-link-primary:hover {
   pointer-events: none;
 }
 
-/* About me: a frosted glass card with big floating letters underneath */
+/* Big floating K and X under the last project */
 .work-about {
   --shape-size: clamp(20rem, 43vw, 52rem); /* matches the A */
-  --card-width: min(50rem, 100%);
+  --card-width: 100%; /* no card any more, so the letters sit out at the edges */
   position: relative;
   display: flex;
   justify-content: center;
@@ -1247,11 +1288,29 @@ a.nav-link-primary:hover {
 }
 
 @media (hover: hover) {
+  /* Hovering a card pulls its image closer through the frame */
+  .work-project:hover .work-project-tile-hero {
+    scale: 1.06;
+  }
+
+  .work-project:hover .work-project-tile::after {
+    box-shadow:
+      inset 0 0 0 1px rgba(9, 9, 11, 0.08),
+      inset 0 0.375rem 1.75rem rgba(9, 9, 11, 0.22);
+  }
+
   .work-project-link:hover .button-045__inner {
     box-shadow:
       inset 0 1px 0 rgba(255, 255, 255, 0.55),
       inset 0 -2px 4px rgba(0, 0, 0, 0.08),
       0 8px 20px var(--btn-glow);
+  }
+}
+
+/* Reduced motion: the frame shadow still changes, the image stays put */
+@media (prefers-reduced-motion: reduce) {
+  .work-project-tile-hero {
+    scale: 1 !important;
   }
 }
 
@@ -1273,8 +1332,9 @@ a.nav-link-primary:hover {
     grid-column: 1 / -1;
   }
 
+  .work-project-meta,
   .work-project-body {
-    padding-top: 0;
+    padding-inline: 0;
   }
 }
 

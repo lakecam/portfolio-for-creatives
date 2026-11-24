@@ -39,9 +39,9 @@
   }
 }
 
-/* K and E, the same size as the A, behind the about me glass card: the K
-   across its top-left corner, the E across its bottom-right corner and a
-   little lower. Sizes come from --shape-size and --card-width on .work-about. */
+/* K and X, the same size as the A, under the last project: the K out on
+   the left, the X on the right and lower, over the top of the footer.
+   Sizes come from --shape-size and --card-width on .work-about. */
 .work-shape {
   position: absolute;
   z-index: 1;
@@ -53,13 +53,13 @@
 }
 
 .work-shape-k {
-  top: 0;
+  top: calc(var(--shape-size) * -0.17);
   left: calc(50% - var(--card-width) / 2 - var(--shape-size) * 0.55);
   rotate: 7.49deg;
 }
 
 .work-shape-x {
-  bottom: 0;
+  bottom: calc(var(--shape-size) * -0.28);
   left: calc(50% + var(--card-width) / 2 - var(--shape-size) * 0.42);
 }
 
