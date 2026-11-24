@@ -37,7 +37,7 @@ const sceneLayers = (prefix) => [
             height: { unit: "uv", value: 1 },
             origin: "center",
           },
-          url: `${ASSETS}/lp4HcMFgK0g0.png`,
+          url: `${ASSETS}/sRNKHM70I-HV.jpg`,
         },
       },
       {
@@ -50,7 +50,7 @@ const sceneLayers = (prefix) => [
             height: { unit: "uv", value: 1.038 },
             origin: "center",
           },
-          url: `${ASSETS}/2bcYTq9IH5RI.png`,
+          url: `${ASSETS}/BEtFPHMY28jU.jpg`,
         },
       },
       {
