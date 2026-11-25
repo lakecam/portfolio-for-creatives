@@ -1522,7 +1522,7 @@ a.nav-link-primary:hover {
 
 /* -------------------------------------------------------------------------- */
 /* 🪪 About Page                                                              */
-/* Dark page: photo stack on the left, bio and experience cards on the right  */
+/* Dark page: photo and intro on top, education and experience cards below  */
 /* -------------------------------------------------------------------------- */
 
 .about-page {
@@ -1563,8 +1563,8 @@ a.nav-link-primary:hover {
 .about-image .about-beanie {
   position: absolute;
   top: 0;
-  left: 53%;
-  width: 47.1%;
+  left: 50.9%;
+  width: 49.2%;
   animation: about-float 5s ease-in-out -1.5s infinite;
 }
 
@@ -1592,20 +1592,14 @@ a.nav-link-primary:hover {
 }
 
 /* Each card has its own colour: title, the line beside each item, and a glow */
-.about-panel-bio {
+
+.about-panel-experience {
   --panel-title: var(--amber-200);
   --panel-line: var(--amber-200);
   background:
-    url("/assets/lake-cam--about--glow-yellow.webp") right -107px bottom -14px / 400px no-repeat,
-    var(--neutral-800);
-}
-
-.about-panel-experience {
-  --panel-title: var(--fuchsia-300);
-  --panel-line: var(--fuchsia-400);
-  background:
-    url("/assets/lake-cam--about--glow-pink.webp") right -236px top 10px / 400px no-repeat,
-    url("/assets/lake-cam--about--glow-pink.webp") left 84px bottom 200px / 400px no-repeat,
+    url("/assets/lake-cam--about--glow-yellow.webp") right -165px top 10px / 400px no-repeat,
+    url("/assets/lake-cam--about--glow-yellow.webp") left 84px bottom 200px / 400px no-repeat,
+    url("/assets/lake-cam--about--glow-yellow.webp") left -124px bottom -131px / 400px no-repeat,
     var(--neutral-800);
 }
 
@@ -1649,20 +1643,36 @@ a.nav-link-primary:hover {
   font-variation-settings: "opsz" 32;
 }
 
-/* Bio paragraphs sit in the same small card as the jobs */
-.about-bio {
-  padding: 1rem 1.5rem;
+/* Intro beside the photo: a hand-lettered line, then the bio */
+.about-intro {
+  color: var(--neutral-50);
+  font-family: var(--font-hero);
 }
 
-.about-bio p {
+.about-intro h1 {
+  margin: 0 0 2rem;
+}
+
+.about-intro h1 img {
+  display: block;
+  width: min(100%, 37.25rem);
+  height: auto;
+}
+
+.about-intro p {
   margin: 0;
   font-size: 1rem;
-  font-weight: 500;
   line-height: 1.7;
 }
 
-.about-bio p + p {
-  margin-top: 1.5rem;
+.about-intro p + p {
+  margin-top: 2.5rem;
+}
+
+@media (max-width: 37.5rem) {
+  .about-intro p + p {
+    margin-top: 1.5rem;
+  }
 }
 
 /* Email and LinkedIn under the bio */
@@ -1676,7 +1686,7 @@ a.nav-link-primary:hover {
 .about-social .social-orb {
   --button-045-border-radius: 999px;
   --button-045-focus-inset: -3px;
-  color: var(--neutral-300);
+  color: var(--neutral-100);
 }
 
 .about-social .social-orb .button-045__inner {
@@ -1725,8 +1735,7 @@ a.nav-link-primary:hover {
   padding: 1.125rem 1.5rem 1rem;
 }
 
-.resume-item,
-.about-bio {
+.resume-item {
   position: relative;
   border: 1px solid rgb(113 113 123 / 0.25);
   border-radius: 20px;
@@ -1734,8 +1743,7 @@ a.nav-link-primary:hover {
 }
 
 /* Thin coloured line down the left of each card */
-.resume-item::before,
-.about-bio::before {
+.resume-item::before {
   content: "";
   position: absolute;
   top: 1.5rem;
@@ -1820,9 +1828,9 @@ a.nav-link-primary:hover {
 @media (min-width: 992px) {
   .about-diamond {
     display: block;
-    width: 53%;
+    width: 64%;
     height: auto;
-    margin-top: 3rem;
+    margin-top: 2.5rem;
     animation: about-float 6s ease-in-out infinite;
   }
 }
@@ -1830,7 +1838,7 @@ a.nav-link-primary:hover {
 /* Wide screens: it hangs past the left edge, like in the design */
 @media (min-width: 1700px) {
   .about-diamond {
-    margin-left: -28.8%;
+    margin-left: -34.5%;
   }
 }
 
@@ -2876,11 +2884,11 @@ to keep your styles reusable and consistent.
 
   .about-grid {
     padding: var(--padding-jumbo);
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 3fr 4fr;
   }
 
   .about-page .about-grid {
-    grid-gap: 1.5rem 1.25rem;
+    grid-gap: 2.5rem 3.5rem;
   }
 
   /* Education sits under the photo, level with Experience */
@@ -2894,11 +2902,11 @@ to keep your styles reusable and consistent.
     grid-row: 2 / 3;
   }
 
-  /* The beanie pokes up above the top of the About card */
+  /* The photos hang a little past the column, and the beanie up into the top */
   .about-image {
-    width: 95%;
-    margin-top: -10.5%;
-    margin-left: 2%;
+    width: 109%;
+    margin-top: -12.8%;
+    margin-left: -5.25%;
   }
 
   .about-grid-image {
@@ -2908,6 +2916,7 @@ to keep your styles reusable and consistent.
   .about-grid-text {
     grid-row: 1 / 2;
     grid-column: 2 / 3;
+    align-self: center;
   }
 
   /* ------------------------------- */
