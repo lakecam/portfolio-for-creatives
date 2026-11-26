@@ -507,6 +507,33 @@ sup {
   align-self: stretch;
 }
 
+/* Case study intro: app name, subtitle and the line beside them */
+.project-title h1 {
+  font-size: clamp(2.75rem, 4.2vw, 4.5rem);
+  font-weight: 800;
+  line-height: 1.05;
+  letter-spacing: 0;
+}
+.project-title h3 {
+  font-weight: 600;
+  line-height: 1.25;
+  letter-spacing: -0.02em;
+  margin-bottom: 0;
+}
+.project-description p {
+  line-height: 1.7;
+}
+
+@media (min-width: 992px) {
+  /* The line beside the title sits on the same bottom edge as the subtitle */
+  .project-title + .project-description {
+    align-self: flex-end;
+  }
+  .project-title + .project-description p {
+    margin-bottom: 0;
+  }
+}
+
 /* 🧱 Full-width headings — useful in layouts that span edge-to-edge */
 .h1-full-width,
 .h2-full-width {
@@ -2543,7 +2570,7 @@ a.nav-link-primary:hover {
   color: #fff;
 }
 .background-poba-audience {
-  background: url("/assets/lake-cam--poba--audience--background.jpg") center / cover;
+  background: url("/assets/lake-cam--poba--audience--background.webp") center / cover;
   color: #fff;
 }
 .background-poba-cream {
@@ -2595,7 +2622,7 @@ a.nav-link-primary:hover {
 }
 
 .background-spriig-texture {
-  background: url("/assets/lake-cam--spriig--texture.jpg");
+  background: url("/assets/lake-cam--spriig--texture.webp");
 }
 
 /* Previous/Next Arrow Styles */
