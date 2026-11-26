@@ -2315,8 +2315,58 @@ a.nav-link-primary:hover {
   padding: var(--padding-tiny);
   border-radius: var(--radius-sm);
 }
-.figure-card img {
+.figure-card img,
+.figure-card video {
   border-radius: var(--radius-sm);
+}
+
+.figure-card video {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* Two phones side by side for the phone-width screen recordings */
+.phone-pair {
+  display: flex;
+  justify-content: center;
+  gap: 6%;
+  padding: 2.5% 0;
+  border-radius: var(--radius-sm);
+  background: #0f0f0f;
+}
+
+.phone {
+  width: 38%;
+  padding: 10px;
+  border: 1px solid #404040;
+  border-radius: 46px;
+  background: #262626;
+}
+
+.phone-screen {
+  overflow: hidden;
+  border-radius: 36px;
+  background: #ffffff;
+}
+
+.phone-screen img,
+.phone-screen video {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 0;
+}
+
+@media (max-width: 37.5rem) {
+  .phone {
+    padding: 6px;
+    border-radius: 28px;
+  }
+
+  .phone-screen {
+    border-radius: 22px;
+  }
 }
 .figure-card figcaption {
   display: flex;
