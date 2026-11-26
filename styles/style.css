@@ -2541,6 +2541,47 @@ a.nav-link-primary:hover {
   background: url("/assets/lake-cam--poba--audience--background.jpg") center / cover;
   color: #fff;
 }
+.background-poba-cream {
+  background: #fbf4ef;
+}
+.background-poba-cream-pattern {
+  background: url("/assets/poba-pattern-challenge.svg") center / 100% auto no-repeat, #fbf4ef;
+}
+.background-poba-pink-pattern {
+  background: url("/assets/poba-pattern-looking-back.svg") center / 100% auto no-repeat, var(--fuchsia-200);
+}
+
+/* Test plan: small label on the left, the detail on the right */
+.test-plan {
+  display: grid;
+  grid-template-columns: 9.75rem 1fr;
+  align-items: baseline;
+  margin: 0;
+}
+.test-plan dt,
+.test-plan dd {
+  margin: 0;
+  padding: 0.75rem 0;
+  border-top: 1px solid var(--neutral-200);
+}
+.test-plan dt {
+  padding-right: 1rem;
+  font-size: 0.875rem;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: var(--neutral-500);
+}
+.test-plan dd {
+  line-height: 1.5;
+  color: var(--neutral-700);
+}
+
+@media (max-width: 37.5rem) {
+  .test-plan {
+    grid-template-columns: 7.5rem 1fr;
+  }
+}
 .background-lumat-texture {
   background: url("/assets/lumat-texture.svg");
 }
