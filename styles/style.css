@@ -1855,15 +1855,30 @@ a.nav-link-primary:hover {
   }
 }
 
-/* Sky footer on the dark page: it fades in from the dark background */
-.about-page .site-footer {
-  background: linear-gradient(
-    to bottom,
-    var(--neutral-900) 0%,
-    #d4f3fd 45%,
-    #b9f0fe 70%,
-    #a7effe 100%
-  );
+/* Footer on the dark page: light text and dark glass orbs */
+.about-page .footer-fineprint {
+  font-weight: 300;
+  color: rgb(255 255 255 / 0.6);
+}
+
+.about-page .site-footer .social-orb {
+  color: var(--neutral-100);
+}
+
+.about-page .site-footer .social-orb .button-045__inner {
+  border-color: rgb(113 113 123 / 0.5);
+  background-color: rgb(255 255 255 / 0.08);
+  -webkit-backdrop-filter: blur(45px);
+  backdrop-filter: blur(45px);
+  box-shadow: 2px 2px 20px -2px rgb(255 255 255 / 0.08);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .about-page .site-footer .social-orb:hover .button-045__inner {
+    border-color: rgb(113 113 123 / 0.8);
+    background-color: rgb(255 255 255 / 0.16);
+    box-shadow: 2px 2px 20px -2px rgb(255 255 255 / 0.12);
+  }
 }
 
 /* 
@@ -1902,6 +1917,18 @@ a.nav-link-primary:hover {
 .site-footer.no-clouds {
   background: none;
   min-height: 3rem;
+}
+
+/* Case studies: just the footer bar, no sky or clouds */
+.project-page .site-footer {
+  min-height: 0;
+  background: none;
+}
+.project-page .footer-clouds {
+  display: none;
+}
+.project-page .project-full-width {
+  margin-bottom: 0;
 }
 
 .site-footer-inner {

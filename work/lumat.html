@@ -462,7 +462,7 @@
           </div>
         </section>
 
-        <section class="full-width-section">
+        <section class="full-width-section no-background">
           <div class="section-container justify-start">
             <div class="section-item col-2">
               <p class="eyebrow">Next case study</p>
@@ -471,12 +471,6 @@
                   Monty <img src="/assets/icon-arrow-right.svg" />
                 </a>
               </h2>
-              <p>
-                Contact:
-                <a href="mailto:thelakecam@gmail.com">thelakecam@gmail.com</a>
-                ·
-                <a href="https://www.linkedin.com/in/lakecam">linkedin.com/in/lakecam</a>
-              </p>
             </div>
           </div>
         </section>
@@ -500,8 +494,6 @@
         .then((data) => {
           document.getElementById("footer-placeholder").innerHTML = data;
           document.getElementById("copyright-years").textContent = new Date().getFullYear();
-
-          import("/js/cloud-atlas.js");
         });
     </script>
     <script defer src="/js/sticky-nav.js"></script>
