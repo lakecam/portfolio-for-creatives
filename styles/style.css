@@ -520,6 +520,12 @@ sup {
   font-weight: 600;
 }
 
+/* Case study section headings: eyebrow, title, then the description */
+.project-page p.eyebrow + h2 {
+  margin-top: 1.5rem;
+  margin-bottom: 3rem;
+}
+
 /* ✨ Highlighted text — great for emphasis */
 .highlight-primary {
   color: var(--color-accent-secondary);
