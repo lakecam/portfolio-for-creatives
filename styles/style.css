@@ -3413,3 +3413,87 @@ That’s a wrap, class! 🧑‍🎓✨
 .project-page main h2.h2-sans.h2-sans-tight {
   line-height: 1.3;
 }
+
+/* Case study text widths and column gaps, matched to Figma */
+.project-page main :where(p.eyebrow + h2) + p {
+  max-width: 45rem;
+}
+.project-page .max-w-636 { max-width: 39.75rem; }
+.project-page .max-w-650 { max-width: 40.625rem; }
+.project-page .max-w-750 { max-width: 46.875rem; }
+.project-page .max-w-756 { max-width: 47.25rem; }
+.project-page .max-w-763 { max-width: 47.6875rem; }
+.project-page .max-w-805 { max-width: 50.3125rem; }
+.project-page .width-two-thirds > .width-two-thirds {
+  width: auto;
+}
+.project-page .figure-card figcaption {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+.project-page .icon-card {
+  padding: 2rem;
+}
+.project-page .project-page-problem-tile,
+.project-page .big-stat-card {
+  padding: 1.5rem;
+}
+.project-page .test-plan {
+  grid-template-columns: 10.75rem 1fr;
+}
+@media (min-width: 992px) {
+  /* 24px gutters between columns; text still starts on the 1300px content edge */
+  .project-page .section-container {
+    padding-left: 2.25rem;
+    padding-right: 2.25rem;
+  }
+  .project-page .section-item,
+  .project-page .section-container > :is(.width-two-thirds, .width-third, .project-title, .project-description) {
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: 0.75rem;
+    margin-right: 0.75rem;
+  }
+  .project-page .flex-row:has(> .section-item) {
+    margin-left: -0.75rem;
+    margin-right: -0.75rem;
+  }
+  .project-page .user-flow-container {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+  .project-page .caption-row {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+  .project-page .research-split > .section-item:first-child {
+    flex: 786 1 0;
+  }
+  .project-page .research-split > .section-item:last-child {
+    flex: 482 1 0;
+  }
+}
+.project-page .max-w-383 { max-width: 23.9375rem; }
+.project-page .max-w-720 { max-width: 45rem; }
+.project-page .max-w-none { max-width: none; }
+.project-page .left-border-block:has(> .test-plan) {
+  padding-left: 1.5rem;
+}
+@media (min-width: 992px) {
+  /* Two columns of plain text sit further apart than cards do */
+  .project-page .section-container:has(> .col-2):not(:has(figure, img, ul, .icon-card, .test-plan, .bordered-mini-card, .project-page-problem-tile, .project-title)) {
+    column-gap: 2.5rem;
+  }
+}
+@media (min-width: 992px) {
+  .project-page .section-item.left-border-block {
+    padding-left: 1.5rem;
+  }
+  /* Intro: subtitle and description sit 32px apart */
+  .project-page aside .section-container:has(> .project-title) {
+    column-gap: 0.5rem;
+  }
+}
+.project-page .research-split {
+  align-items: flex-start;
+}
