@@ -2418,6 +2418,10 @@ a.nav-link-primary:hover {
 .figure-card.figure-card-dark {
   background: var(--neutral-800);
 }
+/* Cards on a tinted section stay white so the mockups stand out */
+.full-width-section:not(.no-background):not(.background-black):not(.background-neutral-900) .figure-card:not(.figure-card-dark) {
+  background: #fff;
+}
 .figure-card-dark {
   color: var(--neutral-400);
 }
@@ -2474,6 +2478,26 @@ a.nav-link-primary:hover {
 }
 .problem-coloured-step-yellow {
   border-left: 4px solid var(--yellow-400);
+  padding-left: var(--gap-small);
+}
+.problem-coloured-step-orange {
+  border-left: 4px solid var(--amber-500);
+  padding-left: var(--gap-small);
+}
+.problem-coloured-step-green {
+  border-left: 4px solid var(--lime-500);
+  padding-left: var(--gap-small);
+}
+.problem-coloured-step-fuchsia {
+  border-left: 4px solid var(--fuchsia-400);
+  padding-left: var(--gap-small);
+}
+.problem-coloured-step-light {
+  border-left: 4px solid #e2e2e2;
+  padding-left: var(--gap-small);
+}
+.problem-coloured-step-grey {
+  border-left: 4px solid #c0c0c0;
   padding-left: var(--gap-small);
 }
 
@@ -2575,6 +2599,9 @@ a.nav-link-primary:hover {
 }
 .background-poba-cream {
   background: #fbf4ef;
+}
+.background-spriig-stone {
+  background: #f4f2ee;
 }
 .background-poba-cream-pattern {
   background: url("/assets/poba-pattern-challenge.svg") center / 100% auto no-repeat, #fbf4ef;
