@@ -2237,6 +2237,32 @@ a.nav-link-primary:hover {
   justify-content: flex-start;
   gap: var(--gap-small);
 }
+.problem-tile-white .eyebrow {
+  color: #71717b;
+}
+.problem-tile-white h3 {
+  color: #09090b;
+}
+.problem-tile-white p:not(.eyebrow) {
+  color: #52525c;
+}
+
+/* Persona cards */
+.persona-card {
+  height: 100%;
+  padding: 1.5rem;
+  border-radius: 16px;
+  background: var(--neutral-100);
+}
+.persona-card .eyebrow {
+  color: #727272;
+}
+.persona-card h3 {
+  color: #0a0a0a;
+}
+.persona-card p:not(.eyebrow) {
+  color: #090909;
+}
 
 .big-stat {
   font-size: 4.5rem;
@@ -2254,6 +2280,7 @@ a.nav-link-primary:hover {
 }
 
 .big-stat-card {
+  color: #09090b;
   border-radius: 20px;
   padding: var(--padding-small);
   background: var(--neutral-200);
@@ -2315,7 +2342,13 @@ a.nav-link-primary:hover {
   min-height: 20rem;
   padding: var(--padding-small);
   border-radius: var(--radius-md);
-  background: var(--color-bg-project-description);
+  background: var(--neutral-100);
+}
+.icon-card h3 {
+  color: #0a0a0a;
+}
+.icon-card p {
+  color: #525252;
 }
 
 .icon-card-icon {
@@ -2337,13 +2370,39 @@ a.nav-link-primary:hover {
   color: #fff;
 }
 
+.icon-card-bg-dark {
+  background: var(--neutral-800);
+}
+
+.icon-card-bg-lime-200 {
+  background: #d8f999;
+}
+
+.icon-card-bg-amber-100 {
+  background: #fef3c6;
+}
+
 .icon-card-bg-poba h3,
 .icon-card-bg-black h3 {
   color: #fff;
 }
+.icon-card-bg-poba p {
+  color: #dbeafe;
+}
+.icon-card-bg-black p {
+  color: #a3a3a3;
+}
+.icon-card-bg-dark h3,
+.icon-card-bg-dark p {
+  color: #fafafa;
+}
+.icon-card-bg-lime-200 p,
+.icon-card-bg-amber-100 p {
+  color: #27272a;
+}
 
 .figure-card {
-  background: var(--neutral-100);
+  background: #f5f5f5;
   padding: var(--padding-tiny);
   border-radius: 20px;
 }
@@ -2414,12 +2473,28 @@ a.nav-link-primary:hover {
 .figure-card.figure-card-dark {
   background: var(--neutral-800);
 }
-/* Cards on a tinted section stay white so the mockups stand out */
-.full-width-section:not(.no-background):not(.background-black):not(.background-neutral-900) .figure-card:not(.figure-card-dark) {
+/* Cards on the stone and cream sections stay white so the mockups stand out */
+.background-spriig-stone .figure-card:not(.figure-card-dark),
+.background-poba-cream .figure-card:not(.figure-card-dark) {
   background: #fff;
 }
-.figure-card-dark {
-  color: var(--neutral-400);
+.figure-card figcaption,
+.figure-card figcaption p {
+  color: #525252;
+}
+.figure-card .main-caption {
+  color: #3f3f47;
+}
+.figure-card-ink .main-caption {
+  color: #0a0a0a;
+}
+.figure-card-ink-body figcaption,
+.figure-card-ink-body figcaption p {
+  color: #3f3f47;
+}
+.figure-card-dark figcaption,
+.figure-card-dark figcaption p {
+  color: #a3a3a3;
 }
 .figure-card-dark .main-caption {
   color: #fff;
@@ -3148,3 +3223,45 @@ That’s a wrap, class! 🧑‍🎓✨
 /* 🎉 You made it to the end! */
 /* This is a great place to celebrate your progress, add Easter eggs, or leave notes for your future self. */
 /* Happy coding, and don’t forget to take breaks, stay hydrated, and share your work proudly. 💻✨🎨 */
+
+/* Case study text and dark sections, matched to the Figma file */
+:where(.project-page main) h2 {
+  color: #09090b;
+}
+:where(.project-page main) p {
+  color: #3f3f47;
+}
+:where(.project-page main) .eyebrow {
+  color: #71717b;
+}
+.project-page .background-black {
+  background: var(--neutral-900);
+}
+.big-stat-card p {
+  color: #09090b;
+}
+.big-stat-card .big-stat {
+  color: #0a0a0a;
+}
+.problem-coloured-step-amber {
+  border-left: 4px solid #ffb900;
+  padding-left: var(--gap-small);
+}
+.project-page .eyebrow.eyebrow-amber {
+  color: #ffd230;
+}
+/* Links take the colour of the text around them, underlined in copy, as in Figma */
+.project-page main a:link,
+.project-page main a:visited {
+  color: inherit;
+}
+.project-page main a {
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+}
+.project-page main h2 a {
+  text-decoration: none;
+}
+.left-border-block.problem-coloured-step-green {
+  border-left: 4px solid var(--lime-500);
+}
