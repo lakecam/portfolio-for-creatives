@@ -1078,6 +1078,22 @@ a.nav-link-primary:hover {
   font-display: swap;
 }
 
+/* Figtree by Erik Kennedy (SIL Open Font License, see fonts/Figtree-OFL.txt) */
+@font-face {
+  font-family: "Figtree";
+  src: url("../fonts/FigtreeVariable.woff2") format("woff2");
+  font-weight: 300 900;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Figtree";
+  src: url("../fonts/FigtreeVariable-Italic.woff2") format("woff2");
+  font-weight: 300 900;
+  font-style: italic;
+  font-display: swap;
+}
+
 /* Allo by Josh Puckett (SIL Open Font License, see fonts/Allo-OFL.txt) */
 @font-face {
   font-family: "Allo";
@@ -3379,4 +3395,21 @@ That’s a wrap, class! 🧑‍🎓✨
 .project-page main p.small-note {
   font-size: 0.875rem;
   line-height: 1.5;
+}
+
+/* Case study text is set in Figtree; titles and section headings stay in Allo, as in Figma */
+.project-page .project-wrapper-full-width * {
+  font-family: "Figtree", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+.project-page .project-wrapper-full-width :is(h1, h2, h2 *, .medium-stat, .big-stat) {
+  font-family: var(--font-body);
+}
+.project-page .project-wrapper-full-width :is(h2.h2-sans, h2.h2-sans *) {
+  font-family: "Figtree", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+.project-page main h2.h2-sans {
+  line-height: 1.5;
+}
+.project-page main h2.h2-sans.h2-sans-tight {
+  line-height: 1.3;
 }
