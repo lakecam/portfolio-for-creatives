@@ -2254,7 +2254,7 @@ a.nav-link-primary:hover {
 }
 
 .big-stat-card {
-  border-radius: var(--radius-md);
+  border-radius: 20px;
   padding: var(--padding-small);
   background: var(--neutral-200);
 }
@@ -2273,7 +2273,7 @@ a.nav-link-primary:hover {
 
   display: inline-block;
   padding: 1rem;
-  border-radius: 18px;
+  border-radius: 16px;
   box-shadow: 0 0 8px 2px rgba(255, 252, 63, 0.50), 1px 1px 4px 0 rgba(219, 157, 23, 0.40) inset, -1px -1px 4px 0 rgba(219, 157, 23, 0.64) inset;
   text-align: center;
 }
@@ -2345,11 +2345,11 @@ a.nav-link-primary:hover {
 .figure-card {
   background: var(--neutral-100);
   padding: var(--padding-tiny);
-  border-radius: var(--radius-sm);
+  border-radius: 20px;
 }
 .figure-card img,
 .figure-card video {
-  border-radius: var(--radius-sm);
+  border-radius: 12px;
 }
 
 .figure-card video {
@@ -2364,21 +2364,22 @@ a.nav-link-primary:hover {
   justify-content: center;
   gap: 6%;
   padding: 2.5% 0;
-  border-radius: var(--radius-sm);
+  border-radius: 12px;
   background: #0f0f0f;
+  container-type: inline-size;
 }
 
 .phone {
   width: 38%;
   padding: 10px;
   border: 1px solid #404040;
-  border-radius: 46px;
+  border-radius: 6.9cqw; /* 46px on a 252px phone */
   background: #262626;
 }
 
 .phone-screen {
   overflow: hidden;
-  border-radius: 36px;
+  border-radius: 5.4cqw; /* 36px on a 252px phone */
   background: #ffffff;
 }
 
@@ -2393,11 +2394,6 @@ a.nav-link-primary:hover {
 @media (max-width: 37.5rem) {
   .phone {
     padding: 6px;
-    border-radius: 28px;
-  }
-
-  .phone-screen {
-    border-radius: 22px;
   }
 }
 .figure-card figcaption {
@@ -2443,7 +2439,7 @@ a.nav-link-primary:hover {
   display: flex;
   width: 100%;
   background: #ffffff;
-  border-radius: var(--radius-sm);
+  border-radius: 12px;
   padding: var(--padding-small);
   text-align: center;
   align-items: center;
@@ -2462,7 +2458,7 @@ a.nav-link-primary:hover {
 
 .user-flow-container {
   background: var(--neutral-50);
-  border-radius: var(--radius-md);
+  border-radius: 32px;
 }
 .user-flow-card-wrapper {
   height: 11.25rem;
@@ -2503,7 +2499,7 @@ a.nav-link-primary:hover {
 
 .pill {
   background: #fff;
-  border-radius: 1rem;
+  border-radius: 999px;
   padding-left: 0.5rem;
   padding-right: 0.5rem;
   font-size: 0.75rem;
